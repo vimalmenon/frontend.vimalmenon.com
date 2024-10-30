@@ -4,8 +4,8 @@ Frontend for vimalmenon.com
 #### To Do List
 - [ ] Add basic page
 - [ ] Add Eslint
-- [ ] Add Routes Frontend
+- [ ] Add Routes for Frontend
+- [ ] Add Checks
 - [ ] Add CI
 - [ ] Add CD
-- [ ] Static Page
-
+- [ ] Static Pages

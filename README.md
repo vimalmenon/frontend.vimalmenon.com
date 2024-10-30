@@ -2,9 +2,10 @@
 Frontend for vimalmenon.com
 
 #### To Do List
-- [ ] Add MUI
 - [ ] Add basic page
 - [ ] Add Eslint
-- [ ] Add rules Frontend
-- [ ] Add Route
+- [ ] Add Routes Frontend
+- [ ] Add CI
+- [ ] Add CD
+- [ ] Static Page
 

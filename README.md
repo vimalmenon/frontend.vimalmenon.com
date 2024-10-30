@@ -6,4 +6,5 @@ Frontend for vimalmenon.com
 - [ ] Add basic page
 - [ ] Add Eslint
 - [ ] Add rules Frontend
+- [ ] Add Route
 

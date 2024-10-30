@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "tsc": "tsc"
+    "tsc": "tsc",
+    "eslint": "ESLINT_USE_FLAT_CONFIG=false eslint ./ --ext .ts,.tsx",
+    "eslint:fix": "ESLINT_USE_FLAT_CONFIG=false eslint ./ --ext .ts,.tsx --fix"
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",
@@ -25,6 +27,10 @@
     "@types/react-dom": "^18",
     "eslint": "9.13.0",
     "eslint-config-next": "15.0.2",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "prettier": "^3.3.3",
     "typescript": "^5"
   }
 }

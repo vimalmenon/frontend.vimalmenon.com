@@ -9,3 +9,8 @@ Frontend for vimalmenon.com
 - [ ] Add CI
 - [ ] Add CD
 - [ ] Static Pages
+
+
+#### Issues
+- [ ] Fix the issue with ESLINT_USE_FLAT_CONFIG=false
+ 

@@ -1,4 +1,6 @@
-export const NavigationData = [
+import { INavigation } from '@types';
+
+export const NavigationData: INavigation[] = [
   {
     name: 'Home',
     url: '/',

@@ -5,7 +5,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 import type { Metadata } from 'next';
 
-import { Footer, Header } from '@common';
+import { Footer, Header, Body } from '@common';
 import { IReactChildren } from '@types';
 
 export const metadata: Metadata = {
@@ -26,7 +26,7 @@ const RootLayout: React.FC<IReactChildren> = ({ children }) => {
             sx={{ display: 'flex', flexDirection: 'column', height: '100vh' }}
           >
             <Header />
-            {children}
+            <Body>{children}</Body>
             <Footer />
           </Container>
         </AppRouterCacheProvider>

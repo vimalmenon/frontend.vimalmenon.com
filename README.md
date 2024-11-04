@@ -2,10 +2,11 @@
 Frontend for vimalmenon.com
 
 #### To Do List
-- [ ] Add basic page
-- [ ] Add CI
+- [ ] Improved Header
+- [ ] Improved Footer
 - [ ] Add CD
 - [ ] Create static Pages
+- [ ] Managing the state
 
 
 #### Issues

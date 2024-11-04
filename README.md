@@ -3,10 +3,9 @@ Frontend for vimalmenon.com
 
 #### To Do List
 - [ ] Add basic page
-- [ ] Add Routes for Frontend
 - [ ] Add CI
 - [ ] Add CD
-- [ ] Static Pages
+- [ ] Create static Pages
 
 
 #### Issues

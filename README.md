@@ -3,7 +3,6 @@ Frontend for vimalmenon.com
 
 #### To Do List
 - [ ] Add basic page
-- [ ] Add GitHub Actions
 - [ ] Add CI
 - [ ] Add CD
 - [ ] Create static Pages

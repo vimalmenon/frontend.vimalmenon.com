@@ -24,4 +24,14 @@ jobs:
       with:
         node-version: ${{env.NODE_VERSION}}
         cache: 'npm'
-    - run: npm eslint
+    - name: Cache dependencies
+      id: cache
+      uses: actions/cache@v2
+      with:
+        path: ./node_modules
+        key: modules-${{ hashFiles('package-lock.json') }}
+    - name: Install dependencies
+      if: steps.cache.outputs.cache-hit != 'true'
+      run: npm ci --ignore-scripts
+    - name: run Eslint
+      run: npm eslint

@@ -34,4 +34,4 @@ jobs:
       if: steps.cache.outputs.cache-hit != 'true'
       run: npm ci --ignore-scripts
     - name: run Eslint
-      run: npm eslint
+      run: npm run eslint

@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: 'This is my personal website',
 };
 
-export const LinksPage: NextPage = () => {
+const LinksPage: NextPage = () => {
   return (
     <div>
       <a href="https://crontab.guru/" target="blank">

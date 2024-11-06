@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: 'This is my personal website',
 };
 
-export const TmuxPage: NextPage = () => {
+const TmuxPage: NextPage = () => {
   return <div>This is Tmux</div>;
 };
 

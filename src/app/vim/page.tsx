@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: 'This is my personal website',
 };
 
-export const VimPage: NextPage = () => {
+const VimPage: NextPage = () => {
   return <div>This is Vim</div>;
 };
 

@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: 'This is my personal website',
 };
 
-export const RustPage: NextPage = () => {
+const RustPage: NextPage = () => {
   return <div>This is Rust</div>;
 };
 

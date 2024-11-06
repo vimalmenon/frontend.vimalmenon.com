@@ -2,8 +2,8 @@
 Frontend for vimalmenon.com
 
 #### To Do List
-- [ ] Improved Header
 - [ ] Improved Footer
+- [ ] Align body
 - [ ] Add CD
 - [ ] Create static Pages
 - [ ] Managing the state

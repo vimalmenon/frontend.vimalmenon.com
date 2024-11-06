@@ -5,8 +5,9 @@ Frontend for vimalmenon.com
 - [ ] Improved Footer
 - [ ] Align body
 - [ ] Add CD
-- [ ] Create static Pages
 - [ ] Managing the state
+- [ ] Use Toggle Theme
+- [ ] Fix the Navigation (UI)
 
 
 #### Issues

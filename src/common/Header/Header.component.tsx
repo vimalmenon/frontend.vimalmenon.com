@@ -1,20 +1,36 @@
 import React from 'react';
 
+import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
 import Link from 'next/link';
 
 import { NavigationData } from '@data';
 
 export const Header: React.FC = () => {
   return (
-    <Box component={'header'} sx={{ display: 'flex', flex: '0 0 50px', overflow: 'hidden' }}>
-      {NavigationData.map((nav) => {
-        return (
-          <React.Fragment key={nav.name}>
-            <Link href={nav.url}>{nav.name}</Link> &nbsp;|&nbsp;
-          </React.Fragment>
-        );
-      })}
+    <Box component={'header'} sx={{ display: 'flex' }}>
+      <AppBar position="static">
+        <Toolbar>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            Vimal Menon
+          </Typography>
+          {NavigationData.map((nav) => {
+            return (
+              <Button color="inherit" key={nav.name}>
+                <Link
+                  href={nav.url}
+                  style={{ color: 'white', textDecoration: 'none', fontWeight: 'bold' }}
+                >
+                  {nav.name}
+                </Link>
+              </Button>
+            );
+          })}
+        </Toolbar>
+      </AppBar>
     </Box>
   );
 };

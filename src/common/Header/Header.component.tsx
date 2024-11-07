@@ -22,7 +22,6 @@ export const Header: React.FC = () => {
               <Button color="inherit" key={nav.name}>
                 <Link
                   href={nav.url}
-
                   style={{ color: 'inherit', textDecoration: 'none', fontWeight: 'bold' }}
                 >
                   {nav.name}

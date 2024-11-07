@@ -6,6 +6,7 @@ import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 import type { Metadata } from 'next';
 
 import { Footer, Header, Body } from '@common';
+import { AppContext } from '@context';
 import { IReactChildren } from '@types';
 
 export const metadata: Metadata = {
@@ -20,15 +21,17 @@ const RootLayout: React.FC<IReactChildren> = ({ children }) => {
       <body>
         <AppRouterCacheProvider options={{ enableCssLayer: true }}>
           <CssBaseline />
-          <Container
-            maxWidth={false}
-            disableGutters
-            sx={{ display: 'flex', flexDirection: 'column', height: '100vh' }}
-          >
-            <Header />
-            <Body>{children}</Body>
-            <Footer />
-          </Container>
+          <AppContext>
+            <Container
+              maxWidth={false}
+              disableGutters
+              sx={{ display: 'flex', flexDirection: 'column', height: '100vh' }}
+            >
+              <Header />
+              <Body>{children}</Body>
+              <Footer />
+            </Container>
+          </AppContext>
         </AppRouterCacheProvider>
       </body>
     </html>

@@ -9,6 +9,5 @@ Frontend for vimalmenon.com
 - [ ] Use Toggle Theme
 - [ ] Fix the Navigation (UI)
 
-
 #### Issues
-- [ ] Fix the issue with ESLINT_USE_FLAT_CONFIG=false
+- [ ] Fix the issue with Auto Sort

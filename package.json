@@ -6,7 +6,6 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
     "tsc": "tsc",
     "eslint": "ESLINT_USE_FLAT_CONFIG=false eslint ./ --ext .ts,.tsx",
     "eslint:fix": "ESLINT_USE_FLAT_CONFIG=false eslint ./ --ext .ts,.tsx --fix",

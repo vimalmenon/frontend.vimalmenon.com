@@ -10,4 +10,4 @@ Frontend for vimalmenon.com
 - [ ] Fix the Navigation (UI)
 
 #### Issues
-- [ ] Fix the issue with Auto Sort
+- [ ] Fix the issue with Eslint : Auto Sort and Grouping

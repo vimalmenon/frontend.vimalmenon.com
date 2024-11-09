@@ -1,11 +1,11 @@
 import React from 'react';
 
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 import Container from '@mui/material/Container';
 import CssBaseline from '@mui/material/CssBaseline';
-import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 import type { Metadata } from 'next';
 
-import { Footer, Header, Body } from '@common';
+import { Body, Footer, Header } from '@common';
 import { AppContext } from '@context';
 import { IReactChildren } from '@types';
 

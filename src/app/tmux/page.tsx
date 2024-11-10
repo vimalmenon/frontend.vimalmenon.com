@@ -11,9 +11,9 @@ const TmuxPage: NextPage = () => {
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column' }}>
       <div>TMUX Commands:</div>
-      <Highlight code={'tmux'} language={'bash'} />
-      <Highlight code={'tmux new -s myname'} language={'shell'} />
-      <Highlight code={'tmux ls'} language={'shell'} />
+      <Highlight code="tmux" language="bash" />
+      <Highlight code="tmux new -s myname" language="bash" />
+      <Highlight code="tmux ls" language="bash" />
     </Box>
   );
 };

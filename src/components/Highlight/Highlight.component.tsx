@@ -2,9 +2,9 @@
 
 import hljs from 'highlight.js';
 import javascript from 'highlight.js/lib/languages/javascript';
-import bash from 'highlight.js/lib/languages/bash.js';
-import rust from 'highlight.js/lib/languages/rust.js';
-import shell from 'highlight.js/lib/languages/shell.js';
+import bash from 'highlight.js/lib/languages/bash';
+import rust from 'highlight.js/lib/languages/rust';
+import shell from 'highlight.js/lib/languages/shell';
 import { IHighlight } from './Highlight';
 
 // import 'highlight.js/styles/github.css';

@@ -2,8 +2,8 @@
 
 import React, { useState } from 'react';
 
-import { ThemeProvider } from '@mui/material/styles';
 import { IReactChildren } from '@types';
+import { ThemeProvider } from '@mui/material/styles';
 import { generateTheme } from '@utility';
 
 import { AppContext as Context } from './AppContext.service';

@@ -1,12 +1,11 @@
 import React from 'react';
-
+import { AppContext } from '@context';
+import { Body, Footer, Header } from '@common';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 import Container from '@mui/material/Container';
 import CssBaseline from '@mui/material/CssBaseline';
 import type { Metadata } from 'next';
 import Box from '@mui/material/Box';
-import { Body, Footer, Header } from '@common';
-import { AppContext } from '@context';
 import { IReactChildren } from '@types';
 
 export const metadata: Metadata = {

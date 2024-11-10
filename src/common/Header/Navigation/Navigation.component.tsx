@@ -5,9 +5,9 @@ import { NavigationData } from '@data';
 import Link from 'next/link';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
+
 export const Navigation: React.FC = () => {
   const pathName = usePathname();
-
   return (
     <Box sx={{ display: 'flex', gap: 1 }}>
       {NavigationData.map((nav) => {

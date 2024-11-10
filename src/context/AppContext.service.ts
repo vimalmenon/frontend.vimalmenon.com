@@ -1,8 +1,9 @@
 'use client';
 
-import React from 'react';
-import { NotImplemented } from '@utility';
 import { IAppContext, IUseThemeHelper } from './AppContext';
+
+import { NotImplemented } from '@utility';
+import React from 'react';
 
 export const initialValue: IAppContext = {
   isDark: true,

@@ -28,7 +28,7 @@ const RootLayout: React.FC<IReactChildren> = ({ children }) => {
             >
               <Header />
               <Body>
-                <Box sx={{ padding: 2, flex: "1 1 100%" }}>{children}</Box>
+                <Box sx={{ padding: 2, flex: '1 1 100%' }}>{children}</Box>
               </Body>
               <Footer />
             </Container>

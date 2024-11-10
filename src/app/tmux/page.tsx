@@ -9,10 +9,8 @@ export const metadata: Metadata = {
 
 const TmuxPage: NextPage = () => {
   return (
-    <Box sx={{display: "flex", flexDirection: "column"}}>
-      <div>
-      This is Tmux
-      </div>
+    <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+      <div>This is Tmux</div>
       <Highlight code={'$tmux'} language={'shell'} />
     </Box>
   );

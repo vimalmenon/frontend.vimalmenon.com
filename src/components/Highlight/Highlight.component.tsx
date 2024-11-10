@@ -21,13 +21,13 @@ hljs.registerLanguage('shell', shell);
 export const Highlight: React.FC<IHighlight> = ({ code, language }) => {
   const highlightedCode = hljs.highlight(code, { language: language }).value;
   return (
-      <pre className="theme-lioshi-min">
-        <div className="hljs" style={{ padding: '15px 10px' }}>
-          <code
-            className={`language-${language}`}
-            dangerouslySetInnerHTML={{ __html: highlightedCode }}
-          ></code>
-        </div>
-      </pre>
+    <pre className="theme-lioshi-min">
+      <div className="hljs" style={{ padding: '15px 10px' }}>
+        <code
+          className={`language-${language}`}
+          dangerouslySetInnerHTML={{ __html: highlightedCode }}
+        ></code>
+      </div>
+    </pre>
   );
 };

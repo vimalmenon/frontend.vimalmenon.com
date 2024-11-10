@@ -20,8 +20,8 @@ const RootLayout: React.FC<IReactChildren> = ({ children }) => {
       <meta name="viewport" content="initial-scale=1, width=device-width" />
       <body>
         <AppRouterCacheProvider options={{ enableCssLayer: true }}>
-          <CssBaseline />
           <AppContext>
+            <CssBaseline />
             <Container
               maxWidth={false}
               disableGutters

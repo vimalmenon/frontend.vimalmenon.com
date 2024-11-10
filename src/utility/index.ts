@@ -1,3 +1,2 @@
-export const NotImplemented = (): void => {
-  throw new Error('Function not implemented.');
-};
+export * from './createTheme';
+export * from './notImplemented';

@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { NotImplemented } from '@utility';
 import { IAppContext, IUseThemeHelper } from './AppContext';

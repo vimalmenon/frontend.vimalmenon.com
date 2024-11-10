@@ -1,5 +1,6 @@
 import type { Metadata, NextPage } from 'next';
 import { Highlight } from '@components';
+import Box from '@mui/material/Box';
 
 export const metadata: Metadata = {
   title: 'TMUX Tutorial | Vimal Menon',
@@ -8,10 +9,12 @@ export const metadata: Metadata = {
 
 const TmuxPage: NextPage = () => {
   return (
-    <div>
+    <Box sx={{display: "flex", flexDirection: "column"}}>
+      <div>
       This is Tmux
+      </div>
       <Highlight code={'$tmux'} language={'shell'} />
-    </div>
+    </Box>
   );
 };
 

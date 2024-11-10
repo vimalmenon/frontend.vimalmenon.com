@@ -15,13 +15,13 @@ hljs.registerLanguage('bash', bash);
 hljs.registerLanguage('rust', rust);
 hljs.registerLanguage('shell', shell);
 
-export const Highlight: React.FC<IHighlight> = ({ code }) => {
-  const highlightedCode = hljs.highlight(code, { language: 'shell' }).value;
+export const Highlight: React.FC<IHighlight> = ({ code, language }) => {
+  const highlightedCode = hljs.highlight(code, { language: language }).value;
   return (
     <Paper elevation={3} sx={{ padding: '2px 10px', background: '#1f2328' }}>
       <pre>
         <code
-          className={`language-shell`}
+          className={`language-${language}`}
           dangerouslySetInnerHTML={{ __html: highlightedCode }}
         ></code>
       </pre>

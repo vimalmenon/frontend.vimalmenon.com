@@ -10,7 +10,7 @@ const TmuxPage: NextPage = () => {
   return (
     <div>
       This is Tmux
-      <Highlight code={'$tmux'}></Highlight>
+      <Highlight code={'$tmux'} language={'shell'} />
     </div>
   );
 };

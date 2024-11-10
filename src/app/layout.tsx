@@ -4,7 +4,7 @@ import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 import Container from '@mui/material/Container';
 import CssBaseline from '@mui/material/CssBaseline';
 import type { Metadata } from 'next';
-
+import Box from '@mui/material/Box';
 import { Body, Footer, Header } from '@common';
 import { AppContext } from '@context';
 import { IReactChildren } from '@types';
@@ -28,7 +28,9 @@ const RootLayout: React.FC<IReactChildren> = ({ children }) => {
               sx={{ display: 'flex', flexDirection: 'column', height: '100vh' }}
             >
               <Header />
-              <Body>{children}</Body>
+              <Body>
+                <Box sx={{ padding: 2 }}>{children}</Box>
+              </Body>
               <Footer />
             </Container>
           </AppContext>

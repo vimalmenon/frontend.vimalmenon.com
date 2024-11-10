@@ -30,7 +30,6 @@ export default [
       '.next/*',
       '/pages/api/**/*.ts',
       'out/*',
-      '!.prettierrc.js',
       'jest.setup.js',
       '.eslintrc.js',
       '.prettierrc.js',

@@ -8,6 +8,7 @@ Frontend for vimalmenon.com
 - [ ] Have a code to copy to clipboard
 - [ ] Show language used in code
 - [ ] Grouping of commands
+- [ ] Searching of commands
 
 #### Issues
 - [ ] Fix the issue with Eslint : Auto Sort and Grouping

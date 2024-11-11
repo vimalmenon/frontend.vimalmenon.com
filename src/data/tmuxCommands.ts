@@ -57,6 +57,11 @@ export const TmuxCommands: ICommand[] = [
     language: 'bash',
   },
   {
+    describe: 'Rename a window',
+    command: '<ctrl> b + ,',
+    language: 'bash',
+  },
+  {
     describe: 'Kill Window',
     command: '<ctrl> b + &',
     language: 'bash',

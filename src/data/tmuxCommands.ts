@@ -76,4 +76,35 @@ export const TmuxCommands: ICommand[] = [
     command: '<ctrl> b + t',
     language: 'bash',
   },
+  {
+    describe: 'Vertical Split Pane',
+    command: '<ctrl> b + %',
+    language: 'bash',
+  },
+
+  {
+    describe: 'Horizontal Split Pane',
+    command: '<ctrl> b + "',
+    language: 'bash',
+  },
+  {
+    describe: 'Navigate to Pane',
+    command: '<ctrl> b + <UP | DOWN | Right | LEFT>',
+    language: 'bash',
+  },
+  {
+    describe: 'Move Pane to window',
+    command: '<ctrl> b + !',
+    language: 'bash',
+  },
+  {
+    describe: 'kill Pane',
+    command: '<ctrl> b + x',
+    language: 'bash',
+  },
+  {
+    describe: 'Help Command',
+    command: '<ctrl> b + ?',
+    language: 'bash',
+  },
 ];

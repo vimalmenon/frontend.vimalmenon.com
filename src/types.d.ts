@@ -11,7 +11,7 @@ export interface INavigation {
   url: string;
 }
 
-export interface ITmuxCommand {
+export interface ICommand {
   describe: string;
   command: string;
   language: LanguageType;

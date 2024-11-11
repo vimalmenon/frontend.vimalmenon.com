@@ -1,6 +1,6 @@
-import { ITmuxCommand } from '@types';
+import { ICommand } from '@types';
 
-export const TmuxCommands: ITmuxCommand[] = [
+export const TmuxCommands: ICommand[] = [
   {
     describe: 'Start a session',
     command: 'tmux',
@@ -48,7 +48,7 @@ export const TmuxCommands: ITmuxCommand[] = [
   },
   {
     describe: 'Create window',
-    command: '<ctrl> b + C',
+    command: '<ctrl> b + c',
     language: 'bash',
   },
   {

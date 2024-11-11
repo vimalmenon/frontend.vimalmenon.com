@@ -1,4 +1,6 @@
 import type { Metadata, NextPage } from 'next';
+import Box from '@mui/material/Box';
+import { VimCommands } from '@data';
 
 export const metadata: Metadata = {
   title: 'Vim Tutorial | Vimal Menon',
@@ -6,7 +8,14 @@ export const metadata: Metadata = {
 };
 
 const VimPage: NextPage = () => {
-  return <div>This is Vim</div>;
+  return (
+    <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+      <div>VIM Commands:</div>
+      {VimCommands.map((key, index) => {
+        return <div key={index}></div>;
+      })}
+    </Box>
+  );
 };
 
 export default VimPage;

@@ -6,4 +6,9 @@ export const VimCommands: ICommand[] = [
     command: 'vim .',
     language: 'bash',
   },
+  {
+    describe: 'Show files',
+    command: '<f5>',
+    language: 'bash',
+  },
 ];

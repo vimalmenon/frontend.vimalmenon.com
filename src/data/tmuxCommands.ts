@@ -32,6 +32,36 @@ export const TmuxCommands: ITmuxCommand[] = [
     language: 'bash',
   },
   {
+    describe: 'List session inside tmux',
+    command: '<ctrl> b + s',
+    language: 'bash',
+  },
+  {
+    describe: 'Rename session',
+    command: '<ctrl> b + $',
+    language: 'bash',
+  },
+  {
+    describe: 'List Window',
+    command: '<ctrl> b + w',
+    language: 'bash',
+  },
+  {
+    describe: 'Kill Window',
+    command: '<ctrl> b + &',
+    language: 'bash',
+  },
+  {
+    describe: 'Next window',
+    command: '<ctrl> b + n',
+    language: 'bash',
+  },
+  {
+    describe: 'Previous window',
+    command: '<ctrl> b + p',
+    language: 'bash',
+  },
+  {
     describe: 'Show Time',
     command: '<ctrl> b + t',
     language: 'bash',

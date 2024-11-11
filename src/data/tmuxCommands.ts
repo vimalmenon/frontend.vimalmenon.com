@@ -17,13 +17,18 @@ export const TmuxCommands: ITmuxCommand[] = [
     language: 'bash',
   },
   {
-    describe: 'Attach to a session with number',
+    describe: 'Attach to a session with Name',
     command: 'tmux attach -t <name>',
     language: 'bash',
   },
   {
     describe: 'Command key',
     command: '<ctrl> b',
+    language: 'bash',
+  },
+  {
+    describe: 'Kill Session inside Tmux',
+    command: '<ctrl> b + : kill-session',
     language: 'bash',
   },
   {

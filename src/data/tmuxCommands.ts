@@ -42,6 +42,11 @@ export const TmuxCommands: ITmuxCommand[] = [
     language: 'bash',
   },
   {
+    describe: 'Create window',
+    command: '<ctrl> b + C',
+    language: 'bash',
+  },
+  {
     describe: 'List Window',
     command: '<ctrl> b + w',
     language: 'bash',

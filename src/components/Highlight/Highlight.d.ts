@@ -1,4 +1,6 @@
+import { LanguageType } from '@types';
+
 export interface IHighlight {
   code: string;
-  language: 'shell' | 'bash' | 'rust' | 'javascript';
+  language: LanguageType;
 }

@@ -6,6 +6,7 @@ import bash from 'highlight.js/lib/languages/bash';
 import rust from 'highlight.js/lib/languages/rust';
 import shell from 'highlight.js/lib/languages/shell';
 import { IHighlight } from './Highlight';
+import Box from '@mui/material/Box';
 
 // import 'highlight.js/styles/github.css';
 import 'highlight.js/styles/night-owl.css';
@@ -21,13 +22,13 @@ hljs.registerLanguage('shell', shell);
 export const Highlight: React.FC<IHighlight> = ({ code, language }) => {
   const highlightedCode = hljs.highlight(code, { language: language }).value;
   return (
-    <pre className="theme-night-owl" style={{ margin: '10px 0' }}>
+    <Box component="pre" className="theme-night-owl" sx={{ margin: [0.5, 0] }}>
       <div className="hljs" style={{ padding: '15px 10px' }}>
         <code
           className={`language-${language}`}
           dangerouslySetInnerHTML={{ __html: highlightedCode }}
         ></code>
       </div>
-    </pre>
+    </Box>
   );
 };

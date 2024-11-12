@@ -18,12 +18,27 @@ export const VimCommands: ICommand[] = [
   },
   {
     describe: 'Quit pane',
-    command: '<ctrl> a',
+    command: '<ctrl> q',
     language: 'bash',
   },
   {
     describe: 'Save pane',
     command: '<ctrl> s',
+    language: 'bash',
+  },
+  {
+    describe: 'Go to Edit Mode',
+    command: '<space>',
+    language: 'bash',
+  },
+  {
+    describe: 'Go to End of Page',
+    command: '<shift> g',
+    language: 'bash',
+  },
+  {
+    describe: 'Got to start of Page',
+    command: 'g + g',
     language: 'bash',
   },
 ];

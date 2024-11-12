@@ -7,6 +7,7 @@ Frontend for vimalmenon.com
 - [ ] Have a code to copy to clipboard
 - [ ] Show language used in code
 - [ ] Grouping of commands
+- [ ] Multiple commands
 - [ ] Searching of commands
 - [ ] [Long] API's
 

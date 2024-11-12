@@ -63,7 +63,7 @@ export const TmuxCommands: ICommand[] = [
   },
   {
     describe: 'Going to Specific Window with name',
-    command: '<ctrl> b + \' <name>',
+    command: "<ctrl> b + ' <name>",
     language: 'bash',
   },
   {
@@ -103,6 +103,11 @@ export const TmuxCommands: ICommand[] = [
     language: 'bash',
   },
   {
+    describe: 'Convert to window',
+    command: '<ctrl> b + !',
+    language: 'bash',
+  },
+  {
     describe: 'Move Pane to window',
     command: '<ctrl> b + !',
     language: 'bash',
@@ -110,6 +115,11 @@ export const TmuxCommands: ICommand[] = [
   {
     describe: 'kill Pane',
     command: '<ctrl> b + x',
+    language: 'bash',
+  },
+  {
+    describe: 'Move the panel',
+    command: '<ctrl> b + m & <go to window><ctrl> b + :join-pane',
     language: 'bash',
   },
   {

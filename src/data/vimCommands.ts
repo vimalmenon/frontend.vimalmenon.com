@@ -41,4 +41,9 @@ export const VimCommands: ICommand[] = [
     command: 'g + g',
     language: 'bash',
   },
+  {
+    describe: 'Go to end of the word',
+    command: '<shift> $',
+    language: 'bash',
+  },
 ];

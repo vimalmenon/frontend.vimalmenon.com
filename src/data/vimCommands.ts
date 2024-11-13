@@ -38,12 +38,22 @@ export const VimCommands: ICommand[] = [
   },
   {
     describe: 'Got to start of Page',
-    command: 'g + g',
+    command: 'gg',
     language: 'bash',
   },
   {
     describe: 'Go to end of the word',
     command: '<shift> $',
+    language: 'bash',
+  },
+  {
+    describe: 'Copy to register letter',
+    command: '" + <letter> + y',
+    language: 'bash',
+  },
+  {
+    describe: 'paste to register letter',
+    command: '" + <letter> + p',
     language: 'bash',
   },
 ];

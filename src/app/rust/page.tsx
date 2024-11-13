@@ -12,7 +12,7 @@ const RustPage: NextPage = () => {
     <Box sx={{ display: 'flex', flexDirection: 'column' }}>
       This is Rust
       <Box>basic rust code</Box>
-      <Highlight code={`println!("Hello World")`} language="bash" />
+      <Highlight code={`println!("Hello World")`} language="rust" />
     </Box>
   );
 };

@@ -76,4 +76,9 @@ export const VimCommands: ICommand[] = [
     command: '])',
     language: 'bash',
   },
+  {
+    describe: 'Move to next buffer',
+    command: '<ctr> b +n',
+    language: 'bash',
+  },
 ];

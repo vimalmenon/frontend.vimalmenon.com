@@ -1,5 +1,6 @@
 import type { Metadata, NextPage } from 'next';
 import Box from '@mui/material/Box';
+import { Highlight } from '@components';
 
 export const metadata: Metadata = {
   title: 'Rust Tutorial | Vimal Menon',
@@ -7,7 +8,13 @@ export const metadata: Metadata = {
 };
 
 const RustPage: NextPage = () => {
-  return <Box sx={{ display: 'flex', flexDirection: 'column' }}>This is Rust</Box>;
+  return (
+    <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+      This is Rust
+      <Box>basic rust code</Box>
+      <Highlight code={`println!("Hello World")`} language="bash" />
+    </Box>
+  );
 };
 
 export default RustPage;

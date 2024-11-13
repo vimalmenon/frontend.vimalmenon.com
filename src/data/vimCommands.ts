@@ -81,4 +81,9 @@ export const VimCommands: ICommand[] = [
     command: '<ctr> b +n',
     language: 'bash',
   },
+  {
+    describe: 'List all buffer',
+    command: ':ls',
+    language: 'bash',
+  },
 ];

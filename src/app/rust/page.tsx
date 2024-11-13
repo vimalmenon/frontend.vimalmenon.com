@@ -1,6 +1,6 @@
 import type { Metadata, NextPage } from 'next';
 import Box from '@mui/material/Box';
-import { Highlight } from '@components';
+import { Highlight, AceEditor } from '@components';
 
 export const metadata: Metadata = {
   title: 'Rust Tutorial | Vimal Menon',
@@ -14,8 +14,8 @@ const RustPage: NextPage = () => {
       <Box>Basic rust code</Box>
       <Highlight
         code={`fn main() {
-      println!("Hello World");
-    }`}
+    println!("Hello World");
+}`}
         language="rust"
       />
       <Box>Rust Function</Box>
@@ -28,6 +28,18 @@ const RustPage: NextPage = () => {
           println!("this is test");
         }`}
         language="rust"
+      />
+      <AceEditor
+        value={`
+fn main() {
+    println!("Main Function");
+    test();
+}
+fn test() {
+    println!("this is test");
+}
+`}
+        readOnly={true}
       />
     </Box>
   );

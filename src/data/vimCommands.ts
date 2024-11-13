@@ -66,4 +66,14 @@ export const VimCommands: ICommand[] = [
     command: ']}',
     language: 'bash',
   },
+  {
+    describe: 'Start of round bracket',
+    command: '[(',
+    language: 'bash',
+  },
+  {
+    describe: 'End of round bracket',
+    command: '])',
+    language: 'bash',
+  },
 ];

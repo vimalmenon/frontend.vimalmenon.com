@@ -7,7 +7,7 @@ export const VimCommands: ICommand[] = [
     language: 'bash',
   },
   {
-    describe: 'Show explorer',
+    describe: 'Show file explorer',
     command: '<f5>',
     language: 'bash',
   },
@@ -18,7 +18,7 @@ export const VimCommands: ICommand[] = [
   },
   {
     describe: 'Quit pane',
-    command: '<ctrl> q',
+    command: '<ctrl> + q',
     language: 'bash',
   },
   {
@@ -78,7 +78,7 @@ export const VimCommands: ICommand[] = [
   },
   {
     describe: 'Move to next buffer',
-    command: '<ctr> b +n',
+    command: '<ctl> b +n',
     language: 'bash',
   },
   {
@@ -98,7 +98,12 @@ export const VimCommands: ICommand[] = [
   },
   {
     describe: 'Move cursor to the end of the screen',
-    command: '<shift>  + l',
+    command: '<shift> + l',
+    language: 'bash',
+  },
+  {
+    describe: 'Vertical Split',
+    command: '<ctl> w + v',
     language: 'bash',
   },
 ];

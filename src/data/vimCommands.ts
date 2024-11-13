@@ -56,4 +56,14 @@ export const VimCommands: ICommand[] = [
     command: '" + <letter> + p',
     language: 'bash',
   },
+  {
+    describe: 'Start of bracket',
+    command: '[{',
+    language: 'bash',
+  },
+  {
+    describe: 'End of bracket',
+    command: ']}',
+    language: 'bash',
+  },
 ];

@@ -86,4 +86,19 @@ export const VimCommands: ICommand[] = [
     command: ':ls',
     language: 'bash',
   },
+  {
+    describe: 'Move cursor to the top of Screen',
+    command: '<shift> + h',
+    language: 'bash',
+  },
+  {
+    describe: 'Move cursor to the middle of the screen',
+    command: '<shift> + m',
+    language: 'bash',
+  },
+  {
+    describe: 'Move cursor to the end of the screen',
+    command: '<shift>  + l',
+    language: 'bash',
+  },
 ];

@@ -1,4 +1,5 @@
 import type { Metadata, NextPage } from 'next';
+import Box from '@mui/material/Box';
 
 export const metadata: Metadata = {
   title: 'Rust Tutorial | Vimal Menon',
@@ -6,7 +7,7 @@ export const metadata: Metadata = {
 };
 
 const RustPage: NextPage = () => {
-  return <div>This is Rust</div>;
+  return <Box sx={{ display: 'flex', flexDirection: 'column' }}>This is Rust</Box>;
 };
 
 export default RustPage;

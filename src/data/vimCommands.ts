@@ -47,12 +47,12 @@ export const VimCommands: ICommand[] = [
     language: 'bash',
   },
   {
-    describe: 'Copy to register letter',
+    describe: 'Copy to register with a letter',
     command: '" + <letter> + y',
     language: 'bash',
   },
   {
-    describe: 'paste to register letter',
+    describe: 'Paste from register with a letter',
     command: '" + <letter> + p',
     language: 'bash',
   },

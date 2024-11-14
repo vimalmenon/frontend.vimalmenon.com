@@ -78,7 +78,7 @@ export const VimCommands: ICommand[] = [
   },
   {
     describe: 'Move to next buffer',
-    command: '<ctl> b +n',
+    command: '<ctr> b +n',
     language: 'bash',
   },
   {
@@ -103,7 +103,12 @@ export const VimCommands: ICommand[] = [
   },
   {
     describe: 'Vertical Split',
-    command: '<ctl> w + v',
+    command: '<ctr> w + v',
+    language: 'bash',
+  },
+  {
+    describe: 'Indent Line',
+    command: '= + =',
     language: 'bash',
   },
 ];

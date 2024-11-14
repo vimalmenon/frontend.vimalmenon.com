@@ -111,4 +111,19 @@ export const VimCommands: ICommand[] = [
     command: '= + =',
     language: 'bash',
   },
+  {
+    describe: 'Keep the cursor in middle',
+    command: 'z z',
+    language: 'bash',
+  },
+  {
+    describe: 'Kept the cursor in top',
+    command: 'z t',
+    language: 'bash',
+  },
+  {
+    describe: 'Kept the cursor in bottom',
+    command: 'z b',
+    language: 'bash',
+  },
 ];

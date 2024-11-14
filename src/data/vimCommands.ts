@@ -107,6 +107,11 @@ export const VimCommands: ICommand[] = [
     language: 'bash',
   },
   {
+    describe: 'Horizontal Split',
+    command: '<ctr> w + s',
+    language: 'bash',
+  },
+  {
     describe: 'Indent Line',
     command: '= + =',
     language: 'bash',
@@ -124,6 +129,21 @@ export const VimCommands: ICommand[] = [
   {
     describe: 'Kept the cursor in bottom',
     command: 'z b',
+    language: 'bash',
+  },
+  {
+    describe: 'Search on selected word that is selected',
+    command: '*',
+    language: 'bash',
+  },
+  {
+    describe: 'Visually select the Hightlight word',
+    command: 'g n',
+    language: 'bash',
+  },
+  {
+    describe: 'Perform the last Operation',
+    command: '.',
     language: 'bash',
   },
 ];

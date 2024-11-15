@@ -78,7 +78,12 @@ export const VimCommands: ICommand[] = [
   },
   {
     describe: 'Move to next buffer',
-    command: '<ctr> b +n',
+    command: 'b + n',
+    language: 'bash',
+  },
+  {
+    describe: 'Move to previous buffer',
+    command: 'b + p',
     language: 'bash',
   },
   {
@@ -122,12 +127,12 @@ export const VimCommands: ICommand[] = [
     language: 'bash',
   },
   {
-    describe: 'Kept the cursor in top',
+    describe: 'Keep the cursor in top',
     command: 'z t',
     language: 'bash',
   },
   {
-    describe: 'Kept the cursor in bottom',
+    describe: 'Keep the cursor in bottom',
     command: 'z b',
     language: 'bash',
   },

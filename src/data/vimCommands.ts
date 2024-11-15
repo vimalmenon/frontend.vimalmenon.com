@@ -118,7 +118,7 @@ export const VimCommands: ICommand[] = [
   },
   {
     describe: 'Indent Line',
-    command: '= + =',
+    command: '= =',
     language: 'bash',
   },
   {
@@ -147,13 +147,18 @@ export const VimCommands: ICommand[] = [
     language: 'bash',
   },
   {
-    describe: 'Perform the last Operation',
+    describe: 'Perform the last operation',
     command: '.',
     language: 'bash',
   },
   {
-    describe: 'Vistually select inside bracket',
+    describe: 'Visually select inside bracket',
     command: 'v a }',
+    language: 'bash',
+  },
+  {
+    describe: 'Visually select inside bracket',
+    command: 'v a B',
     language: 'bash',
   },
 ];

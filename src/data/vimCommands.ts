@@ -202,7 +202,7 @@ export const VimCommands: ICommand[] = [
     language: 'bash',
   },
   {
-    describe: 'Insert mode at End of the line',
+    describe: 'Insert mode at the end of line',
     command: 'A',
     language: 'bash',
   },

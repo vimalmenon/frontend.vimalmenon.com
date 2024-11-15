@@ -161,4 +161,14 @@ export const VimCommands: ICommand[] = [
     command: 'v a B',
     language: 'bash',
   },
+  {
+    describe: 'Search for a file',
+    command: '<ctrl> f',
+    language: 'bash',
+  },
+  {
+    describe: 'Go to <letter>',
+    command: 'f <letter>',
+    language: 'bash',
+  },
 ];

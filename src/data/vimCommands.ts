@@ -196,4 +196,14 @@ export const VimCommands: ICommand[] = [
     command: 'O',
     language: 'bash',
   },
+  {
+    describe: 'Insert mode at the beginning of Line',
+    command: 'I',
+    language: 'bash',
+  },
+  {
+    describe: 'Insert mode at End of the line',
+    command: 'A',
+    language: 'bash',
+  },
 ];

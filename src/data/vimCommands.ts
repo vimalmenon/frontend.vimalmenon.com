@@ -151,4 +151,9 @@ export const VimCommands: ICommand[] = [
     command: '.',
     language: 'bash',
   },
+  {
+    describe: 'Vistually select inside bracket',
+    command: 'v a }',
+    language: 'bash',
+  },
 ];

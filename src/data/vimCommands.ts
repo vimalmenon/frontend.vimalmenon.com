@@ -167,8 +167,13 @@ export const VimCommands: ICommand[] = [
     language: 'bash',
   },
   {
-    describe: 'Go to <letter>',
+    describe: 'Go to <letter> forwards',
     command: 'f <letter>',
+    language: 'bash',
+  },
+  {
+    describe: 'Go to <letter> backwards',
+    command: 'F <letter>',
     language: 'bash',
   },
   {

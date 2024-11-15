@@ -171,4 +171,29 @@ export const VimCommands: ICommand[] = [
     command: 'f <letter>',
     language: 'bash',
   },
+  {
+    describe: 'Go to end of line',
+    command: '$',
+    language: 'bash',
+  },
+  {
+    describe: 'Go to start of line',
+    command: '^',
+    language: 'bash',
+  },
+  {
+    describe: 'Go to beginning of line',
+    command: '0',
+    language: 'bash',
+  },
+  {
+    describe: 'Insert new line at end',
+    command: 'o',
+    language: 'bash',
+  },
+  {
+    describe: 'Insert new line at beginning',
+    command: 'O',
+    language: 'bash',
+  },
 ];

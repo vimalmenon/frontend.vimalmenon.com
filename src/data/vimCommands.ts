@@ -236,4 +236,9 @@ export const VimCommands: ICommand[] = [
     command: 'g r',
     language: 'bash',
   },
+  {
+    describe: 'Find the declaration for a reference',
+    command: 'g d',
+    language: 'bash',
+  },
 ];

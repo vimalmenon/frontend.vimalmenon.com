@@ -2,8 +2,14 @@ import Box from '@mui/material/Box';
 import { linuxCommands } from '@data';
 import { Fragment } from 'react';
 import { Highlight } from '@components';
+import type { Metadata, NextPage } from 'next';
 
-const Linux: React.FC = () => {
+export const metadata: Metadata = {
+  title: 'Linux Tutorial | Vimal Menon',
+  description: 'This is my personal website',
+};
+
+const Linux: NextPage = () => {
   return (
     <Box>
       {linuxCommands.map((data, index) => {

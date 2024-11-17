@@ -18,11 +18,11 @@ export const NavigationData: INavigation[] = [
     url: '/vim',
   },
   {
-    name: 'Links',
-    url: '/links',
-  },
-  {
     name: 'Linux',
     url: '/linux',
+  },
+  {
+    name: 'Links',
+    url: '/links',
   },
 ];

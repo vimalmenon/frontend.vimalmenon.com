@@ -211,4 +211,24 @@ export const VimCommands: ICommand[] = [
     command: 'A',
     language: 'bash',
   },
+  {
+    describe: 'Move cursor one line at top',
+    command: '<ctrl> e',
+    language: 'bash',
+  },
+  {
+    describe: 'Move cursor one line to botom',
+    command: '<ctrl> y',
+    language: 'bash',
+  },
+  {
+    describe: 'Move the screen one page down',
+    command: '<ctrl> b',
+    language: 'bash',
+  },
+  {
+    describe: 'Insert mode at the end of line',
+    command: 'A',
+    language: 'bash',
+  },
 ];

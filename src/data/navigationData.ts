@@ -21,4 +21,8 @@ export const NavigationData: INavigation[] = [
     name: 'Links',
     url: '/links',
   },
+  {
+    name: 'Linux',
+    url: '/linux',
+  },
 ];

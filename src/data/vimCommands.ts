@@ -231,4 +231,9 @@ export const VimCommands: ICommand[] = [
     command: 'A',
     language: 'bash',
   },
+  {
+    describe: 'Search and find for a reference',
+    command: 'g r',
+    language: 'bash',
+  },
 ];

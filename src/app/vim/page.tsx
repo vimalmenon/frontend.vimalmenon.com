@@ -1,6 +1,6 @@
 import type { Metadata, NextPage } from 'next';
 import Box from '@mui/material/Box';
-import { VimCommands } from '@data';
+import { VimCommands, NeoVimCommands } from '@data';
 import { Highlight } from '@components';
 import { Fragment } from 'react';
 
@@ -14,6 +14,16 @@ const VimPage: NextPage = () => {
     <Box sx={{ display: 'flex', flexDirection: 'column' }}>
       <div>VIM Commands:</div>
       {VimCommands.map((data, index) => {
+        return (
+          <Fragment key={index}>
+            <Box component="p" sx={{ margin: 0.5 }}>
+              {data.describe}
+            </Box>
+            <Highlight code={data.command} language={data.language} />
+          </Fragment>
+        );
+      })}
+      {NeoVimCommands.map((data, index) => {
         return (
           <Fragment key={index}>
             <Box component="p" sx={{ margin: 0.5 }}>

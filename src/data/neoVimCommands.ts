@@ -16,4 +16,14 @@ export const NeoVimCommands: ICommand[] = [
     command: 'F5',
     language: 'bash',
   },
+  {
+    describe: 'Virtually select all',
+    command: '<ctrl> a',
+    language: 'bash',
+  },
+  {
+    describe: 'Copy the current line',
+    command: 'yy',
+    language: 'bash',
+  },
 ];

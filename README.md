@@ -2,6 +2,7 @@
 Frontend for vimalmenon.com
 
 #### To Do List
+- [ ] Create a docker file
 - [ ] Deploy the static page
 - [ ] Add CD
 - [ ] Have a code to copy to clipboard

@@ -27,8 +27,13 @@ export const NeoVimCommands: ICommand[] = [
     language: 'bash',
   },
   {
+    describe: 'Toggle hidden item in navigation',
+    command: '<ctrl> h',
+    language: 'bash',
+  },
+  {
     describe: 'Open lazy git',
     command: '<space> lg',
     language: 'bash',
-  }
+  },
 ];

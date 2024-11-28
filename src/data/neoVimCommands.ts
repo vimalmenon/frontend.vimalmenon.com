@@ -3,7 +3,7 @@ import { ICommand } from '@types';
 export const NeoVimCommands: ICommand[] = [
   {
     describe: 'Show Buffers in telescope',
-    command: 'space space',
+    command: '<space> <space>',
     language: 'bash',
   },
   {
@@ -13,7 +13,7 @@ export const NeoVimCommands: ICommand[] = [
   },
   {
     describe: 'Refresh the buffer',
-    command: 'F5',
+    command: '<F5>',
     language: 'bash',
   },
   {
@@ -26,4 +26,9 @@ export const NeoVimCommands: ICommand[] = [
     command: 'yy',
     language: 'bash',
   },
+  {
+    describe: 'Open lazy git',
+    command: '<space> lg',
+    language: 'bash',
+  }
 ];

@@ -1,8 +1,6 @@
 FROM node:20-alpine
 
-COPY package.json package.json
-
-COPY package-lock.json package-lock.json
+COPY package.json package-lock.json ./
 
 RUN npm ci
 
@@ -13,4 +11,8 @@ COPY src src
 COPY eslint.config.mjs next-env.d.ts next.config.ts tsconfig.json .prettierrc.js ./
 
 RUN npm run build
+
+EXPOSE 3000
+
+CMD ["npm", "run", "start"]
 

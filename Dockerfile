@@ -1,4 +1,4 @@
-from node:20-alpine
+FROM node:20-alpine
 
 COPY package.json package.json
 
@@ -10,7 +10,7 @@ COPY public public
 
 COPY src src
 
-COPY eslint.config.mjs next-env.d.ts next.config.ts tsconfig.json .prettierrc.js .
+COPY eslint.config.mjs next-env.d.ts next.config.ts tsconfig.json .prettierrc.js ./
 
 RUN npm run build
 

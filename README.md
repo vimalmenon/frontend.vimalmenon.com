@@ -2,6 +2,7 @@
 Frontend for vimalmenon.com
 
 #### To Do List
+- [ ] Push to DockerHub
 - [ ] Create a .dockerignore file
 - [ ] Deploy the static page
 - [ ] Add CD

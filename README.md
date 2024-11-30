@@ -3,7 +3,8 @@ Frontend for vimalmenon.com
 
 #### To Do List
 - [ ] Create a .dockerignore file
-- [ ] Create helm chart of application
+- [ ] Create Deployment
+- [ ] Create Service
 - [ ] Deploy the app in Minikube
 - [ ] Deploy the static page
 - [ ] Add CD

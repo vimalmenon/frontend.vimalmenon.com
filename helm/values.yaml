@@ -1,2 +1,4 @@
 namespace: "frontend-vimalmenon"
-
+replica: 1
+image: "frontend.vimalmenon.com"
+version: 0.0.1

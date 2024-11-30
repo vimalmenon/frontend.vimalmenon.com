@@ -6,7 +6,6 @@ Frontend for vimalmenon.com
 - [ ] Create Deployment
 - [ ] Create Service
 - [ ] Deploy the app in Minikube
-- [ ] Deploy the static page
 - [ ] Add CD
 - [ ] Have a code to copy to clipboard
 - [ ] Show language used in code

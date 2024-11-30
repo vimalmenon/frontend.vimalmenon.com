@@ -13,7 +13,7 @@ Frontend for vimalmenon.com
 - [ ] Grouping of commands
 - [ ] Multiple commands
 - [ ] Searching of commands
-- [ ] [Long] API's
+- [ ] Standardize the command
 
 #### Issues
 - [ ] Fix the issue with Eslint : Auto Sort and Grouping

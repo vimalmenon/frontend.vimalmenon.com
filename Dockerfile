@@ -4,9 +4,11 @@ COPY package.json package-lock.json ./
 
 RUN npm ci
 
-COPY public public
+ADD src src
 
-COPY src src
+ADD out out
+
+ADD public public
 
 COPY eslint.config.mjs next-env.d.ts next.config.ts tsconfig.json .prettierrc.js ./
 

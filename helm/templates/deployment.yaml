@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: fe-deploy
+    app: {{ .Values.deployment.name }}
     type: frontend
   name: fe-deploy
   namespace: {{ .Values.namespace }}
@@ -10,12 +10,12 @@ spec:
   replicas: {{ .Values.deployment.replicas }}
   selector:
     matchLabels:
-      app: {{ .Values.deployment.name }}
+      app: frontend-vimalmenon
   strategy: {}
   template:
     metadata:
       labels:
-        app: {{ .Values.deployment.name }}
+        app: frontend-vimalmenon
         type: frontend
     spec:
       containers:

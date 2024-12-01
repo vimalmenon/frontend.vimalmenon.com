@@ -7,3 +7,7 @@ Replicas : {{ .Values.deployment.replicas }}
 Image : {{.Values.deployment.image }}
 Version : {{ .Values.deployment.version}}
 
+Create a Service
+Name: {{ .Values.service.name }}
+port: {{ .Values.service.nodePort }}
+

@@ -3,8 +3,6 @@ Frontend for vimalmenon.com
 
 #### To Do List
 - [ ] Create a .dockerignore file
-- [ ] Create Service
-- [ ] Deploy the app in Minikube
 - [ ] Access K8S NodePort service
 - [ ] Add CD
 - [ ] Have a code to copy to clipboard

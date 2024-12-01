@@ -16,3 +16,19 @@ Frontend for vimalmenon.com
 
 #### Issues
 - [ ] Fix the issue with Eslint : Auto Sort and Grouping
+
+
+#### Commands
+Deploy app in k8s
+```sh
+helm install vimalmenon .
+```
+Remove app from K8s
+```sh
+helm uninstall vimalmenon
+```
+Check app status
+```sh
+helm status vimalmenon
+```
+

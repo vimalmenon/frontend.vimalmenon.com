@@ -2,5 +2,5 @@ namespace: "frontend-vimalmenon"
 deployment:
   name: "fe-vimalmenon"
   replicas: 1
-  image: "frontend.vimalmenon.com"
+  image: "vimalsmenon/frontend.vimalmenon.com"
   version: 0.0.1

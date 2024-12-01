@@ -1,3 +1,9 @@
 Create a Namespace.
 {{ .Values.namespace }}
 
+Create a Deployment
+Name: {{ .Values.deployment.name }}
+Replicas : {{ .Values.deployment.replicas }}
+Image : {{.Values.deployment.image }}
+Version : {{ .Values.deployment.version}}
+

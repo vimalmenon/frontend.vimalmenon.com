@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: fe-deploy
+    type: frontend
+  name: fe-deploy
+  namespace: {{ .Values.namespace }}
+spec:
+  replicas: {{ .Values.deployment.replicas }}
+  selector:
+    matchLabels:
+      app: {{ .Values.deployment.name }}
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.deployment.name }}
+        type: frontend
+    spec:
+      containers:
+        - image: {{ .Values.deployment.image }}:{{ .Values.deployment.version }}
+          name: {{ .Values.deployment.name}}-pod
+

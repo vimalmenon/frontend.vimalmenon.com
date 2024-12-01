@@ -1,4 +1,6 @@
 namespace: "frontend-vimalmenon"
-replica: 1
-image: "frontend.vimalmenon.com"
-version: 0.0.1
+deployment:
+  name: "fe-vimalmenon"
+  replicas: 1
+  image: "frontend.vimalmenon.com"
+  version: 0.0.1

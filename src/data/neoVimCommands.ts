@@ -28,12 +28,22 @@ export const NeoVimCommands: ICommand[] = [
   },
   {
     describe: 'Toggle hidden item in navigation',
-    command: '<shift> h',
+    command: '<ctrl> h',
     language: 'bash',
   },
   {
     describe: 'Open lazy git',
     command: '<space> lg',
+    language: 'bash',
+  },
+  {
+    describe: 'Toggle between corresponding brackets',
+    command: '%',
+    language: 'bash',
+  },
+  {
+    describe: 'Add value to multiple lines',
+    command: '<ctrl> v + action',
     language: 'bash',
   },
 ];

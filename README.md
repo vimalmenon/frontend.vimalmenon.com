@@ -35,3 +35,7 @@ Build docker file with latest version
 ```sh
 docker build -t frontend.vimalmenon.com:latest .
 ```
+
+```sh
+
+````

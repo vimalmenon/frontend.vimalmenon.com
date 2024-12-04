@@ -4,7 +4,6 @@ Frontend for vimalmenon.com
 #### To Do List
 - [ ] Create a .dockerignore file
 - [ ] Access K8S NodePort service in minikube
-- [ ] Fix the issue with deploy
 - [ ] Deploy app in Civo
 - [ ] Have a code to copy to clipboard
 - [ ] Show language used in code

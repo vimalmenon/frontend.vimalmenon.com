@@ -4,7 +4,7 @@ metadata:
   labels:
     app: {{ .Values.deployment.name }}
     type: frontend
-  name: fe-deploy
+  name: {{ .Values.deployment.name }}
   namespace: {{ .Values.namespace }}
 spec:
   replicas: {{ .Values.deployment.replicas }}

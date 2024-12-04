@@ -1,0 +1,39 @@
+name: Upload the Image to DockerHub
+
+on:
+  workflow_dispatch:
+    inputs:
+      Release:
+        description: 'Select a Type'
+        type: choice
+        required: true
+        default: 'Dev'
+        options:
+          - Dev
+          - Prod
+
+env:
+  DOCKER_REGISTRY: vimalsmenon
+  RELEASE: ${{ github.event.inputs.Release }}
+  APP_NAME: frontend.vimalmenon.com
+  DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+  DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
+
+jobs:
+  PushCode:
+    name: 'Deploy Image'
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout 
+      uses: actions/checkout@v2
+    - name: Login to DockerHub
+      uses: docker/login-action@v1
+      with:
+        username: ${{ env.DOCKERHUB_USERNAME }}
+        password: ${{ env.DOCKERHUB_TOKEN }}
+    - name: Docker push
+      run: |
+        docker build -t ${{ env.APP_NAME }}:${{ env.RELEASE }} .
+        docker tag ${{ env.APP_NAME }}:${{ env.RELEASE }} ${{ env.DOCKER_REGISTRY }}/${{ env.APP_NAME }}:${{ env.RELEASE }}
+        docker push ${{ env.DOCKER_REGISTRY }}/${{env.APP_NAME}}:${{ env.RELEASE }}
+

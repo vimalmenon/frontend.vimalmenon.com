@@ -46,4 +46,9 @@ export const NeoVimCommands: ICommand[] = [
     command: '<ctrl> v + action',
     language: 'bash',
   },
+  {
+    describe: 'Open a Link in browser',
+    command: 'g x',
+    language: 'bash',
+  },
 ];

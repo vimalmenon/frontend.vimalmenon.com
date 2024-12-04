@@ -6,10 +6,6 @@ RUN npm ci
 
 ADD src src
 
-ADD out out
-
-ADD public public
-
 COPY eslint.config.mjs next-env.d.ts next.config.ts tsconfig.json .prettierrc.js ./
 
 RUN npm run build

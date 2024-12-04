@@ -1,7 +1,7 @@
 # vimalmenon.com
 Frontend for vimalmenon.com
 
-#### To Do List
+#### To Do
 - [ ] Create a .dockerignore file
 - [ ] Access K8S NodePort service in minikube
 - [ ] Deploy app in Civo

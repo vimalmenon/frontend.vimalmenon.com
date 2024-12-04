@@ -3,11 +3,8 @@ Frontend for vimalmenon.com
 
 #### To Do List
 - [ ] Create a .dockerignore file
-- [ ] Upload the image to DockerHub
 - [ ] Access K8S NodePort service in minikube
-- [ ] Create a GitHub workflow to upload image to DockerHub
 - [ ] Deploy app in Civo
-- [ ] Add CD
 - [ ] Have a code to copy to clipboard
 - [ ] Show language used in code
 - [ ] Grouping of commands

@@ -132,9 +132,4 @@ export const TmuxCommands: ICommand[] = [
     command: '<ctrl> b + ?',
     language: 'bash',
   },
-  {
-    describe: 'Add Folder in NerdTree',
-    command: 'm',
-    language: 'bash',
-  },
 ];

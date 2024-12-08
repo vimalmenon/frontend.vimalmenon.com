@@ -8,10 +8,11 @@ Frontend for vimalmenon.com
 - [ ] Multiple commands
 - [ ] Searching of commands
 - [ ] Standardize the command
+- [ ] Create a workign dir for docker
+
 
 #### Issues
 - [ ] Fix the issue with Eslint : Auto Sort and Grouping
-
 
 #### Commands
 Start app

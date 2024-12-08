@@ -42,6 +42,11 @@ export const TmuxCommands: ICommand[] = [
     language: 'bash',
   },
   {
+    describe: 'List windows inside tmux',
+    command: '<ctrl> b + w',
+    language: 'bash',
+  },
+  {
     describe: 'Rename session',
     command: '<ctrl> b + $',
     language: 'bash',

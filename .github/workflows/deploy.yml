@@ -7,9 +7,8 @@ on:
         description: 'Select a Type'
         type: choice
         required: true
-        default: 'Dev'
+        default: Local
         options:
-          - Dev
           - Local
           - PI
           - Prod

@@ -9,6 +9,7 @@ Frontend for vimalmenon.com
 - [ ] Searching of commands
 - [ ] Standardize the command
 - [ ] Create a working dir for docker
+- [ ] Get Env value during run time
 
 
 #### Issues

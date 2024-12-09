@@ -8,7 +8,6 @@ Frontend for vimalmenon.com
 - [ ] Multiple commands
 - [ ] Searching of commands
 - [ ] Standardize the command
-- [ ] Create a working dir for docker
 - [ ] Get Env value during run time
 
 
@@ -20,3 +19,9 @@ Start app
 ```sh
 npm run dev
 ```
+Build the app and start the prod
+```sh
+npm run build
+npm run start
+```
+

@@ -8,7 +8,6 @@ Frontend for vimalmenon.com
 - [ ] Multiple commands
 - [ ] Searching of commands
 - [ ] Standardize the command
-- [ ] Get Env value during run time
 
 
 #### Issues

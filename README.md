@@ -8,7 +8,8 @@ Frontend for vimalmenon.com
 - [ ] Multiple commands
 - [ ] Searching of commands
 - [ ] Standardize the command
-
+- [ ] Make the docker image size smaller (Less than 100MB)
+- [ ] Create a multipe Stage build
 
 #### Issues
 - [ ] Fix the issue with Eslint : Auto Sort and Grouping

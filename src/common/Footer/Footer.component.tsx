@@ -1,6 +1,8 @@
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
+import { env } from '../../config';
+
 export const Footer: React.FC = () => {
   return (
     <Box
@@ -13,10 +15,14 @@ export const Footer: React.FC = () => {
         justifyContent: 'space-between',
       }}
     >
-      <div></div>
       <div>
         <Typography component={'p'} sx={{ fontSize: '15px' }}>
-          © 2021 Vimal Menon. All rights reserved
+          © 2024 Vimal Menon. All rights reserved
+        </Typography>
+      </div>
+      <div>
+        <Typography component={'p'} sx={{ fontSize: '15px' }}>
+          {env.ENV}
         </Typography>
       </div>
     </Box>

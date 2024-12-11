@@ -16,7 +16,6 @@ const Home: React.FC = async () => {
         <Box>Env</Box>
         <Box>{env.ENV}</Box>
       </Box>
-
     </Box>
   );
 };

@@ -13,6 +13,11 @@ const VimPage: NextPage = () => {
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column' }}>
       <div>VIM Commands:</div>
+      <div>
+        <a href="https://github.com/vimalmenon/neovim" target="_blank" rel="noreferrer">
+          GitHub
+        </a>
+      </div>
       {VimCommands.map((data, index) => {
         return (
           <Fragment key={index}>

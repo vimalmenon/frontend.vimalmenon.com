@@ -1,7 +1,9 @@
 # vimalmenon.com
+
 Frontend for vimalmenon.com
 
 #### To Do
+
 - [ ] Have a code to copy to clipboard
 - [ ] Show language used in code
 - [ ] Grouping of commands
@@ -13,16 +15,20 @@ Frontend for vimalmenon.com
 - [ ] Use Proper API to connect to API
 
 #### Issues
+
 - [ ] Fix the issue with Eslint : Auto Sort and Grouping
 
 #### Commands
+
 Start app
+
 ```sh
 npm run dev
 ```
+
 Build the app and start the prod
+
 ```sh
 npm run build
 npm run start
 ```
-

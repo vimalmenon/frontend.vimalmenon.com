@@ -51,4 +51,15 @@ export const NeoVimCommands: ICommand[] = [
     command: 'g x',
     language: 'bash',
   },
+  {
+    describe: 'Open a file in nvim',
+    command: 'g f',
+    language: 'bash',
+  },
+
+  {
+    describe: 'Comment the code',
+    command: 'g c',
+    language: 'bash',
+  },
 ];

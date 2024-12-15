@@ -14,6 +14,8 @@ Frontend for vimalmenon.com
 - [ ] Create a multiple stage build
 - [ ] Use Proper API to connect to API
 - [ ] Get data from API
+- [ ] Add form to submit the data
+- [ ] Edit data using form
 
 #### Issues
 

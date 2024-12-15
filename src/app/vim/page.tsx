@@ -1,7 +1,7 @@
 import type { Metadata, NextPage } from 'next';
 import Box from '@mui/material/Box';
 import { VimCommands, NeoVimCommands } from '@data';
-import { Highlight } from '@components';
+import { Highlight, CommandForm } from '@components';
 import { Fragment } from 'react';
 
 export const metadata: Metadata = {
@@ -12,6 +12,7 @@ export const metadata: Metadata = {
 const VimPage: NextPage = () => {
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+      <CommandForm />
       <div>VIM Commands:</div>
       <div>
         <a href="https://github.com/vimalmenon/neovim" target="_blank" rel="noreferrer">

@@ -32,7 +32,9 @@ export const CommandForm: React.FC<ICommandForm> = ({ onChange, onFormCancel }) 
           <Button variant="contained" type="submit">
             Save
           </Button>
-          <Button variant="outlined" onClick={onFormCancel}>Clear</Button>
+          <Button variant="outlined" onClick={onFormCancel}>
+            Clear
+          </Button>
         </Box>
       </Box>
     </form>

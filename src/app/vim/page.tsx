@@ -4,6 +4,7 @@ import { VimContext } from './Vim.context';
 import { VimCommandForm } from './VimCommandForm';
 import { VimCommandView } from './VimCommandView';
 import { VimCommandPanel } from './VimCommandPanel';
+import { VimCommands, NeoVimCommands } from '@data';
 
 export const dynamic = 'force-dynamic';
 export const metadata: Metadata = {
@@ -18,7 +19,7 @@ const VimPage: NextPage = () => {
         <div>VIM Commands:</div>
         <VimCommandPanel />
         <VimCommandForm />
-        <VimCommandView />
+        <VimCommandView commands={[...VimCommands, ...NeoVimCommands]} />
         <div>
           <a href="https://github.com/vimalmenon/neovim" target="_blank" rel="noreferrer">
             GitHub

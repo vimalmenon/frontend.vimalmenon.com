@@ -13,15 +13,16 @@ export const CommandForm: React.FC = () => {
   } = useForm();
   console.log(errors);
   return (
-    <form onSubmit={handleSubmit(console.log)}>
+    <form onSubmit={handleSubmit(console.log)} noValidate>
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
         <TextField
+          error
           required
           label="Description"
           size="small"
           id="description"
           {...register('description', { required: true, minLength: 5 })}
-          helperText={errors.description?.message || 'None'}
+          helperText={'None'}
         />
         <TextField required label="Command" size="small" id="command" />
         <TextField required label="Language" size="small" id="language" />

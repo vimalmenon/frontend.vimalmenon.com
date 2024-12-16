@@ -21,10 +21,10 @@ export const CommandForm: React.FC = () => {
           size="small"
           id="description"
           {...register('description', { required: true, minLength: 5 })}
-          helperText={errors.description?.message || ''}
+          helperText={errors.description?.message || 'None'}
         />
-        <TextField required label="Command" size="small" />
-        <TextField required label="Language" size="small" />
+        <TextField required label="Command" size="small" id="command" />
+        <TextField required label="Language" size="small" id="language" />
         <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
           <Button variant="contained" type="submit">
             Save

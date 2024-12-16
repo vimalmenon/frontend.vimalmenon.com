@@ -7,7 +7,7 @@ import { useForm } from 'react-hook-form';
 import { ICommandForm } from './CommandForm';
 import { ICommand } from '@types';
 
-export const CommandForm: React.FC<ICommandForm> = ({ onChange }) => {
+export const CommandForm: React.FC<ICommandForm> = ({ onChange, onFormCancel }) => {
   const {
     register,
     handleSubmit,
@@ -32,7 +32,7 @@ export const CommandForm: React.FC<ICommandForm> = ({ onChange }) => {
           <Button variant="contained" type="submit">
             Save
           </Button>
-          <Button variant="outlined">Clear</Button>
+          <Button variant="outlined" onClick={onFormCancel}>Clear</Button>
         </Box>
       </Box>
     </form>

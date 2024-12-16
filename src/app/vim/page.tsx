@@ -1,46 +1,29 @@
 import type { Metadata, NextPage } from 'next';
 import Box from '@mui/material/Box';
-import { VimCommands, NeoVimCommands } from '@data';
-import { Highlight, CommandForm } from '@components';
-import { Fragment } from 'react';
+import { VimContext } from './Vim.context';
+import { VimCommandForm } from './VimCommandForm';
+import { VimCommandView } from './VimCommandView';
 
+export const dynamic = 'force-dynamic';
 export const metadata: Metadata = {
   title: 'Vim Tutorial | Vimal Menon',
   description: 'This is my personal website',
 };
 
 const VimPage: NextPage = () => {
-  const onChange = (): boolean => false;
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-      <CommandForm onChange={onChange} />
-      <div>VIM Commands:</div>
-      <div>
-        <a href="https://github.com/vimalmenon/neovim" target="_blank" rel="noreferrer">
-          GitHub
-        </a>
-      </div>
-      {VimCommands.map((data, index) => {
-        return (
-          <Fragment key={index}>
-            <Box component="p" sx={{ margin: 0.5 }}>
-              {data.describe}
-            </Box>
-            <Highlight code={data.command} language={data.language} />
-          </Fragment>
-        );
-      })}
-      {NeoVimCommands.map((data, index) => {
-        return (
-          <Fragment key={index}>
-            <Box component="p" sx={{ margin: 0.5 }}>
-              {data.describe}
-            </Box>
-            <Highlight code={data.command} language={data.language} />
-          </Fragment>
-        );
-      })}
-    </Box>
+    <VimContext>
+      <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+        <div>VIM Commands:</div>
+        <div>
+          <a href="https://github.com/vimalmenon/neovim" target="_blank" rel="noreferrer">
+            GitHub
+          </a>
+        </div>
+        <VimCommandForm />
+        <VimCommandView />
+      </Box>
+    </VimContext>
   );
 };
 

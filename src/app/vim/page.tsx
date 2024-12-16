@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const VimPage: NextPage = () => {
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-      <CommandForm />
+      <CommandForm onChange={console.log} />
       <div>VIM Commands:</div>
       <div>
         <a href="https://github.com/vimalmenon/neovim" target="_blank" rel="noreferrer">

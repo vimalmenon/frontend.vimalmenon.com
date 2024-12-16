@@ -4,24 +4,26 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { useForm } from 'react-hook-form';
+import { ICommandForm } from './CommandForm';
+import { ICommand } from '@types';
 
-export const CommandForm: React.FC = () => {
+export const CommandForm: React.FC<ICommandForm> = ({ onChange }) => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm<ICommand>();
   console.log(errors);
   return (
-    <form onSubmit={handleSubmit(console.log)} noValidate>
+    <form onSubmit={handleSubmit(onChange)} noValidate>
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
         <TextField
           error
           required
-          label="Description"
+          label="Describe"
           size="small"
-          id="description"
-          {...register('description', { required: true, minLength: 5 })}
+          id="describe"
+          {...register('describe', { required: true, minLength: 5 })}
           helperText={'None'}
         />
         <TextField required label="Command" size="small" id="command" />

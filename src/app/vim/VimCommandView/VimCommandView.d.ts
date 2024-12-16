@@ -1,5 +1,5 @@
-import { ICommand } from "@types";
+import { ICommand } from '@types';
 
 export interface IVimCommandView {
-  commands: ICommand[]
+  commands: ICommand[];
 }

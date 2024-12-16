@@ -4,7 +4,7 @@ import { useVimForm } from '../Vim.service';
 import Box from '@mui/material/Box';
 import { Fragment } from 'react';
 import { Highlight } from '@components';
-import { IVimCommandView } from "./VimCommandView";
+import { IVimCommandView } from './VimCommandView';
 
 export const VimCommandView: React.FC<IVimCommandView> = ({ commands }) => {
   const { mode } = useVimForm();

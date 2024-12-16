@@ -6,13 +6,17 @@ import Button from '@mui/material/Button';
 import { useForm } from 'react-hook-form';
 import { ICommandForm } from './CommandForm';
 import { ICommand } from '@types';
+import { yupResolver } from '@hookform/resolvers/yup';
+import { schema } from './CommandForm.service';
 
 export const CommandForm: React.FC<ICommandForm> = ({ onChange, onFormCancel }) => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<ICommand>();
+  } = useForm<ICommand>({
+    resolver: yupResolver<ICommand>(schema),
+  });
   console.log(errors);
   return (
     <form onSubmit={handleSubmit(onChange)} noValidate>

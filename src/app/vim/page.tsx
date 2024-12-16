@@ -10,9 +10,10 @@ export const metadata: Metadata = {
 };
 
 const VimPage: NextPage = () => {
+  const onChange = (): boolean => false;
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-      <CommandForm onChange={console.log} />
+      <CommandForm onChange={onChange} />
       <div>VIM Commands:</div>
       <div>
         <a href="https://github.com/vimalmenon/neovim" target="_blank" rel="noreferrer">

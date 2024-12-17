@@ -17,21 +17,36 @@ export const CommandForm: React.FC<ICommandForm> = ({ onChange, onFormCancel }) 
   } = useForm<ICommand>({
     resolver: yupResolver<ICommand>(schema),
   });
-  console.log(errors);
   return (
     <form onSubmit={handleSubmit(onChange)} noValidate>
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
         <TextField
-          error
+          error={!!errors.describe?.message}
           required
           label="Describe"
           size="small"
           id="describe"
-          {...register('describe', { required: true, minLength: 5 })}
-          helperText={'None'}
+          {...register('describe')}
+          helperText={errors.describe?.message}
         />
-        <TextField required label="Command" size="small" id="command" />
-        <TextField required label="Language" size="small" id="language" />
+        <TextField
+          error={!!errors.command?.message}
+          required
+          label="Command"
+          size="small"
+          id="command"
+          {...register('command')}
+          helperText={errors.command?.message}
+        />
+        <TextField
+          error={!!errors.language?.message}
+          required
+          label="Language"
+          size="small"
+          id="language"
+          {...register('language')}
+          helperText={errors.language?.message}
+        />
         <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
           <Button variant="contained" type="submit">
             Save

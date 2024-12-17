@@ -17,7 +17,7 @@ export const VimCommandView: React.FC<IVimCommandView> = ({ commands }) => {
               <Box component="p" sx={{ margin: 0.5 }}>
                 {data.describe}
               </Box>
-              <Highlight code={data.command} language={data.language} />
+              <Highlight code={data.command} language="bash" />
             </Fragment>
           );
         })}

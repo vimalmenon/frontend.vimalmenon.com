@@ -12,6 +12,7 @@ export interface INavigation {
 }
 
 export interface ICommand {
+  id?: string;
   describe: string;
   command: string;
   language: LanguageType;

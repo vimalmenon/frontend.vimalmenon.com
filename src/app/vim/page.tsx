@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description: 'This is my personal website',
 };
 
-const VimPage: NextPage = () => {
+const VimPage: NextPage = async () => {
   return (
     <VimContext>
       <Box sx={{ display: 'flex', flexDirection: 'column' }}>

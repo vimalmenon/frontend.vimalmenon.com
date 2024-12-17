@@ -4,6 +4,7 @@ import { NotImplemented, apiCaller } from '@utility';
 import { ICommand } from '@types';
 import { API } from '@constants';
 import { IUseVimForm } from './Vim';
+import { useRouter } from 'next/navigation';
 
 export const VimContext = React.createContext<IVimContext>({
   mode: 'VIEW',
@@ -16,8 +17,11 @@ export const useVimContext = (): IVimContext => {
 
 export const useVimForm = (): IUseVimForm => {
   const { mode, setMode } = useVimContext();
+  const { refresh } = useRouter();
   const onFormSave = async (data: ICommand): Promise<void> => {
     await apiCaller(API.PostVimData(data));
+    refresh();
+    onFormToggle();
   };
   const onFormToggle = (): void => {
     setMode(mode === 'VIEW' ? 'EDIT' : 'VIEW');
@@ -25,6 +29,7 @@ export const useVimForm = (): IUseVimForm => {
   const onCommandDelete = async (id?: string): Promise<void> => {
     if (id) {
       await apiCaller(API.DeleteVimData(id));
+      refresh();
     }
   };
   return {

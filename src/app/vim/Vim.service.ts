@@ -22,8 +22,10 @@ export const useVimForm = (): IUseVimForm => {
   const onFormToggle = (): void => {
     setMode(mode === 'VIEW' ? 'EDIT' : 'VIEW');
   };
-  const onCommandDelete = async (id: string): Promise<void> => {
-    await apiCaller(API.DeleteVimData(id));
+  const onCommandDelete = async (id?: string): Promise<void> => {
+    if (id) {
+      await apiCaller(API.DeleteVimData(id));
+    }
   };
   return {
     mode,

@@ -1,7 +1,7 @@
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
-import { env } from '../../config';
+import { env } from '@constants';
 
 export const Footer: React.FC = () => {
   return (

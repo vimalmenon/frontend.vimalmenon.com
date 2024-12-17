@@ -18,3 +18,9 @@ export interface ICommand {
 }
 
 export type FormMode = 'VIEW' | 'EDIT';
+
+export interface IApi {
+  url: string;
+  method: 'POST' | 'GET' | 'PUT' | 'DELETE';
+  body?: string;
+}

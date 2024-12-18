@@ -6,8 +6,8 @@ import { Fragment } from 'react';
 import { Highlight } from '@components';
 import { IVimCommandView } from './VimCommandView';
 import { Icons } from '@constants';
-
 import IconButton from '@mui/material/IconButton';
+
 export const VimCommandView: React.FC<IVimCommandView> = ({ commands }) => {
   const { mode, onCommandDelete, setCommand } = useVimForm();
   if (mode === 'VIEW') {
@@ -29,7 +29,7 @@ export const VimCommandView: React.FC<IVimCommandView> = ({ commands }) => {
                   </IconButton>
                 </div>
               </Box>
-              <Highlight code={data.command} language="bash" />
+              <Highlight code={data.command} language={data.language} />
             </Fragment>
           );
         })}

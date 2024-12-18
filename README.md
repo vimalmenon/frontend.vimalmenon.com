@@ -13,7 +13,6 @@ Frontend for vimalmenon.com
 - [ ] Make the docker image size smaller (Less than 100MB)
 - [ ] Create a multiple stage build
 - [ ] Edit data using form
-- [ ] Value not working in Select
 
 #### Issues
 

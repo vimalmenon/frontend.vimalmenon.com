@@ -6,11 +6,11 @@ import IconButton from '@mui/material/IconButton';
 import { useVimForm } from '../Vim.service';
 
 export const VimCommandPanel: React.FC = () => {
-  const { onFormToggle, mode } = useVimForm();
+  const { onFormAdd, mode } = useVimForm();
   return (
     <Box>
       {mode === 'VIEW' ? (
-        <IconButton size="small" onClick={onFormToggle}>
+        <IconButton size="small" onClick={onFormAdd}>
           <AddIcon />
         </IconButton>
       ) : null}

@@ -23,10 +23,7 @@ export const useVimForm = (): IUseVimForm => {
   const onFormSave = async (data: ICommand): Promise<void> => {
     await apiCaller(API.PostVimData(data));
     refresh();
-    onFormToggle();
-  };
-  const onFormToggle = (): void => {
-    setMode(mode === 'VIEW' ? 'EDIT' : 'VIEW');
+    setMode('VIEW');
   };
   const onCommandDelete = async (id?: string): Promise<void> => {
     if (id) {
@@ -42,6 +39,9 @@ export const useVimForm = (): IUseVimForm => {
     setCommand(undefined);
     setMode('ADD');
   };
+  const onFormCancel = (): void => {
+    setMode('VIEW');
+  };
   return {
     mode,
     command,
@@ -49,7 +49,7 @@ export const useVimForm = (): IUseVimForm => {
     onFormSave,
     onFormEdit,
     onFormAdd,
-    onFormToggle,
     onCommandDelete,
+    onFormCancel,
   };
 };

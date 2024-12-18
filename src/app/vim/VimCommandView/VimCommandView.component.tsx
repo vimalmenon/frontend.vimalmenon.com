@@ -9,7 +9,7 @@ import { Icons } from '@constants';
 
 import IconButton from '@mui/material/IconButton';
 export const VimCommandView: React.FC<IVimCommandView> = ({ commands }) => {
-  const { mode, onCommandDelete } = useVimForm();
+  const { mode, onCommandDelete, setCommand } = useVimForm();
   if (mode === 'VIEW') {
     return (
       <div>
@@ -22,7 +22,7 @@ export const VimCommandView: React.FC<IVimCommandView> = ({ commands }) => {
               >
                 {data.describe}
                 <div>
-                  <IconButton size="small">
+                  <IconButton size="small" onClick={() => setCommand(data)}>
                     <Icons.Edit />
                   </IconButton>
                   <IconButton size="small" onClick={() => onCommandDelete(data.id)}>

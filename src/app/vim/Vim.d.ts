@@ -11,6 +11,7 @@ export interface IVimContext {
 export interface IUseVimForm {
   mode: FormMode;
   command: ICommand | undefined;
+  setCommand: Dispatch<SetStateAction<ICommand | undefined>>;
   onFormSave: (data: ICommand) => Promise<void>;
   onFormToggle: () => void;
   onCommandDelete: (id?: string) => void;

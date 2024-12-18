@@ -18,7 +18,7 @@ export const useVimContext = (): IVimContext => {
 };
 
 export const useVimForm = (): IUseVimForm => {
-  const { mode, setMode, command } = useVimContext();
+  const { mode, setMode, command, setCommand } = useVimContext();
   const { refresh } = useRouter();
   const onFormSave = async (data: ICommand): Promise<void> => {
     await apiCaller(API.PostVimData(data));
@@ -37,6 +37,7 @@ export const useVimForm = (): IUseVimForm => {
   return {
     mode,
     command,
+    setCommand,
     onFormSave,
     onFormToggle,
     onCommandDelete,

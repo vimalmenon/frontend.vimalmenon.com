@@ -34,11 +34,21 @@ export const useVimForm = (): IUseVimForm => {
       refresh();
     }
   };
+  const onFormEdit = (data: ICommand): void => {
+    setCommand(data);
+    setMode('EDIT');
+  };
+  const onFormAdd = (): void => {
+    setCommand(undefined);
+    setMode('ADD');
+  };
   return {
     mode,
     command,
     setCommand,
     onFormSave,
+    onFormEdit,
+    onFormAdd,
     onFormToggle,
     onCommandDelete,
   };

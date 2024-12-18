@@ -15,4 +15,6 @@ export interface IUseVimForm {
   onFormSave: (data: ICommand) => Promise<void>;
   onFormToggle: () => void;
   onCommandDelete: (id?: string) => void;
+  onFormEdit: (data: ICommand) => void;
+  onFormAdd: () => void;
 }

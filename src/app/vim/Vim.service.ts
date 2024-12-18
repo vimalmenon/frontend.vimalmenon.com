@@ -9,6 +9,8 @@ import { useRouter } from 'next/navigation';
 export const VimContext = React.createContext<IVimContext>({
   mode: 'VIEW',
   setMode: NotImplemented,
+  command: undefined,
+  setCommand: NotImplemented,
 });
 
 export const useVimContext = (): IVimContext => {

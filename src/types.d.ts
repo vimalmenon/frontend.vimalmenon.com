@@ -18,7 +18,7 @@ export interface ICommand {
   language: LanguageType;
 }
 
-export type FormMode = 'VIEW' | 'EDIT';
+export type FormMode = 'VIEW' | 'EDIT' | 'ADD';
 
 export interface IApi {
   url: string;

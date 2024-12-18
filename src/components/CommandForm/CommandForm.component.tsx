@@ -3,7 +3,7 @@
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import { useForm } from 'react-hook-form';
+import { useForm, Controller } from 'react-hook-form';
 import { ICommandForm } from './CommandForm';
 import { ICommand, LanguageType } from '@types';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -16,12 +16,12 @@ export const CommandForm: React.FC<ICommandForm> = ({ onChange, onFormCancel, co
   const {
     register,
     handleSubmit,
+    control,
     formState: { errors },
   } = useForm<ICommand>({
     defaultValues: command,
     resolver: yupResolver<ICommand>(schema),
   });
-  console.log(command);
   return (
     <form onSubmit={handleSubmit(onChange)} noValidate>
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
@@ -43,24 +43,33 @@ export const CommandForm: React.FC<ICommandForm> = ({ onChange, onFormCancel, co
           {...register('command')}
           helperText={errors.command?.message}
         />
-        <TextField
-          select
-          error={!!errors.language?.message}
-          required
-          label="Language"
-          size="small"
-          id="language"
-          inputProps={{ ...register('language') }}
-          helperText={errors.language?.message}
-        >
-          {LanguageOption.map((data) => {
-            return (
-              <MenuItem key={data} value={data}>
-                {data}
-              </MenuItem>
-            );
-          })}
-        </TextField>
+        <Controller
+          control={control}
+          name="language"
+          render={({ field: { onChange, onBlur, value, ref } }) => (
+            <TextField
+              select
+              error={!!errors.language?.message}
+              required
+              label="Language"
+              size="small"
+              id="language"
+              value={value}
+              onChange={(e) => onChange(e.target.value)}
+              ref={ref}
+              onBlur={onBlur}
+              helperText={errors.language?.message}
+            >
+              {LanguageOption.map((data) => {
+                return (
+                  <MenuItem key={data} value={data}>
+                    {data}
+                  </MenuItem>
+                );
+              })}
+            </TextField>
+          )}
+        />
         <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
           <Button variant="contained" type="submit">
             Save

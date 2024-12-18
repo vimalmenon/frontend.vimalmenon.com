@@ -34,6 +34,7 @@ export const VimCommands: ICommand[] = [
     describe: 'Go to start of the page',
     command: 'gg',
     language: 'bash',
+    hidden: true
   },
   {
     describe: 'Go to end of the word',
@@ -68,21 +69,6 @@ export const VimCommands: ICommand[] = [
   {
     describe: 'End of round bracket',
     command: '])',
-    language: 'bash',
-  },
-  {
-    describe: 'Move to next buffer',
-    command: 'b + n',
-    language: 'bash',
-  },
-  {
-    describe: 'Move to previous buffer',
-    command: 'b + p',
-    language: 'bash',
-  },
-  {
-    describe: 'List all buffer',
-    command: ':ls',
     language: 'bash',
   },
   {

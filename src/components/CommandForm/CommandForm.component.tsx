@@ -54,7 +54,7 @@ export const CommandForm: React.FC<ICommandForm> = ({ onChange, onFormCancel, co
               label="Language"
               size="small"
               id="language"
-              value={value || "bash"}
+              value={value || 'bash'}
               onChange={(e) => onChange(e.target.value)}
               ref={ref}
               onBlur={onBlur}

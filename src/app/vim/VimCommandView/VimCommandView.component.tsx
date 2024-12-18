@@ -14,6 +14,9 @@ export const VimCommandView: React.FC<IVimCommandView> = ({ commands }) => {
     return (
       <div>
         {commands.map((data, index) => {
+          if (data.hidden) {
+            return null;
+          }
           return (
             <Fragment key={index}>
               <Box sx={{ margin: 0.5, display: 'flex', justifyContent: 'space-between' }}>

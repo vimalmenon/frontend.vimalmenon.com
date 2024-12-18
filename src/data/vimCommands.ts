@@ -5,7 +5,7 @@ export const VimCommands: ICommand[] = [
     describe: 'Start Vim from current folder',
     command: 'vim .',
     language: 'bash',
-    hidden: true
+    hidden: true,
   },
   {
     describe: 'Switch between window',
@@ -16,6 +16,7 @@ export const VimCommands: ICommand[] = [
     describe: 'Quit pane',
     command: '<ctrl> + q',
     language: 'bash',
+    hidden: true,
   },
   {
     describe: 'Save pane',

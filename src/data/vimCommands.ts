@@ -5,11 +5,7 @@ export const VimCommands: ICommand[] = [
     describe: 'Start Vim from current folder',
     command: 'vim .',
     language: 'bash',
-  },
-  {
-    describe: 'Show file explorer',
-    command: '<f5>',
-    language: 'bash',
+    hidden: true
   },
   {
     describe: 'Switch between window',
@@ -27,11 +23,6 @@ export const VimCommands: ICommand[] = [
     language: 'bash',
   },
   {
-    describe: 'Go to Edit Mode',
-    command: '<space>',
-    language: 'bash',
-  },
-  {
     describe: 'Go to End of Page',
     command: '<shift> g',
     language: 'bash',
@@ -43,7 +34,7 @@ export const VimCommands: ICommand[] = [
   },
   {
     describe: 'Go to end of the word',
-    command: '<shift> $',
+    command: '$',
     language: 'bash',
   },
   {

@@ -8,13 +8,9 @@ import { ICommandForm } from './CommandForm';
 import { ICommand, LanguageType } from '@types';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { schema } from './CommandForm.service';
-import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
-import FormHelperText from '@mui/material/FormHelperText';
-import FormControl from '@mui/material/FormControl';
-import InputLabel from '@mui/material/InputLabel';
 
-export const LanguageOption: LanguageType[] = ['bash', 'shell', 'rust', 'javascript'];
+const LanguageOption: LanguageType[] = ['bash', 'shell', 'rust', 'javascript'];
 
 export const CommandForm: React.FC<ICommandForm> = ({ onChange, onFormCancel, command = {} }) => {
   const {
@@ -25,6 +21,7 @@ export const CommandForm: React.FC<ICommandForm> = ({ onChange, onFormCancel, co
     defaultValues: command,
     resolver: yupResolver<ICommand>(schema),
   });
+  console.log(command);
   return (
     <form onSubmit={handleSubmit(onChange)} noValidate>
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
@@ -46,19 +43,24 @@ export const CommandForm: React.FC<ICommandForm> = ({ onChange, onFormCancel, co
           {...register('command')}
           helperText={errors.command?.message}
         />
-        <FormControl fullWidth size="small" error={!!errors.language?.message}>
-          <InputLabel id="language">Language</InputLabel>
-          <Select label="Language" id="language" {...register('language')}>
-            {LanguageOption.map((data) => {
-              return (
-                <MenuItem key={data} value={data}>
-                  {data}
-                </MenuItem>
-              );
-            })}
-          </Select>
-          <FormHelperText>{errors.language?.message}</FormHelperText>
-        </FormControl>
+        <TextField
+          select
+          error={!!errors.language?.message}
+          required
+          label="Language"
+          size="small"
+          id="language"
+          inputProps={{ ...register('language') }}
+          helperText={errors.language?.message}
+        >
+          {LanguageOption.map((data) => {
+            return (
+              <MenuItem key={data} value={data}>
+                {data}
+              </MenuItem>
+            );
+          })}
+        </TextField>
         <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
           <Button variant="contained" type="submit">
             Save

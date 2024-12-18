@@ -22,6 +22,9 @@ export const VimCommandView: React.FC<IVimCommandView> = ({ commands }) => {
               >
                 {data.describe}
                 <div>
+                  <IconButton size="small" >
+                    <Icons.Edit />
+                  </IconButton>
                   <IconButton size="small" onClick={() => onCommandDelete(data.id)}>
                     <Icons.Delete />
                   </IconButton>

@@ -28,7 +28,7 @@ export const NeoVimCommands: ICommand[] = [
   },
   {
     describe: 'Toggle hidden item in navigation',
-    command: '<ctrl> h',
+    command: '<shift> h',
     language: 'bash',
   },
   {

@@ -12,7 +12,6 @@ Frontend for vimalmenon.com
 - [ ] Standardize the command
 - [ ] Make the docker image size smaller (Less than 100MB)
 - [ ] Create a multiple stage build
-- [ ] Edit data using form
 
 #### Issues
 

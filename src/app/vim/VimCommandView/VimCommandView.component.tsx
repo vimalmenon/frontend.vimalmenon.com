@@ -16,9 +16,7 @@ export const VimCommandView: React.FC<IVimCommandView> = ({ commands }) => {
         {commands.map((data, index) => {
           return (
             <Fragment key={index}>
-              <Box
-                sx={{ margin: 0.5, display: 'flex', justifyContent: 'space-between' }}
-              >
+              <Box sx={{ margin: 0.5, display: 'flex', justifyContent: 'space-between' }}>
                 {data.describe}
                 <div>
                   <IconButton size="small" onClick={() => setCommand(data)}>

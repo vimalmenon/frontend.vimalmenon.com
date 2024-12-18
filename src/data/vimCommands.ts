@@ -22,14 +22,16 @@ export const VimCommands: ICommand[] = [
     describe: 'Save pane',
     command: '<ctrl> s',
     language: 'bash',
+    hidden: true,
   },
   {
-    describe: 'Go to End of Page',
+    describe: 'Go to end of the page',
     command: '<shift> g',
     language: 'bash',
+    hidden: true,
   },
   {
-    describe: 'Got to start of Page',
+    describe: 'Go to start of the page',
     command: 'gg',
     language: 'bash',
   },

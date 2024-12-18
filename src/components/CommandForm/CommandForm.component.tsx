@@ -5,9 +5,16 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { useForm } from 'react-hook-form';
 import { ICommandForm } from './CommandForm';
-import { ICommand } from '@types';
+import { ICommand, LanguageType } from '@types';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { schema } from './CommandForm.service';
+import Select from '@mui/material/Select';
+import MenuItem from '@mui/material/MenuItem';
+import FormHelperText from '@mui/material/FormHelperText';
+import FormControl from '@mui/material/FormControl';
+import InputLabel from '@mui/material/InputLabel';
+
+export const LanguageOption: LanguageType[] = ['bash', 'shell', 'rust', 'javascript'];
 
 export const CommandForm: React.FC<ICommandForm> = ({ onChange, onFormCancel }) => {
   const {
@@ -38,15 +45,19 @@ export const CommandForm: React.FC<ICommandForm> = ({ onChange, onFormCancel }) 
           {...register('command')}
           helperText={errors.command?.message}
         />
-        <TextField
-          error={!!errors.language?.message}
-          required
-          label="Language"
-          size="small"
-          id="language"
-          {...register('language')}
-          helperText={errors.language?.message}
-        />
+        <FormControl fullWidth size="small" error={!!errors.language?.message}>
+          <InputLabel id="language">Language</InputLabel>
+          <Select label="Language" id="language" {...register('language')}>
+            {LanguageOption.map((data) => {
+              return (
+                <MenuItem key={data} value={data}>
+                  {data}
+                </MenuItem>
+              );
+            })}
+          </Select>
+          <FormHelperText>{errors.language?.message}</FormHelperText>
+        </FormControl>
         <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
           <Button variant="contained" type="submit">
             Save

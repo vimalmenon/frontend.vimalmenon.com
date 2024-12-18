@@ -9,5 +9,6 @@ export const schema = yup
     describe: yup.string().required('Required'),
     command: yup.string().required('Required'),
     language: yup.string<LanguageType>().required('Required'),
+    hidden: yup.boolean().optional(),
   })
   .required();

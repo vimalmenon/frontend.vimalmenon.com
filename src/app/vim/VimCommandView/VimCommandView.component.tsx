@@ -18,14 +18,16 @@ export const VimCommandView: React.FC<IVimCommandView> = ({ commands }) => {
             <Fragment key={index}>
               <Box sx={{ margin: 0.5, display: 'flex', justifyContent: 'space-between' }}>
                 {data.describe}
-                <div>
-                  <IconButton size="small" onClick={() => onFormEdit(data)}>
-                    <Icons.Edit />
-                  </IconButton>
-                  <IconButton size="small" onClick={() => onCommandDelete(data.id)}>
-                    <Icons.Delete />
-                  </IconButton>
-                </div>
+                {data.id ? (
+                  <div>
+                    <IconButton size="small" onClick={() => onFormEdit(data)}>
+                      <Icons.Edit />
+                    </IconButton>
+                    <IconButton size="small" onClick={() => onCommandDelete(data.id)}>
+                      <Icons.Delete />
+                    </IconButton>
+                  </div>
+                ) : null}
               </Box>
               <Highlight code={data.command} language={data.language} />
             </Fragment>

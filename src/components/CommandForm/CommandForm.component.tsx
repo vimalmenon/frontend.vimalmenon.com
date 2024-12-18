@@ -16,12 +16,13 @@ import InputLabel from '@mui/material/InputLabel';
 
 export const LanguageOption: LanguageType[] = ['bash', 'shell', 'rust', 'javascript'];
 
-export const CommandForm: React.FC<ICommandForm> = ({ onChange, onFormCancel }) => {
+export const CommandForm: React.FC<ICommandForm> = ({ onChange, onFormCancel, command = {} }) => {
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<ICommand>({
+    defaultValues: command,
     resolver: yupResolver<ICommand>(schema),
   });
   return (

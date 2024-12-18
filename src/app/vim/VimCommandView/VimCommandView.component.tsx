@@ -17,7 +17,6 @@ export const VimCommandView: React.FC<IVimCommandView> = ({ commands }) => {
           return (
             <Fragment key={index}>
               <Box
-                component="p"
                 sx={{ margin: 0.5, display: 'flex', justifyContent: 'space-between' }}
               >
                 {data.describe}

@@ -67,4 +67,9 @@ export const NeoVimCommands: ICommand[] = [
     command: '~',
     language: 'bash',
   },
+  {
+    describe: 'Check the error in the line',
+    command: '<space> q',
+    language: 'bash',
+  },
 ];

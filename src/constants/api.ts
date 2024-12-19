@@ -6,7 +6,7 @@ const GetVimData = (): IApi => ({
   method: 'GET',
 });
 
-const PostVimData = (data: ICommand): IApi => ({
+const AddVimData = (data: ICommand): IApi => ({
   url: `${env.API}/vim/`,
   method: 'POST',
   body: JSON.stringify(data),
@@ -16,9 +16,15 @@ const DeleteVimData = (id: string): IApi => ({
   url: `${env.API}/vim/${id}`,
   method: 'DELETE',
 });
+const UpdateVimData = (data: ICommand): IApi => ({
+  url: `${env.API}/vim/`,
+  method: 'PUT',
+  body: JSON.stringify(data),
+});
 
 export const API = {
   GetVimData,
-  PostVimData,
+  AddVimData,
   DeleteVimData,
+  UpdateVimData,
 };

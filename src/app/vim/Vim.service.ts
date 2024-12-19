@@ -21,9 +21,15 @@ export const useVimForm = (): IUseVimForm => {
   const { mode, setMode, command, setCommand } = useVimContext();
   const { refresh } = useRouter();
   const onFormSave = async (data: ICommand): Promise<void> => {
-    await apiCaller(API.PostVimData(data));
-    refresh();
-    setMode('VIEW');
+    if (data.id) {
+      await apiCaller(API.UpdateVimData(data));
+      refresh();
+      setMode('VIEW');
+    } else {
+      await apiCaller(API.AddVimData(data));
+      refresh();
+      setMode('VIEW');
+    }
   };
   const onCommandDelete = async (id?: string): Promise<void> => {
     if (id) {

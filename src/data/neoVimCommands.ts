@@ -56,7 +56,6 @@ export const NeoVimCommands: ICommand[] = [
     command: 'g f',
     language: 'bash',
   },
-
   {
     describe: 'Comment the code',
     command: 'g c',

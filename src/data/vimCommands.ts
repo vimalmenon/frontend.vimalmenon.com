@@ -40,6 +40,7 @@ export const VimCommands: ICommand[] = [
     describe: 'Go to end of the word',
     command: '$',
     language: 'bash',
+    hidden: true,
   },
   {
     describe: 'Copy to register with a letter',

@@ -12,7 +12,13 @@ import MenuItem from '@mui/material/MenuItem';
 
 const LanguageOption: LanguageType[] = ['bash', 'shell', 'rust', 'javascript'];
 
-export const CommandForm: React.FC<ICommandForm> = ({ onChange, onFormCancel, command = {} }) => {
+export const CommandForm: React.FC<ICommandForm> = ({
+  onChange,
+  onFormCancel,
+  command = {
+    language: 'bash',
+  },
+}) => {
   const {
     register,
     handleSubmit,
@@ -54,7 +60,7 @@ export const CommandForm: React.FC<ICommandForm> = ({ onChange, onFormCancel, co
               label="Language"
               size="small"
               id="language"
-              value={value || 'bash'}
+              value={value}
               onChange={(e) => onChange(e.target.value)}
               ref={ref}
               onBlur={onBlur}

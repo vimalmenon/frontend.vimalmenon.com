@@ -15,6 +15,7 @@ export const NeoVimCommands: ICommand[] = [
     describe: 'Refresh the buffer',
     command: '<F5>',
     language: 'bash',
+    hidden: true,
   },
   {
     describe: 'Virtually select all',

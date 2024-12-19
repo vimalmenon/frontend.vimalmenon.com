@@ -34,7 +34,7 @@ export const VimCommands: ICommand[] = [
     describe: 'Go to start of the page',
     command: 'gg',
     language: 'bash',
-    hidden: true
+    hidden: true,
   },
   {
     describe: 'Go to end of the word',

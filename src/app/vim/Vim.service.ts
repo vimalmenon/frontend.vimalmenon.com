@@ -61,3 +61,14 @@ export const useVimForm = (): IUseVimForm => {
     onFormCancel,
   };
 };
+
+export const useVimSearch = () => {
+  const { search, setSearch } = useVimContext();
+  const onSearchChange: React.ChangeEventHandler<HTMLTextAreaElement> = (e) => {
+    setSearch(e.target.value);
+  };
+  return {
+    search,
+    onSearchChange,
+  };
+};

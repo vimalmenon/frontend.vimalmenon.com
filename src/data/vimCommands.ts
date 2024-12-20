@@ -115,16 +115,19 @@ export const VimCommands: ICommand[] = [
     describe: 'Keep the cursor in middle',
     command: 'z z',
     language: 'bash',
+    hidden: true,
   },
   {
     describe: 'Keep the cursor in top',
     command: 'z t',
     language: 'bash',
+    hidden: true,
   },
   {
     describe: 'Keep the cursor in bottom',
     command: 'z b',
     language: 'bash',
+    hidden: true,
   },
   {
     describe: 'Search on selected word that is selected',
@@ -197,19 +200,19 @@ export const VimCommands: ICommand[] = [
     describe: 'Insert new line at beginning',
     command: 'O',
     language: 'bash',
-    hidden: true
+    hidden: true,
   },
   {
     describe: 'Insert mode at the beginning of line',
     command: 'I',
     language: 'bash',
-    hidden: true
+    hidden: true,
   },
   {
     describe: 'Insert mode at the end of line',
     command: 'A',
     language: 'bash',
-    hidden: true
+    hidden: true,
   },
   {
     describe: 'Move cursor one line at top',

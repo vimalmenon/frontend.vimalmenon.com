@@ -139,6 +139,7 @@ export const VimCommands: ICommand[] = [
     describe: 'Perform the last operation',
     command: '.',
     language: 'bash',
+    hidden: true,
   },
   {
     describe: 'Visually select inside bracket',
@@ -156,14 +157,16 @@ export const VimCommands: ICommand[] = [
     language: 'bash',
   },
   {
-    describe: 'Go to <letter> forwards',
+    describe: 'Go to <letter> forward',
     command: 'f <letter>',
     language: 'bash',
+    hidden: true
   },
   {
-    describe: 'Go to <letter> backwards',
+    describe: 'Go to <letter> backward',
     command: 'F <letter>',
     language: 'bash',
+    hidden: true
   },
   {
     describe: 'Go to end of line',

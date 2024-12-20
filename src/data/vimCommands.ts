@@ -104,6 +104,7 @@ export const VimCommands: ICommand[] = [
     describe: 'Horizontal Split',
     command: '<ctr> w + s',
     language: 'bash',
+    hidden: true
   },
   {
     describe: 'Indent Line',
@@ -187,11 +188,13 @@ export const VimCommands: ICommand[] = [
     describe: 'Insert new line at end',
     command: 'o',
     language: 'bash',
+    hidden: true
   },
   {
     describe: 'Insert new line at beginning',
     command: 'O',
     language: 'bash',
+    hidden: true
   },
   {
     describe: 'Insert mode at the beginning of Line',

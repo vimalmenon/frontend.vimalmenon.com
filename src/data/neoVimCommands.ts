@@ -5,11 +5,13 @@ export const NeoVimCommands: ICommand[] = [
     describe: 'Show Buffers in telescope',
     command: '<space> <space>',
     language: 'bash',
+    hidden: true,
   },
   {
     describe: 'Show navigation tree',
     command: '\\',
     language: 'bash',
+    hidden: true,
   },
   {
     describe: 'Refresh the buffer',
@@ -21,6 +23,7 @@ export const NeoVimCommands: ICommand[] = [
     describe: 'Virtually select all',
     command: '<ctrl> a',
     language: 'bash',
+    hidden: true,
   },
   {
     describe: 'Copy the current line',
@@ -36,6 +39,7 @@ export const NeoVimCommands: ICommand[] = [
     describe: 'Open lazy git',
     command: '<space> lg',
     language: 'bash',
+    hidden: true,
   },
   {
     describe: 'Toggle between corresponding brackets',
@@ -66,6 +70,7 @@ export const NeoVimCommands: ICommand[] = [
     describe: 'Change the case',
     command: '~',
     language: 'bash',
+    hidden: true,
   },
   {
     describe: 'Check the error in the line',

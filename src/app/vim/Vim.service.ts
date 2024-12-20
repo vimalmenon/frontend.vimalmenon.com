@@ -11,6 +11,8 @@ export const VimContext = React.createContext<IVimContext>({
   setMode: NotImplemented,
   command: undefined,
   setCommand: NotImplemented,
+  search: '',
+  setSearch: NotImplemented,
 });
 
 export const useVimContext = (): IVimContext => {

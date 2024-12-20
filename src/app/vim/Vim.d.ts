@@ -6,6 +6,8 @@ export interface IVimContext {
   setMode: Dispatch<SetStateAction<FormMode>>;
   command: ICommand | undefined;
   setCommand: Dispatch<SetStateAction<ICommand | undefined>>;
+  search: string;
+  setSearch: Dispatch<SetStateAction<string>>;
 }
 
 export interface IUseVimForm {

@@ -56,21 +56,25 @@ export const VimCommands: ICommand[] = [
     describe: 'Start of bracket',
     command: '[{',
     language: 'bash',
+    hidden: true,
   },
   {
     describe: 'End of bracket',
     command: ']}',
     language: 'bash',
+    hidden: true,
   },
   {
     describe: 'Start of round bracket',
     command: '[(',
     language: 'bash',
+    hidden: true,
   },
   {
     describe: 'End of round bracket',
     command: '])',
     language: 'bash',
+    hidden: true,
   },
   {
     describe: 'Move cursor to the top of Screen',

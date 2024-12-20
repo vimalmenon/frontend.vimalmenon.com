@@ -104,7 +104,7 @@ export const VimCommands: ICommand[] = [
     describe: 'Horizontal Split',
     command: '<ctr> w + s',
     language: 'bash',
-    hidden: true
+    hidden: true,
   },
   {
     describe: 'Indent Line',
@@ -161,40 +161,42 @@ export const VimCommands: ICommand[] = [
     describe: 'Go to <letter> forward',
     command: 'f <letter>',
     language: 'bash',
-    hidden: true
+    hidden: true,
   },
   {
     describe: 'Go to <letter> backward',
     command: 'F <letter>',
     language: 'bash',
-    hidden: true
+    hidden: true,
   },
   {
     describe: 'Go to end of line',
     command: '$',
     language: 'bash',
+    hidden: true,
   },
   {
     describe: 'Go to start of line',
     command: '^',
     language: 'bash',
+    hidden: true,
   },
   {
     describe: 'Go to beginning of line',
     command: '0',
     language: 'bash',
+    hidden: true,
   },
   {
     describe: 'Insert new line at end',
     command: 'o',
     language: 'bash',
-    hidden: true
+    hidden: true,
   },
   {
     describe: 'Insert new line at beginning',
     command: 'O',
     language: 'bash',
-    hidden: true
   },
   {
     describe: 'Insert mode at the beginning of Line',

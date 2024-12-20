@@ -72,3 +72,10 @@ export const useVimSearch = () => {
     onSearchChange,
   };
 };
+
+export const isSearched = (searchedValue: string, command: ICommand): boolean => {
+  if (searchedValue.trim() === '') {
+    return true;
+  }
+  return command.describe.toLowerCase().includes(searchedValue.trim().toLowerCase());
+};

@@ -29,11 +29,13 @@ export const NeoVimCommands: ICommand[] = [
     describe: 'Copy the current line',
     command: 'yy',
     language: 'bash',
+    hidden: true,
   },
   {
     describe: 'Toggle hidden item in navigation',
     command: '<shift> h',
     language: 'bash',
+    hidden: true,
   },
   {
     describe: 'Open lazy git',

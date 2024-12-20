@@ -197,16 +197,19 @@ export const VimCommands: ICommand[] = [
     describe: 'Insert new line at beginning',
     command: 'O',
     language: 'bash',
+    hidden: true
   },
   {
-    describe: 'Insert mode at the beginning of Line',
+    describe: 'Insert mode at the beginning of line',
     command: 'I',
     language: 'bash',
+    hidden: true
   },
   {
     describe: 'Insert mode at the end of line',
     command: 'A',
     language: 'bash',
+    hidden: true
   },
   {
     describe: 'Move cursor one line at top',
@@ -221,11 +224,6 @@ export const VimCommands: ICommand[] = [
   {
     describe: 'Move the screen one page down',
     command: '<ctrl> b',
-    language: 'bash',
-  },
-  {
-    describe: 'Insert mode at the end of line',
-    command: 'A',
     language: 'bash',
   },
   {

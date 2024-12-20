@@ -80,21 +80,25 @@ export const VimCommands: ICommand[] = [
     describe: 'Move cursor to the top of Screen',
     command: '<shift> + h',
     language: 'bash',
+    hidden: true,
   },
   {
     describe: 'Move cursor to the middle of the screen',
     command: '<shift> + m',
     language: 'bash',
+    hidden: true,
   },
   {
     describe: 'Move cursor to the end of the screen',
     command: '<shift> + l',
     language: 'bash',
+    hidden: true,
   },
   {
     describe: 'Vertical Split',
     command: '<ctr> w + v',
     language: 'bash',
+    hidden: true,
   },
   {
     describe: 'Horizontal Split',

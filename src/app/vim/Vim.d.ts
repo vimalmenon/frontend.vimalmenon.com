@@ -1,4 +1,4 @@
-import { FormMode, ICommand } from '@types';
+import { FormMode, ICommand, InputChange } from '@types';
 import { Dispatch, SetStateAction } from 'react';
 
 export interface IVimContext {
@@ -19,4 +19,9 @@ export interface IUseVimForm {
   onFormEdit: (data: ICommand) => void;
   onFormAdd: () => void;
   onFormCancel: () => void;
+}
+
+export interface IUseVimSearch {
+  search: string;
+  onSearchChange: InputChange;
 }

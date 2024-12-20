@@ -26,3 +26,5 @@ export interface IApi {
   method: 'POST' | 'GET' | 'PUT' | 'DELETE';
   body?: string;
 }
+
+export type InputChange = React.ChangeEventHandler<HTMLTextAreaElement>;

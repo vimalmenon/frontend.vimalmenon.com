@@ -1,7 +1,7 @@
 import React from 'react';
-import { IVimContext } from './Vim';
+import { IUseVimSearch, IVimContext } from './Vim';
 import { NotImplemented, apiCaller } from '@utility';
-import { ICommand } from '@types';
+import { ICommand, InputChange } from '@types';
 import { API } from '@constants';
 import { IUseVimForm } from './Vim';
 import { useRouter } from 'next/navigation';
@@ -62,9 +62,9 @@ export const useVimForm = (): IUseVimForm => {
   };
 };
 
-export const useVimSearch = () => {
+export const useVimSearch = (): IUseVimSearch => {
   const { search, setSearch } = useVimContext();
-  const onSearchChange: React.ChangeEventHandler<HTMLTextAreaElement> = (e) => {
+  const onSearchChange: InputChange = (e) => {
     setSearch(e.target.value);
   };
   return {

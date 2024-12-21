@@ -15,9 +15,6 @@ export const VimCommandView: React.FC<IVimCommandView> = ({ commands }) => {
     return (
       <div>
         {commands.map((data, index) => {
-          if (data.hidden) {
-            return null;
-          }
           if (isSearched(search, data)) {
             return (
               <Fragment key={index}>

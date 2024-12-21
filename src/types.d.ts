@@ -17,7 +17,6 @@ export interface ICommand {
   command: string;
   language: LanguageType;
   tags: string[];
-  hidden?: boolean;
 }
 
 export type FormMode = 'VIEW' | 'EDIT' | 'ADD';

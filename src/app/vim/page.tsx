@@ -4,7 +4,6 @@ import { VimContext } from './Vim.context';
 import { VimCommandForm } from './VimCommandForm';
 import { VimCommandView } from './VimCommandView';
 import { VimCommandPanel } from './VimCommandPanel';
-import { VimCommands, NeoVimCommands } from '@data';
 import { apiCaller } from '@utility';
 import { API } from '@constants';
 import { ICommand } from '@types';
@@ -23,7 +22,7 @@ const VimPage: NextPage = async () => {
         <div>VIM Commands:</div>
         <VimCommandPanel />
         <VimCommandForm />
-        <VimCommandView commands={[...result, ...VimCommands, ...NeoVimCommands]} />
+        <VimCommandView commands={[...result]} />
         <div>
           <a href="https://github.com/vimalmenon/neovim" target="_blank" rel="noreferrer">
             GitHub

@@ -55,12 +55,14 @@ export const VimCommands: ICommand[] = [
     command: '" + <letter> + y',
     language: 'bash',
     tags: [],
+    hidden: true,
   },
   {
     describe: 'Paste from register with a letter',
     command: '" + <letter> + p',
     language: 'bash',
     tags: [],
+    hidden: true,
   },
   {
     describe: 'Start of bracket',
@@ -160,12 +162,6 @@ export const VimCommands: ICommand[] = [
     tags: [],
   },
   {
-    describe: 'Visually select the Hightlight word',
-    command: 'g n',
-    language: 'bash',
-    tags: [],
-  },
-  {
     describe: 'Perform the last operation',
     command: '.',
     language: 'bash',
@@ -185,12 +181,6 @@ export const VimCommands: ICommand[] = [
     language: 'bash',
     tags: [],
     hidden: true,
-  },
-  {
-    describe: 'Search for a file',
-    command: '<ctrl> f',
-    language: 'bash',
-    tags: [],
   },
   {
     describe: 'Go to <letter> forward',
@@ -267,12 +257,6 @@ export const VimCommands: ICommand[] = [
     command: '<ctrl> y',
     language: 'bash',
     hidden: true,
-    tags: [],
-  },
-  {
-    describe: 'Move the screen one page down',
-    command: '<ctrl> b',
-    language: 'bash',
     tags: [],
   },
   {

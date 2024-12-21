@@ -58,12 +58,6 @@ export const NeoVimCommands: ICommand[] = [
     hidden: true,
   },
   {
-    describe: 'Add value to multiple lines',
-    command: '<ctrl> v + action',
-    language: 'bash',
-    tags: [],
-  },
-  {
     describe: 'Open a Link in browser',
     command: 'g x',
     language: 'bash',

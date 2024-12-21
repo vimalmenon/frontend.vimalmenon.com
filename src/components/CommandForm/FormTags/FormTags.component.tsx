@@ -5,7 +5,7 @@ import { useState } from 'react';
 import Chip from '@mui/material/Chip';
 import { KeyboardEventHandler } from 'react';
 
-export const FormTags: React.FC<IFormTags> = ({ value = [], onChange }) => {
+export const FormTags: React.FC<IFormTags> = ({ value, onChange, error }) => {
   const [tags, setTags] = useState<string[]>(value);
   const [inputTag, setInputTag] = useState<string>('');
   const onEnter: KeyboardEventHandler = (event) => {
@@ -26,12 +26,14 @@ export const FormTags: React.FC<IFormTags> = ({ value = [], onChange }) => {
   return (
     <Box sx={{ display: 'flex', gap: 2, flexDirection: 'column' }}>
       <TextField
+        error={!!error}
         size="small"
         value={inputTag}
         onChange={(e) => setInputTag(e.target.value)}
         onKeyDown={onEnter}
         fullWidth
         label="Tags"
+        helperText={error}
       />
       <Box sx={{ display: 'flex', gap: 2 }}>
         {tags.map((tag, index) => {

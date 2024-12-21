@@ -18,6 +18,7 @@ export const CommandForm: React.FC<ICommandForm> = ({
   onFormCancel,
   command = {
     language: 'bash',
+    tags: [],
   },
 }) => {
   const {
@@ -80,9 +81,9 @@ export const CommandForm: React.FC<ICommandForm> = ({
         <Controller
           control={control}
           name="tags"
-          render={({ field: { onChange, value } }) => (
-            <FormTags value={value} onChange={onChange} />
-          )}
+          render={({ field: { onChange, value } }) => {
+            return <FormTags value={value} onChange={onChange} error={errors.tags?.message} />;
+          }}
         />
         <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
           <Button variant="contained" type="submit">

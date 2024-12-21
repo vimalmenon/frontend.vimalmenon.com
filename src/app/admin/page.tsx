@@ -1,4 +1,3 @@
-
 import type { Metadata, NextPage } from 'next';
 import Box from '@mui/material/Box';
 

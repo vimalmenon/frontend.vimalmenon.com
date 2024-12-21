@@ -5,7 +5,7 @@ import { useState } from 'react';
 import Chip from '@mui/material/Chip';
 import { KeyboardEventHandler } from 'react';
 
-export const FormTags: React.FC<IFormTags> = ({ value }) => {
+export const FormTags: React.FC<IFormTags> = ({ value = [], onChange }) => {
   const [tags, setTags] = useState<string[]>(value);
   const [inputTag, setInputTag] = useState<string>('');
   const onEnter: KeyboardEventHandler = (event) => {
@@ -14,12 +14,14 @@ export const FormTags: React.FC<IFormTags> = ({ value }) => {
       if (!tags.includes(inputTag.toUpperCase())) {
         setTags([...tags, inputTag.toUpperCase()]);
         setInputTag('');
+        onChange([...tags, inputTag.toUpperCase()]);
       }
     }
   };
   const onDelete = (index: number): void => {
     tags.splice(index, 1);
     setTags([...tags]);
+    onChange([...tags]);
   };
   return (
     <Box sx={{ display: 'flex', gap: 2, flexDirection: 'column' }}>

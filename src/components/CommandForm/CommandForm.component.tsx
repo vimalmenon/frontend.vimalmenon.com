@@ -77,7 +77,13 @@ export const CommandForm: React.FC<ICommandForm> = ({
             </TextField>
           )}
         />
-        <FormTags value={[]} />
+        <Controller
+          control={control}
+          name="tags"
+          render={({ field: { onChange, value } }) => (
+            <FormTags value={value} onChange={onChange} />
+          )}
+        />
         <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
           <Button variant="contained" type="submit">
             Save

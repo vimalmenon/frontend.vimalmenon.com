@@ -3,8 +3,9 @@
 import Box from '@mui/material/Box';
 import AddIcon from '@mui/icons-material/Add';
 import IconButton from '@mui/material/IconButton';
-import { useVimContext, useVimForm, useVimSearch } from '../Vim.service';
 import TextField from '@mui/material/TextField';
+
+import { useVimContext, useVimForm, useVimSearch } from '../Vim.service';
 
 export const VimCommandPanel: React.FC = () => {
   const { onFormAdd, mode } = useVimForm();

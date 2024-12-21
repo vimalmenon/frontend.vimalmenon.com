@@ -9,6 +9,7 @@ import { ICommand, LanguageType } from '@types';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { schema } from './CommandForm.service';
 import MenuItem from '@mui/material/MenuItem';
+import { FormTags } from './FormTags';
 
 const LanguageOption: LanguageType[] = ['bash', 'shell', 'rust', 'javascript'];
 
@@ -76,6 +77,7 @@ export const CommandForm: React.FC<ICommandForm> = ({
             </TextField>
           )}
         />
+        <FormTags value={[]} />
         <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
           <Button variant="contained" type="submit">
             Save

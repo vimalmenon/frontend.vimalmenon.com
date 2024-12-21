@@ -13,6 +13,7 @@ export const VimCommands: ICommand[] = [
     command: '<ctrl> w + <UP | DOWN | RIGHT | LEFT>',
     language: 'bash',
     tags: [],
+    hidden: true,
   },
   {
     describe: 'Quit pane',

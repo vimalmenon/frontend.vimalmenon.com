@@ -55,6 +55,7 @@ export const NeoVimCommands: ICommand[] = [
     command: '%',
     language: 'bash',
     tags: [],
+    hidden: true,
   },
   {
     describe: 'Add value to multiple lines',
@@ -67,12 +68,14 @@ export const NeoVimCommands: ICommand[] = [
     command: 'g x',
     language: 'bash',
     tags: [],
+    hidden: true,
   },
   {
     describe: 'Open a file in nvim',
     command: 'g f',
     language: 'bash',
     tags: [],
+    hidden: true,
   },
   {
     describe: 'Comment the code',
@@ -92,5 +95,6 @@ export const NeoVimCommands: ICommand[] = [
     command: '<space> q',
     language: 'bash',
     tags: [],
+    hidden: true,
   },
 ];

@@ -3,16 +3,23 @@ import Box from '@mui/material/Box';
 import { IFormTags } from './FormTags';
 import { useState } from 'react';
 import Chip from '@mui/material/Chip';
+import { KeyboardEventHandler } from 'react';
 
 export const FormTags: React.FC<IFormTags> = ({ value }) => {
   const [tags, setTags] = useState<string[]>(value);
   const [inputTag, setInputTag] = useState<string>('');
-  const onEnter = (event: any): void => {
+  const onEnter: KeyboardEventHandler = (event) => {
     if (event.key === 'Enter') {
       event.preventDefault();
-      setTags([...tags, inputTag]);
-      setInputTag('');
+      if (!tags.includes(inputTag.toUpperCase())) {
+        setTags([...tags, inputTag.toUpperCase()]);
+        setInputTag('');
+      }
     }
+  };
+  const onDelete = (index: number): void => {
+    tags.splice(index, 1);
+    setTags([...tags]);
   };
   return (
     <Box sx={{ display: 'flex', gap: 2, flexDirection: 'column' }}>
@@ -25,8 +32,8 @@ export const FormTags: React.FC<IFormTags> = ({ value }) => {
         label="Tags"
       />
       <Box sx={{ display: 'flex', gap: 2 }}>
-        {tags.map((tag) => {
-          return <Chip label={tag} key={tag} />;
+        {tags.map((tag, index) => {
+          return <Chip label={tag} key={tag} onDelete={() => onDelete(index)} />;
         })}
       </Box>
     </Box>

@@ -1,15 +1,17 @@
 'use client';
 
-import { VimContext as Context } from './Vim.service';
 import { FormMode, ICommand } from '@types';
 import { useEffect, useState } from 'react';
+
 import { IContext } from './Vim';
+import { VimContext as Context } from './Vim.service';
 
 export const VimContext: React.FC<IContext> = ({ children, commands }) => {
   const [mode, setMode] = useState<FormMode>('VIEW');
   const [command, setCommand] = useState<ICommand | undefined>();
   const [search, setSearch] = useState<string>('');
   const [tags, setTags] = useState<string[]>([]);
+
   useEffect(() => {
     setTags(
       commands.reduce<string[]>((initialValue, data) => {
@@ -20,6 +22,7 @@ export const VimContext: React.FC<IContext> = ({ children, commands }) => {
       }, [])
     );
   }, [commands]);
+
   return (
     <Context.Provider
       value={{

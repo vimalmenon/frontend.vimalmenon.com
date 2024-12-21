@@ -23,11 +23,6 @@ const VimPage: NextPage = async () => {
         <VimCommandPanel />
         <VimCommandForm />
         <VimCommandView commands={result} />
-        <div>
-          <a href="https://github.com/vimalmenon/neovim" target="_blank" rel="noreferrer">
-            GitHub
-          </a>
-        </div>
       </Box>
     </VimContext>
   );

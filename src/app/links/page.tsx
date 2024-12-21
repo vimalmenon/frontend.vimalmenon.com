@@ -8,9 +8,16 @@ export const metadata: Metadata = {
 const LinksPage: NextPage = () => {
   return (
     <div>
-      <a href="https://crontab.guru/" target="blank">
-        Cron Tab
-      </a>
+      <div>
+        <a href="https://crontab.guru/" target="blank">
+          Cron Tab
+        </a>
+      </div>
+      <div>
+        <a href="https://github.com/vimalmenon/neovim" target="_blank" rel="noreferrer">
+          GitHub
+        </a>
+      </div>{' '}
     </div>
   );
 };

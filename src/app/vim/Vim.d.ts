@@ -1,4 +1,4 @@
-import { FormMode, ICommand, InputChange } from '@types';
+import { FormMode, ICommand, InputChange, IReactChildren } from '@types';
 import { Dispatch, SetStateAction } from 'react';
 
 export interface IVimContext {
@@ -8,6 +8,12 @@ export interface IVimContext {
   setCommand: Dispatch<SetStateAction<ICommand | undefined>>;
   search: string;
   setSearch: Dispatch<SetStateAction<string>>;
+  tags: string[];
+  setTags: Dispatch<SetStateAction<string[]>>;
+}
+
+export interface IContext extends IReactChildren {
+  commands: ICommand[];
 }
 
 export interface IUseVimForm {

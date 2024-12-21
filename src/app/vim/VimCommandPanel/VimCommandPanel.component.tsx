@@ -3,11 +3,12 @@
 import Box from '@mui/material/Box';
 import AddIcon from '@mui/icons-material/Add';
 import IconButton from '@mui/material/IconButton';
-import { useVimForm, useVimSearch } from '../Vim.service';
+import { useVimContext, useVimForm, useVimSearch } from '../Vim.service';
 import TextField from '@mui/material/TextField';
 
 export const VimCommandPanel: React.FC = () => {
   const { onFormAdd, mode } = useVimForm();
+  const { tags } = useVimContext();
   const { search, onSearchChange } = useVimSearch();
   return (
     <Box>
@@ -27,6 +28,7 @@ export const VimCommandPanel: React.FC = () => {
               <AddIcon />
             </IconButton>
           </Box>
+          <Box>{tags.join(', ')}</Box>
         </Box>
       ) : null}
     </Box>

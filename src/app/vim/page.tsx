@@ -17,12 +17,12 @@ export const metadata: Metadata = {
 const VimPage: NextPage = async () => {
   const result = await apiCaller<ICommand[]>(API.GetVimData());
   return (
-    <VimContext>
+    <VimContext commands={result}>
       <Box sx={{ display: 'flex', flexDirection: 'column' }}>
         <div>VIM Commands:</div>
         <VimCommandPanel />
         <VimCommandForm />
-        <VimCommandView commands={[...result]} />
+        <VimCommandView commands={result} />
         <div>
           <a href="https://github.com/vimalmenon/neovim" target="_blank" rel="noreferrer">
             GitHub

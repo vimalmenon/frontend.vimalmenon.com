@@ -29,4 +29,8 @@ export const NavigationData: INavigation[] = [
     name: 'Admin',
     url: '/admin',
   },
+  {
+    name: 'Blogs',
+    url: '/blogs',
+  },
 ];

@@ -6,6 +6,7 @@ Frontend for vimalmenon.com
 
 - [ ] Have a code to copy to clipboard
 - [ ] Show language used in code
+- [ ] Remove language from Code (Default to Bash)
 - [ ] Grouping of commands
 - [ ] Multiple commands
 - [ ] Searching of commands

@@ -18,13 +18,13 @@
     "@mui/icons-material": "^6.2.1",
     "@mui/material": "^6.2.1",
     "@mui/material-nextjs": "^6.2.1",
-    "ace-builds": "^1.37.0",
+    "ace-builds": "^1.37.1",
     "highlight.js": "^11.11.0",
     "react": "18.3.1",
     "next": "15.1.2",
     "react-ace": "^13.0.0",
     "react-dom": "18.3.1",
-    "react-hook-form": "^7.54.1",
+    "react-hook-form": "^7.54.2",
     "yup": "^1.6.1"
   },
   "devDependencies": {

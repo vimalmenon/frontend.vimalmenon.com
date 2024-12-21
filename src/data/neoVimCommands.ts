@@ -82,6 +82,7 @@ export const NeoVimCommands: ICommand[] = [
     command: 'g c',
     language: 'bash',
     tags: [],
+    hidden: true,
   },
   {
     describe: 'Change the case',

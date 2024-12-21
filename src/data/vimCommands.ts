@@ -177,12 +177,14 @@ export const VimCommands: ICommand[] = [
     command: 'v a }',
     language: 'bash',
     tags: [],
+    hidden: true,
   },
   {
     describe: 'Visually select inside bracket',
     command: 'v a B',
     language: 'bash',
     tags: [],
+    hidden: true,
   },
   {
     describe: 'Search for a file',

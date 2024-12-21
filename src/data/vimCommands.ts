@@ -133,7 +133,7 @@ export const VimCommands: ICommand[] = [
     describe: 'Search on selected word that is selected',
     command: '*',
     language: 'bash',
-    hidden: true,
+    hidden: true
   },
   {
     describe: 'Visually select the Hightlight word',

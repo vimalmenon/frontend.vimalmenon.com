@@ -3,6 +3,10 @@ import Box from '@mui/material/Box';
 import { env } from '@constants';
 
 export const dynamic = 'force-dynamic';
+export const metadata: Metadata = {
+  title: 'Vimal Menon',
+  description: 'This is my personal website',
+};
 
 const Home: React.FC = async () => {
   return (

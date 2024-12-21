@@ -15,6 +15,7 @@ Frontend for vimalmenon.com
 - [ ] Create a multiple stage build
 - [ ] Show all tags available for select
 - [ ] Create a route for Admin
+- [ ] Create a route for Blogs
 
 #### Issues
 

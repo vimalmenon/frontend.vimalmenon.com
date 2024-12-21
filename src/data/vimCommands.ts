@@ -133,7 +133,7 @@ export const VimCommands: ICommand[] = [
     describe: 'Search on selected word that is selected',
     command: '*',
     language: 'bash',
-    hidden: true
+    hidden: true,
   },
   {
     describe: 'Visually select the Hightlight word',
@@ -219,11 +219,13 @@ export const VimCommands: ICommand[] = [
     describe: 'Move cursor one line at top',
     command: '<ctrl> e',
     language: 'bash',
+    hidden: true,
   },
   {
     describe: 'Move cursor one line to botom',
     command: '<ctrl> y',
     language: 'bash',
+    hidden: true,
   },
   {
     describe: 'Move the screen one page down',

@@ -18,8 +18,8 @@ const VimPage: NextPage = async () => {
   const result = await apiCaller<ICommand[]>(API.GetVimData());
   return (
     <VimContext commands={result}>
-      <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-        <div>VIM Commands:</div>
+      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+        <Box>VIM Commands:</Box>
         <VimCommandPanel />
         <VimCommandForm />
         <VimCommandView commands={result} />

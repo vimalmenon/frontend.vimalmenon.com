@@ -1,6 +1,6 @@
 'use client';
 
-import { FormMode, ICommand } from '@types';
+import { FormMode, ICommand, ITags } from '@types';
 import { useEffect, useState } from 'react';
 
 import { IContext } from './Vim';
@@ -11,12 +11,24 @@ export const VimContext: React.FC<IContext> = ({ children, commands }) => {
   const [command, setCommand] = useState<ICommand | undefined>();
   const [search, setSearch] = useState<string>('');
   const [tags, setTags] = useState<string[]>([]);
+  const [selectedTags, setSelectedTags] = useState<ITags[]>([]);
 
   useEffect(() => {
+    const localTags: string[] = [];
     setTags(
       commands.reduce<string[]>((initialValue, data) => {
         const tags = data.tags.filter((tag) => {
-          return !initialValue.includes(tag);
+          if (localTags.includes(tag)) {
+            localTags.push(tag);
+            setSelectedTags([
+              ...selectedTags,
+              {
+                name: tag,
+                selected: true,
+              },
+            ]);
+            return !initialValue.includes(tag);
+          }
         });
         return [...initialValue, ...tags];
       }, [])

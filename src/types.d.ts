@@ -27,5 +27,9 @@ export interface IApi {
   method: 'POST' | 'GET' | 'PUT' | 'DELETE';
   body?: string;
 }
+export interface ITags {
+  name: string;
+  selected: boolean;
+}
 
 export type InputChange = React.ChangeEventHandler<HTMLTextAreaElement>;

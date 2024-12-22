@@ -20,7 +20,7 @@ export const VimContext: React.FC<IContext> = ({ children, commands }) => {
         const tags = data.tags.filter((tag) => {
           if (localTags.includes(tag)) {
             localTags.push(tag);
-            setSelectedTags([
+            setSelectedTags((selectedTags) => [
               ...selectedTags,
               {
                 name: tag,
@@ -46,6 +46,7 @@ export const VimContext: React.FC<IContext> = ({ children, commands }) => {
         setSearch,
         tags,
         setTags,
+        selectedTags,
       }}
     >
       {children}

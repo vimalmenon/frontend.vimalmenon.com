@@ -15,6 +15,7 @@ export const VimContext = React.createContext<IVimContext>({
   setSearch: NotImplemented,
   tags: [],
   setTags: NotImplemented,
+  selectedTags: [],
 });
 
 export const useVimContext = (): IVimContext => {

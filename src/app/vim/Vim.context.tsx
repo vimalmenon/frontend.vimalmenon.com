@@ -39,6 +39,7 @@ export const VimContext: React.FC<IContext> = ({ children, commands }) => {
         search,
         setSearch,
         selectedTags,
+        setSelectedTags,
       }}
     >
       {children}

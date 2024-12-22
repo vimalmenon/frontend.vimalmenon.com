@@ -1,5 +1,5 @@
 import React from 'react';
-import { IUseVimSearch, IVimContext } from './Vim';
+import { IUseVimSearch, IVimContext, IUseTagHelper } from './Vim';
 import { NotImplemented, apiCaller } from '@utility';
 import { ICommand, InputChange } from '@types';
 import { API } from '@constants';
@@ -14,6 +14,7 @@ export const VimContext = React.createContext<IVimContext>({
   search: '',
   setSearch: NotImplemented,
   selectedTags: [],
+  setSelectedTags: NotImplemented,
 });
 
 export const useVimContext = (): IVimContext => {
@@ -71,6 +72,22 @@ export const useVimSearch = (): IUseVimSearch => {
   return {
     search,
     onSearchChange,
+  };
+};
+
+export const useTagHelper = (): IUseTagHelper => {
+  const { selectedTags, setSelectedTags } = useVimContext();
+  const onTagSelect = (index: number): void => {
+    const tag = selectedTags[index];
+    selectedTags.splice(index, 1, {
+      ...tag,
+      selected: !tag.selected,
+    });
+    setSelectedTags([...selectedTags]);
+  };
+  return {
+    selectedTags,
+    onTagSelect,
   };
 };
 

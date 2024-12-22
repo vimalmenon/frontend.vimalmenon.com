@@ -9,6 +9,7 @@ export interface IVimContext {
   search: string;
   setSearch: Dispatch<SetStateAction<string>>;
   selectedTags: ICommandTag[];
+  setSelectedTags: Dispatch<SetStateAction<ICommandTag[]>>;
 }
 
 export interface IContext extends IReactChildren {
@@ -24,6 +25,10 @@ export interface IUseVimForm {
   onFormEdit: (data: ICommand) => void;
   onFormAdd: () => void;
   onFormCancel: () => void;
+}
+export interface IUseTagHelper {
+  selectedTags: ICommandTag[];
+  onTagSelect: (index: number) => void;
 }
 
 export interface IUseVimSearch {

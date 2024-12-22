@@ -27,7 +27,7 @@ export interface IApi {
   method: 'POST' | 'GET' | 'PUT' | 'DELETE';
   body?: string;
 }
-export interface ITags {
+export interface ICommandTag {
   name: string;
   selected: boolean;
 }

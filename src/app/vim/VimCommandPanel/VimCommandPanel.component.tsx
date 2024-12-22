@@ -10,7 +10,7 @@ import { useVimContext, useVimForm, useVimSearch } from '../Vim.service';
 
 export const VimCommandPanel: React.FC = () => {
   const { onFormAdd, mode } = useVimForm();
-  const { tags } = useVimContext();
+  const { selectedTags } = useVimContext();
   const { search, onSearchChange } = useVimSearch();
   return (
     <Box>
@@ -31,8 +31,14 @@ export const VimCommandPanel: React.FC = () => {
             </IconButton>
           </Box>
           <Box sx={{ display: 'flex', gap: 2 }}>
-            {tags.map((tag) => {
-              return <Chip label={tag} key={tag} />;
+            {selectedTags.map((tag) => {
+              return (
+                <Chip
+                  label={tag.name}
+                  key={tag.name}
+                  variant={tag.selected ? 'filled' : 'outlined'}
+                />
+              );
             })}
           </Box>
         </Box>

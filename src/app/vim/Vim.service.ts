@@ -13,8 +13,6 @@ export const VimContext = React.createContext<IVimContext>({
   setCommand: NotImplemented,
   search: '',
   setSearch: NotImplemented,
-  tags: [],
-  setTags: NotImplemented,
   selectedTags: [],
 });
 

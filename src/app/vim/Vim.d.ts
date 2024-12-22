@@ -1,4 +1,4 @@
-import { FormMode, ICommand, InputChange, IReactChildren, ITags } from '@types';
+import { FormMode, ICommand, InputChange, IReactChildren, ICommandTag } from '@types';
 import { Dispatch, SetStateAction } from 'react';
 
 export interface IVimContext {
@@ -8,9 +8,7 @@ export interface IVimContext {
   setCommand: Dispatch<SetStateAction<ICommand | undefined>>;
   search: string;
   setSearch: Dispatch<SetStateAction<string>>;
-  tags: string[];
-  setTags: Dispatch<SetStateAction<string[]>>;
-  selectedTags: ITags[];
+  selectedTags: ICommandTag[];
 }
 
 export interface IContext extends IReactChildren {

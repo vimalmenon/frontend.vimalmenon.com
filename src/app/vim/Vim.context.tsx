@@ -1,6 +1,6 @@
 'use client';
 
-import { FormMode, ICommand, ITags } from '@types';
+import { FormMode, ICommand, ICommandTag } from '@types';
 import { useEffect, useState } from 'react';
 
 import { IContext } from './Vim';
@@ -10,28 +10,22 @@ export const VimContext: React.FC<IContext> = ({ children, commands }) => {
   const [mode, setMode] = useState<FormMode>('VIEW');
   const [command, setCommand] = useState<ICommand | undefined>();
   const [search, setSearch] = useState<string>('');
-  const [tags, setTags] = useState<string[]>([]);
-  const [selectedTags, setSelectedTags] = useState<ITags[]>([]);
+  const [selectedTags, setSelectedTags] = useState<ICommandTag[]>([]);
 
   useEffect(() => {
-    const localTags: string[] = [];
-    setTags(
-      commands.reduce<string[]>((initialValue, data) => {
-        const tags = data.tags.filter((tag) => {
-          if (localTags.includes(tag)) {
-            localTags.push(tag);
-            setSelectedTags((selectedTags) => [
-              ...selectedTags,
-              {
-                name: tag,
-                selected: true,
-              },
-            ]);
-            return !initialValue.includes(tag);
-          }
-        });
-        return [...initialValue, ...tags];
-      }, [])
+    const tags = commands.reduce<string[]>((initialValue, command) => {
+      const tags = command.tags.filter((tag) => {
+        return !initialValue.includes(tag);
+      });
+      return [...initialValue, ...tags];
+    }, []);
+    setSelectedTags(
+      tags.map<ICommandTag>((tag) => {
+        return {
+          name: tag,
+          selected: true,
+        };
+      })
     );
   }, [commands]);
 
@@ -44,8 +38,6 @@ export const VimContext: React.FC<IContext> = ({ children, commands }) => {
         setCommand,
         search,
         setSearch,
-        tags,
-        setTags,
         selectedTags,
       }}
     >

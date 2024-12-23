@@ -17,7 +17,16 @@ const LinksPage: NextPage = () => {
         <a href="https://github.com/vimalmenon/neovim" target="_blank" rel="noreferrer">
           GitHub
         </a>
-      </div>{' '}
+      </div>
+      <div>
+        <a
+          href="https://www.reddit.com/r/neovim/comments/1bojtr0/please_share_your_nvimcmp_config/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Redis Nvim Config
+        </a>
+      </div>
     </div>
   );
 };

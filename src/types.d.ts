@@ -32,4 +32,9 @@ export interface ICommandTag {
   selected: boolean;
 }
 
+export interface ILink {
+  link: string;
+  name: string;
+}
+
 export type InputChange = React.ChangeEventHandler<HTMLTextAreaElement>;

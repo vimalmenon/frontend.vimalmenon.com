@@ -13,7 +13,6 @@ Frontend for vimalmenon.com
 - [ ] Standardize the command
 - [ ] Make the docker image size smaller (Less than 100MB)
 - [ ] Create a multiple stage build
-- [ ] Show all tags available for select
 - [ ] Create a route for Admin
 - [ ] Create a route for Blogs
 

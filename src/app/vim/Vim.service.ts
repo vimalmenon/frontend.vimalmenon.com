@@ -1,7 +1,7 @@
 import React from 'react';
 import { IUseVimSearch, IVimContext, IUseTagHelper } from './Vim';
 import { NotImplemented, apiCaller } from '@utility';
-import { ICommand, InputChange } from '@types';
+import { ICommand, ICommandTag, InputChange } from '@types';
 import { API } from '@constants';
 import { IUseVimForm } from './Vim';
 import { useRouter } from 'next/navigation';
@@ -91,9 +91,21 @@ export const useTagHelper = (): IUseTagHelper => {
   };
 };
 
-export const isSearched = (searchedValue: string, command: ICommand): boolean => {
-  if (searchedValue.trim() === '') {
+export const isSearched = (
+  searchedValue: string,
+  command: ICommand,
+  selectedTags: ICommandTag[]
+): boolean => {
+  const isTagSelected = selectedTags.some((tag) => {
+    return command.tags.includes(tag.name) && tag.selected;
+  });
+  if (!isTagSelected) {
+    return false;
+  }
+  if (!isTagSelected && searchedValue.trim() === '') {
     return true;
   }
-  return command.describe.toLowerCase().includes(searchedValue.trim().toLowerCase());
+  return (
+    isTagSelected && command.describe.toLowerCase().includes(searchedValue.trim().toLowerCase())
+  );
 };

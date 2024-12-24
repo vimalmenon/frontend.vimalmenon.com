@@ -9,7 +9,6 @@ Frontend for vimalmenon.com
 - [ ] Remove language from Code (Default to Bash)
 - [ ] Grouping of commands
 - [ ] Multiple commands
-- [ ] Searching of commands
 - [ ] Standardize the command
 - [ ] Make the docker image size smaller (Less than 100MB)
 - [ ] Create a multiple stage build

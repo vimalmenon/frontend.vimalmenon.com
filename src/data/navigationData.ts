@@ -39,6 +39,22 @@ export const NavigationData: INavigation[] = [
   {
     name: 'Blogs',
     url: '/blogs',
-    navigations: [],
+    navigations: [
+      {
+        name: 'Vim',
+        url: '/vim',
+        navigations: [],
+      },
+      {
+        name: 'Linux',
+        url: '/linux',
+        navigations: [],
+      },
+      {
+        name: 'Links',
+        url: '/links',
+        navigations: [],
+      },
+    ],
   },
 ];

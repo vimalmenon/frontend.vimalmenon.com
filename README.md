@@ -16,6 +16,7 @@ Frontend for vimalmenon.com
 - [ ] Create side navigation for admin
 - [ ] Get all the blog's data from Api
 - [ ] Move links, tmux, vim, linux to blog.
+- [ ] Create Subnavigation for blogs
 
 #### Issues
 

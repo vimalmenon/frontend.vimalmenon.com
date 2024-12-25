@@ -1,5 +1,8 @@
 import type { Metadata, NextPage } from 'next';
 import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardHeader from '@mui/material/CardHeader';
 
 export const metadata: Metadata = {
   title: 'Blogs | Vimal Menon',
@@ -9,7 +12,24 @@ export const metadata: Metadata = {
 const Blogs: NextPage = async () => {
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-      <Box>This is Blogs page</Box>
+      <Card>
+        <CardHeader
+          title="VIM / NVIM"
+          subheader="Learn all about Vim navigation"
+        />
+        <CardContent>
+          This is card content
+        </CardContent>
+      </Card>
+      <Card>
+        <CardHeader
+          title="Linux Command"
+          subheader="Learn all about Linux Command"
+        />
+        <CardContent>
+          This is card content
+        </CardContent>
+      </Card>
     </Box>
   );
 };

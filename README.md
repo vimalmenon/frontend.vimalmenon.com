@@ -15,7 +15,8 @@ Frontend for vimalmenon.com
 - [ ] Use react query for making api calls
 - [ ] Create side navigation for admin
 - [ ] Get all the blog's data from Api
-- [ ] Move links, tmux, vim, linux to blog.
+- [ ] Move links, tmux, vim to blog
+- [ ] Move links to admin
 - [ ] Show Breadcrumbs
 
 #### Issues

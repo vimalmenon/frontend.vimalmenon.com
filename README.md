@@ -14,6 +14,7 @@ Frontend for vimalmenon.com
 - [ ] Create a multiple stage build
 - [ ] Create a route for Admin
 - [ ] Create a route for Blogs
+- [ ] Create react query for making api calls
 
 #### Issues
 

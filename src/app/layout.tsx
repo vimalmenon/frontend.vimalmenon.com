@@ -1,6 +1,6 @@
 import React from 'react';
 import { AppContext } from '@context';
-import { Body, Footer, Header } from '@common';
+import { Body, Footer, Header, Breadcrumbs } from '@common';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 import Container from '@mui/material/Container';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description: 'This is my personal website',
 };
 
-const RootLayout: React.FC<IReactChildren> = ({ children }) => {
+const RootLayout: React.FC<IReactChildren> = ({ children, ...rest }) => {
   return (
     <html lang="en">
       <meta name="viewport" content="initial-scale=1, width=device-width" />
@@ -27,6 +27,7 @@ const RootLayout: React.FC<IReactChildren> = ({ children }) => {
               sx={{ display: 'flex', flexDirection: 'column', height: '100vh' }}
             >
               <Header />
+              <Breadcrumbs />
               <Body>
                 <Box sx={{ padding: 2, flex: '1 1 100%' }}>{children}</Box>
               </Body>

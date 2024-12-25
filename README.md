@@ -18,7 +18,7 @@ Frontend for vimalmenon.com
 - [ ] Move links, tmux, vim to blog
 - [ ] Move links to admin
 - [ ] Show Breadcrumbs
-- [ ] Navigate to correspondign page
+- [ ] Navigate to correspondign page from blogs
 - [ ] Fix the link colors
 
 #### Issues

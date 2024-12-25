@@ -33,7 +33,7 @@ export interface ICommandTag {
 }
 
 export interface ILink {
-  link: string;
+  links: string[];
   name: string;
 }
 

@@ -7,4 +7,10 @@ export const linuxCommands: ICommand[] = [
     language: 'bash',
     tags: [],
   },
+  {
+    describe: 'Go to previous directory',
+    command: '-',
+    language: 'bash',
+    tags: [],
+  },
 ];

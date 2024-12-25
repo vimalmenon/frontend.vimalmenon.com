@@ -12,9 +12,14 @@ const LinksPage: NextPage = () => {
       {links.map((link) => {
         return (
           <div key={link.name}>
-            <a href={link.link} target="_blank" rel="noreferrer">
-              {link.name}
-            </a>
+            {link.name}
+            {link.links.map((data, index) => {
+              return (
+                <a href={data} key={index} target="_blank" rel="noreferrer">
+                  {link.name}
+                </a>
+              );
+            })}
           </div>
         );
       })}

@@ -15,7 +15,7 @@ export const VimCommandView: React.FC<IVimCommandView> = ({ commands }) => {
   const { selectedTags } = useTagHelper();
   if (mode === 'VIEW') {
     return (
-      <div>
+      <Box>
         {commands.map((data, index) => {
           if (isSearched(search, data, selectedTags)) {
             return (
@@ -23,21 +23,21 @@ export const VimCommandView: React.FC<IVimCommandView> = ({ commands }) => {
                 <Box sx={{ margin: 0.5, display: 'flex', justifyContent: 'space-between' }}>
                   {data.describe}
                   <Box sx={{ display: 'flex', gap: 4 }}>
-                    <Box sx={{ gap: 1, display: 'flex' }}>
+                    <Box sx={{ gap: 2 }}>
                       {data.tags.map((tag) => {
                         return <Chip label={tag} key={tag} />;
                       })}
                     </Box>
 
                     {data.id ? (
-                      <div>
+                      <Box>
                         <IconButton size="small" onClick={() => onFormEdit(data)}>
                           <Icons.Edit />
                         </IconButton>
                         <IconButton size="small" onClick={() => onCommandDelete(data.id)}>
                           <Icons.Delete />
                         </IconButton>
-                      </div>
+                      </Box>
                     ) : null}
                   </Box>
                 </Box>
@@ -46,7 +46,7 @@ export const VimCommandView: React.FC<IVimCommandView> = ({ commands }) => {
             );
           }
         })}
-      </div>
+      </Box>
     );
   }
   return null;

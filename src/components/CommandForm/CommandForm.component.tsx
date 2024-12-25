@@ -89,11 +89,11 @@ export const CommandForm: React.FC<ICommandForm> = ({
           <Button variant="contained" type="submit">
             Save
           </Button>
-          <Button variant="outlined" onClick={onFormCancel} >
+          <Button variant="outlined" onClick={onFormCancel}>
             Cancel
           </Button>
         </Box>
       </Box>
-    </form >
+    </form>
   );
 };

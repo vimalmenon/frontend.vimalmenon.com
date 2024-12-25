@@ -14,7 +14,10 @@ export const links: ILink[] = [
     name: 'Redis NVIM Config',
   },
   {
-    links: ['https://github.com/alexellis/k3sup?tab=readme-ov-file#k3sup--said-ketchup'],
+    links: [
+      'https://github.com/alexellis/k3sup?tab=readme-ov-file#k3sup--said-ketchup',
+      'https://pkg.go.dev/github.com/alexellis/k3sup#readme-do-you-love-k3sup',
+    ],
     name: 'K3SUP',
   },
 ];

@@ -13,22 +13,12 @@ const Blogs: NextPage = async () => {
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column' }}>
       <Card>
-        <CardHeader
-          title="VIM / NVIM"
-          subheader="Learn all about Vim navigation"
-        />
-        <CardContent>
-          This is card content
-        </CardContent>
+        <CardHeader title="VIM / NVIM" subheader="Learn all about Vim navigation" />
+        <CardContent>This is card content</CardContent>
       </Card>
       <Card>
-        <CardHeader
-          title="Linux Command"
-          subheader="Learn all about Linux Command"
-        />
-        <CardContent>
-          This is card content
-        </CardContent>
+        <CardHeader title="Linux Command" subheader="Learn all about Linux Command" />
+        <CardContent>This is card content</CardContent>
       </Card>
     </Box>
   );

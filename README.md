@@ -14,6 +14,8 @@ Frontend for vimalmenon.com
 - [ ] Create a multiple stage build
 - [ ] Use react query for making api calls
 - [ ] Create side navigation for admin
+- [ ] Get all the blog's data from Api
+- [ ] Move links, tmux, vim, linux to blog.
 
 #### Issues
 

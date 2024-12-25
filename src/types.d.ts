@@ -10,6 +10,7 @@ export interface INavigation {
   name: string;
   url: string;
   navigations: INavigation[];
+  breadcrumbs: INavigation[];
 }
 
 export interface ICommand {

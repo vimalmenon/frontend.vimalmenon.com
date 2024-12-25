@@ -12,9 +12,8 @@ Frontend for vimalmenon.com
 - [ ] Standardize the command
 - [ ] Make the docker image size smaller (Less than 100MB)
 - [ ] Create a multiple stage build
-- [ ] Create a route for Admin
-- [ ] Create a route for Blogs
-- [ ] Create react query for making api calls
+- [ ] Use react query for making api calls
+- [ ] Create side navigation for admin
 
 #### Issues
 

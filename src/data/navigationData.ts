@@ -72,9 +72,25 @@ const Vim: INavigation = {
   ],
 };
 
+const Links: INavigation = {
+  name: 'Links',
+  url: '/admin/links',
+  navigations: [],
+  breadcrumbs: [
+    Home,
+    Admin,
+    {
+      name: 'Links',
+      url: '/links',
+      navigations: [],
+      breadcrumbs: [],
+    },
+  ],
+};
+
 const Linux: INavigation = {
   name: 'Linux',
-  url: '/linux',
+  url: '/blogs/linux',
   navigations: [],
   breadcrumbs: [
     Home,
@@ -83,10 +99,10 @@ const Linux: INavigation = {
       name: 'Linux',
       url: '/linux',
       navigations: [],
-      breadcrumbs: []
-    }
+      breadcrumbs: [],
+    },
   ],
-}
+};
 
 export const NavigationData: INavigation[] = [
   Home,
@@ -112,4 +128,6 @@ export const NavigationMap = {
   [Home.url]: Home,
   [Admin.url]: Admin,
   [Blogs.url]: Blogs,
+  [Linux.url]: Linux,
+  [Links.url]: Links,
 };

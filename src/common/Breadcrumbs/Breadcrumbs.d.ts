@@ -1,3 +1,1 @@
-export interface IBreadcrumbs {
-
-}
+export interface IBreadcrumbs {}

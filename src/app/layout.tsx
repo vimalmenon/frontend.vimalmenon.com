@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description: 'This is my personal website',
 };
 
-const RootLayout: React.FC<IReactChildren> = ({ children, ...rest }) => {
+const RootLayout: React.FC<IReactChildren> = ({ children }) => {
   return (
     <html lang="en">
       <meta name="viewport" content="initial-scale=1, width=device-width" />

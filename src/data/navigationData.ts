@@ -4,7 +4,14 @@ const Home: INavigation = {
   name: 'Home',
   url: '/',
   navigations: [],
-  breadcrumbs: [],
+  breadcrumbs: [
+    {
+      name: 'Home',
+      url: '/',
+      navigations: [],
+      breadcrumbs: [],
+    },
+  ],
 };
 
 const Admin: INavigation = {
@@ -97,9 +104,18 @@ const Linux: INavigation = {
     Blogs,
     {
       name: 'Linux',
-      url: '/linux',
+      url: '/blogs/linux',
       navigations: [],
-      breadcrumbs: [],
+      breadcrumbs: [
+        Home,
+        Blogs,
+        {
+          name: 'Linux',
+          url: '/blogs/linux',
+          navigations: [],
+          breadcrumbs: [],
+        },
+      ],
     },
   ],
 };
@@ -114,12 +130,7 @@ export const NavigationData: INavigation[] = [
   },
   Vim,
   Linux,
-  {
-    name: 'Links',
-    url: '/links',
-    navigations: [],
-    breadcrumbs: [],
-  },
+  Links,
   Admin,
   Blogs,
 ];
@@ -130,4 +141,5 @@ export const NavigationMap = {
   [Blogs.url]: Blogs,
   [Linux.url]: Linux,
   [Links.url]: Links,
+  [Vim.url]: Vim,
 };

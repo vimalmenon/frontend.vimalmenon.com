@@ -7,6 +7,7 @@ import { VimCommandPanel } from './VimCommandPanel';
 import { apiCaller } from '@utility';
 import { API } from '@constants';
 import { ICommand } from '@types';
+import { VimDeleteConfirmation } from './VimDeleteConfirmation';
 
 export const dynamic = 'force-dynamic';
 export const metadata: Metadata = {
@@ -20,6 +21,7 @@ const VimPage: NextPage = async () => {
     <VimContext commands={result}>
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
         <Box>VIM Commands:</Box>
+        <VimDeleteConfirmation />
         <VimCommandPanel />
         <VimCommandForm />
         <VimCommandView />

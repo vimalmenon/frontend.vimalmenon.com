@@ -37,4 +37,10 @@ export interface ILink {
   name: string;
 }
 
+export interface ILinkItem {
+  title: string;
+  content: string;
+  link: string;
+}
+
 export type InputChange = React.ChangeEventHandler<HTMLTextAreaElement>;

@@ -1,4 +1,6 @@
-export const blogs = [
+import { ILinkItem } from '@types';
+
+export const blogs: ILinkItem[] = [
   {
     title: 'NVIM / VIM',
     content: 'List all the NVIM and VIM shortcut',

@@ -121,14 +121,14 @@ const Linux: INavigation = {
 };
 const Rust: INavigation = {
   name: 'Rust',
-  url: '/rust',
+  url: '/blogs/rust',
   navigations: [],
   breadcrumbs: [
     Home,
     Blogs,
     {
       name: 'Rust',
-      url: '/rust',
+      url: '/blogs/rust',
       navigations: [],
       breadcrumbs: [],
     },

@@ -15,13 +15,12 @@ export const metadata: Metadata = {
 
 const Blogs: NextPage = async () => {
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
       {blogs.map((blog) => {
         return (
           <Card key={blog.title}>
             <CardHeader
               title={blog.title}
-              subheader="Learn all about Vim navigation"
               action={
                 <IconButton LinkComponent={NextLink} href={blog.link}>
                   <KeyboardArrowRightIcon />

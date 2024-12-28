@@ -1,12 +1,12 @@
 export const blogs = [
   {
     title: 'NVIM / VIM',
-    content: 'This is nvim and vim content',
+    content: 'List all the NVIM and VIM shortcut',
     link: '/blogs/vim',
   },
   {
     title: 'Linux',
-    content: 'This is linux command',
+    content: 'List very useful linux command',
     link: '/blogs/linux',
   },
   {

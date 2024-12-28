@@ -1,5 +1,6 @@
 import type { Metadata, NextPage } from 'next';
 import { links } from '@data';
+import Link from '@mui/material/Link';
 
 export const metadata: Metadata = {
   title: 'Links | Vimal Menon',
@@ -15,9 +16,9 @@ const LinksPage: NextPage = () => {
             {link.name}
             {link.links.map((data, index) => {
               return (
-                <a href={data} key={index} target="_blank" rel="noreferrer">
+                <Link href={data} key={index} target="_blank" rel="noreferrer">
                   {link.name}
-                </a>
+                </Link>
               );
             })}
           </div>

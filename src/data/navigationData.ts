@@ -128,9 +128,7 @@ export const NavigationData: INavigation[] = [
     navigations: [],
     breadcrumbs: [],
   },
-  Vim,
   Linux,
-  Links,
   Admin,
   Blogs,
 ];

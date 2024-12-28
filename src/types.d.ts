@@ -20,7 +20,7 @@ export interface ICommand {
   tags: string[];
 }
 
-export type FormMode = 'VIEW' | 'EDIT' | 'ADD';
+export type FormMode = 'VIEW' | 'EDIT' | 'ADD' | 'DELETE';
 
 export interface IApi {
   url: string;

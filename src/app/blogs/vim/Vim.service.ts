@@ -81,6 +81,18 @@ export const useTagHelper = (): IUseTagHelper => {
   };
 };
 
+export const useDeleteHelper = () => {
+  const { setMode } = useVimContext();
+  const onDeleteCancel = (): void => {
+    setMode('VIEW');
+  };
+  const onDeleteConfirm = (): void => {};
+  return {
+    onDeleteCancel,
+    onDeleteConfirm,
+  };
+};
+
 export const isSearched = (
   searchedValue: string,
   command: ICommand,

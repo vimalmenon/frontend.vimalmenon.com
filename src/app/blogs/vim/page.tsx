@@ -10,7 +10,7 @@ import { ICommand } from '@types';
 
 export const dynamic = 'force-dynamic';
 export const metadata: Metadata = {
-  title: 'Vim Tutorial | Vimal Menon',
+  title: 'VIM Shortcut | Vimal Menon',
   description: 'This is my personal website',
 };
 

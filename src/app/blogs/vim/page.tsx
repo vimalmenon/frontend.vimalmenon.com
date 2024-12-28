@@ -21,7 +21,7 @@ const VimPage: NextPage = async () => {
     <VimContext commands={result}>
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
         <Box>VIM Commands:</Box>
-        <VimDeleteConfirmation onCancel={() => false} onConfirm={() => false} />
+        <VimDeleteConfirmation />
         <VimCommandPanel />
         <VimCommandForm />
         <VimCommandView />

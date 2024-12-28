@@ -81,13 +81,14 @@ export const useTagHelper = (): IUseTagHelper => {
   };
 };
 
-export const useDeleteHelper = () => {
-  const { setMode } = useVimContext();
+export const useVimDeleteHelper = () => {
+  const { mode, setMode } = useVimContext();
   const onDeleteCancel = (): void => {
     setMode('VIEW');
   };
   const onDeleteConfirm = (): void => {};
   return {
+    mode,
     onDeleteCancel,
     onDeleteConfirm,
   };

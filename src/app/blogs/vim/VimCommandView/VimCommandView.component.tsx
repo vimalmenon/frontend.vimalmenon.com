@@ -7,14 +7,17 @@ import IconButton from '@mui/material/IconButton';
 import Chip from '@mui/material/Chip';
 import Box from '@mui/material/Box';
 
-import { useVimForm, useVimSearch, isSearched, useTagHelper } from '../Vim.service';
-import { IVimCommandView } from './VimCommandView';
+import { useVimForm, useVimSearch, isSearched, useTagHelper, useVimContext } from '../Vim.service';
 
-export const VimCommandView: React.FC<IVimCommandView> = ({ commands }) => {
+export const VimCommandView: React.FC = () => {
   const { mode, onCommandDelete, onFormEdit } = useVimForm();
   const { search } = useVimSearch();
   const { selectedTags } = useTagHelper();
+  const { commands, isCommandsLoading } = useVimContext();
   if (mode === 'VIEW') {
+    if (isCommandsLoading) {
+      return <Box>Loading</Box>;
+    }
     return (
       <Box>
         {commands.map((data, index) => {

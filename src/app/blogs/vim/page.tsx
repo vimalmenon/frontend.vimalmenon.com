@@ -22,7 +22,7 @@ const VimPage: NextPage = async () => {
         <Box>VIM Commands:</Box>
         <VimCommandPanel />
         <VimCommandForm />
-        <VimCommandView commands={result} />
+        <VimCommandView />
       </Box>
     </VimContext>
   );

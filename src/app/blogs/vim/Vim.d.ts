@@ -10,6 +10,9 @@ export interface IVimContext {
   setSearch: Dispatch<SetStateAction<string>>;
   selectedTags: ICommandTag[];
   setSelectedTags: Dispatch<SetStateAction<ICommandTag[]>>;
+  commands: ICommand[];
+  isCommandsLoading: boolean;
+  isCommandsError: boolean;
 }
 
 export interface IContext extends IReactChildren {

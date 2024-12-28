@@ -119,19 +119,22 @@ const Linux: INavigation = {
     },
   ],
 };
-
-export const NavigationData: INavigation[] = [
-  Home,
-  {
-    name: 'Rust',
-    url: '/rust',
-    navigations: [],
-    breadcrumbs: [],
-  },
-  Linux,
-  Admin,
-  Blogs,
-];
+const Rust: INavigation = {
+  name: 'Rust',
+  url: '/rust',
+  navigations: [],
+  breadcrumbs: [
+    Home,
+    Blogs,
+    {
+      name: 'Rust',
+      url: '/rust',
+      navigations: [],
+      breadcrumbs: [],
+    },
+  ],
+};
+export const NavigationData: INavigation[] = [Home, Rust, Blogs, Admin];
 
 export const NavigationMap = {
   [Home.url]: Home,
@@ -140,4 +143,5 @@ export const NavigationMap = {
   [Linux.url]: Linux,
   [Links.url]: Links,
   [Vim.url]: Vim,
+  [Rust.url]: Rust,
 };

@@ -14,9 +14,9 @@ Frontend for vimalmenon.com
 - [ ] Create a multiple stage build
 - [ ] Get all the blog's data from Api
 - [ ] Fix the link colors
-- [ ] Show Confirmation on Delete
-- [ ] Show Loading indciator on Delete
-- [ ] Show Error on errors
+- [ ] Show confirmation on delete
+- [ ] Show loading indicator on Delete
+- [ ] Show error msg on errors
 
 #### Issues
 

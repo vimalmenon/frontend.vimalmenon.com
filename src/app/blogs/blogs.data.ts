@@ -11,7 +11,7 @@ export const blogs = [
   },
   {
     title: 'Rust',
-    content: 'This is rust page',
+    content: 'Rust tutorial from basic to advanced stuff',
     link: '/blogs/rust',
   },
 ];

@@ -134,7 +134,7 @@ const Rust: INavigation = {
     },
   ],
 };
-export const NavigationData: INavigation[] = [Home, Rust, Blogs, Admin];
+export const NavigationData: INavigation[] = [Home, Blogs, Admin];
 
 export const NavigationMap = {
   [Home.url]: Home,

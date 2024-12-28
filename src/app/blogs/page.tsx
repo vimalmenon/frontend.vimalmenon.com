@@ -20,6 +20,10 @@ const Blogs: NextPage = async () => {
         <CardHeader title="Linux Command" subheader="Learn all about Linux Command" />
         <CardContent>This is card content</CardContent>
       </Card>
+      <Card>
+        <CardHeader title="Rust" subheader="Learn all about Rust programming language" />
+        <CardContent>This is card content</CardContent>
+      </Card>
     </Box>
   );
 };

@@ -12,14 +12,11 @@ Frontend for vimalmenon.com
 - [ ] Standardize the command
 - [ ] Make the docker image size smaller (Less than 100MB)
 - [ ] Create a multiple stage build
-- [ ] Use react query for making api calls
-- [ ] Create side navigation for admin
 - [ ] Get all the blog's data from Api
-- [ ] Move links, tmux, vim to blog
-- [ ] Move links to admin
-- [ ] Show Breadcrumbs
-- [ ] Navigate to correspondign page from blogs
 - [ ] Fix the link colors
+- [ ] Show Confirmation on Delete
+- [ ] Show Loading indciator on Delete
+- [ ] Show Error on errors
 
 #### Issues
 

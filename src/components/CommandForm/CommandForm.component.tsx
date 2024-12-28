@@ -12,7 +12,7 @@ import MenuItem from '@mui/material/MenuItem';
 import { FormTags } from './FormTags';
 import LoadingButton from '@mui/lab/LoadingButton';
 import SaveIcon from '@mui/icons-material/Save';
-
+import CloseIcon from '@mui/icons-material/Close';
 const LanguageOption: LanguageType[] = ['bash', 'shell', 'rust', 'javascript'];
 
 export const CommandForm: React.FC<ICommandForm> = ({
@@ -98,7 +98,12 @@ export const CommandForm: React.FC<ICommandForm> = ({
           >
             Save
           </LoadingButton>
-          <Button variant="outlined" onClick={onFormCancel} disabled={isLoading}>
+          <Button
+            variant="outlined"
+            onClick={onFormCancel}
+            disabled={isLoading}
+            startIcon={<CloseIcon />}
+          >
             Cancel
           </Button>
         </Box>

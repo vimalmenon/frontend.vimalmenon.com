@@ -14,6 +14,7 @@ export interface IVimContext {
   isCommandsLoading: boolean;
   isCommandsError: boolean;
   onFormSave: (data: ICommand) => void;
+  isSaveLoading: boolean;
 }
 
 export interface IContext extends IReactChildren {
@@ -29,6 +30,7 @@ export interface IUseVimForm {
   onFormEdit: (data: ICommand) => void;
   onFormAdd: () => void;
   onFormCancel: () => void;
+  isSaveLoading: boolean;
 }
 export interface IUseTagHelper {
   selectedTags: ICommandTag[];

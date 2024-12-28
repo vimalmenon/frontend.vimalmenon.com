@@ -19,6 +19,7 @@ export const VimContext = React.createContext<IVimContext>({
   isCommandsError: false,
   isCommandsLoading: false,
   onFormSave: NotImplemented,
+  isSaveLoading: false,
 });
 
 export const useVimContext = (): IVimContext => {
@@ -26,7 +27,7 @@ export const useVimContext = (): IVimContext => {
 };
 
 export const useVimForm = (): IUseVimForm => {
-  const { mode, setMode, command, setCommand, onFormSave } = useVimContext();
+  const { mode, setMode, command, setCommand, onFormSave, isSaveLoading } = useVimContext();
   const { refresh } = useRouter();
   const onCommandDelete = async (id?: string): Promise<void> => {
     if (id) {
@@ -54,6 +55,7 @@ export const useVimForm = (): IUseVimForm => {
     onFormAdd,
     onCommandDelete,
     onFormCancel,
+    isSaveLoading,
   };
 };
 

@@ -10,6 +10,8 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { schema } from './CommandForm.service';
 import MenuItem from '@mui/material/MenuItem';
 import { FormTags } from './FormTags';
+import LoadingButton from '@mui/lab/LoadingButton';
+import SaveIcon from '@mui/icons-material/Save';
 
 const LanguageOption: LanguageType[] = ['bash', 'shell', 'rust', 'javascript'];
 
@@ -20,6 +22,7 @@ export const CommandForm: React.FC<ICommandForm> = ({
     language: 'bash',
     tags: [],
   },
+  isLoading,
 }) => {
   const {
     register,
@@ -86,10 +89,16 @@ export const CommandForm: React.FC<ICommandForm> = ({
           }}
         />
         <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
-          <Button variant="contained" type="submit">
+          <LoadingButton
+            loading={isLoading}
+            variant="contained"
+            type="submit"
+            loadingPosition="start"
+            startIcon={<SaveIcon />}
+          >
             Save
-          </Button>
-          <Button variant="outlined" onClick={onFormCancel}>
+          </LoadingButton>
+          <Button variant="outlined" onClick={onFormCancel} disabled={isLoading}>
             Cancel
           </Button>
         </Box>

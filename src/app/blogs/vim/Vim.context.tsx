@@ -25,7 +25,7 @@ export const VimContext: React.FC<IContext> = ({ children, commands: initialData
     queryFn: () => apiCaller(API.GetVimData()),
     initialData,
   });
-  const { mutate: onFormSave } = useMutation({
+  const { mutate: onFormSave, isPending: isSavePending } = useMutation({
     mutationFn: (data: ICommand) => {
       if (data.id) {
         return apiCaller(API.UpdateVimData(data));
@@ -72,6 +72,7 @@ export const VimContext: React.FC<IContext> = ({ children, commands: initialData
         isCommandsLoading,
         isCommandsError,
         onFormSave,
+        isSaveLoading: isSavePending,
       }}
     >
       {children}

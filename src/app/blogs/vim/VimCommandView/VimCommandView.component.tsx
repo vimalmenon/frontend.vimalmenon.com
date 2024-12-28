@@ -16,7 +16,7 @@ export const VimCommandView: React.FC = () => {
   const { commands, isCommandsLoading } = useVimContext();
   if (mode === 'VIEW') {
     if (isCommandsLoading) {
-      return <Box>Loading</Box>;
+      return <Box>Loading...</Box>;
     }
     return (
       <Box>

@@ -13,6 +13,7 @@ export interface IVimContext {
   commands: ICommand[];
   isCommandsLoading: boolean;
   isCommandsError: boolean;
+  onFormSave: (data: ICommand) => void;
 }
 
 export interface IContext extends IReactChildren {
@@ -23,7 +24,7 @@ export interface IUseVimForm {
   mode: FormMode;
   command: ICommand | undefined;
   setCommand: Dispatch<SetStateAction<ICommand | undefined>>;
-  onFormSave: (data: ICommand) => Promise<void>;
+  onFormSave: (data: ICommand) => void;
   onCommandDelete: (id?: string) => void;
   onFormEdit: (data: ICommand) => void;
   onFormAdd: () => void;

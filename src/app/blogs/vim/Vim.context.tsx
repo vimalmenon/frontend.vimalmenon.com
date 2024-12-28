@@ -1,6 +1,6 @@
 'use client';
 
-import { useQuery } from '@tanstack/react-query';
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 
 import { FormMode, ICommand, ICommandTag } from '@types';
 import { useEffect, useState } from 'react';
@@ -15,6 +15,7 @@ export const VimContext: React.FC<IContext> = ({ children, commands: initialData
   const [command, setCommand] = useState<ICommand | undefined>();
   const [search, setSearch] = useState<string>('');
   const [selectedTags, setSelectedTags] = useState<ICommandTag[]>([]);
+  const queryClient = useQueryClient();
   const {
     data: commands,
     isLoading: isCommandsLoading,
@@ -23,6 +24,21 @@ export const VimContext: React.FC<IContext> = ({ children, commands: initialData
     queryKey: ['Command'],
     queryFn: () => apiCaller(API.GetVimData()),
     initialData,
+  });
+  const { mutate: onFormSave } = useMutation({
+    mutationFn: (data: ICommand) => {
+      if (data.id) {
+        return apiCaller(API.UpdateVimData(data));
+      } else {
+        return apiCaller(API.AddVimData(data));
+      }
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({
+        queryKey: ['Command'],
+      });
+      setMode('VIEW');
+    },
   });
   useEffect(() => {
     const tags = commands.reduce<string[]>((initialValue, command) => {
@@ -55,6 +71,7 @@ export const VimContext: React.FC<IContext> = ({ children, commands: initialData
         commands,
         isCommandsLoading,
         isCommandsError,
+        onFormSave,
       }}
     >
       {children}

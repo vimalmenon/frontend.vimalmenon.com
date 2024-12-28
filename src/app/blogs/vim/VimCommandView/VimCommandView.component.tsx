@@ -24,7 +24,7 @@ export const VimCommandView: React.FC<IVimCommandView> = ({ commands }) => {
                 <Box sx={{ margin: 0.5, display: 'flex', justifyContent: 'space-between' }}>
                   {data.describe}
                   <Box sx={{ display: 'flex', gap: 4 }}>
-                    <Box sx={{ display: "flex", gap: 1 }}>
+                    <Box sx={{ display: 'flex', gap: 1 }}>
                       {data.tags.map((tag) => {
                         return <Chip label={tag} key={tag} />;
                       })}

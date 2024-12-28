@@ -40,6 +40,20 @@ export const VimContext: React.FC<IContext> = ({ children, commands: initialData
       setMode('VIEW');
     },
   });
+  const { mutate: onCommandDelete, isPending: isDeletePending } = useMutation({
+    mutationFn: (id?: string) => {
+      if (id) {
+        return apiCaller(API.DeleteVimData(id));
+      }
+      return Promise.reject(`id doesn't exist`);
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({
+        queryKey: ['Command'],
+      });
+      setMode('VIEW');
+    },
+  });
   useEffect(() => {
     const tags = commands.reduce<string[]>((initialValue, command) => {
       const tags = command.tags.filter((tag) => {
@@ -73,6 +87,8 @@ export const VimContext: React.FC<IContext> = ({ children, commands: initialData
         isCommandsError,
         onFormSave,
         isSaveLoading: isSavePending,
+        onCommandDelete,
+        isDeleteLoading: isDeletePending,
       }}
     >
       {children}

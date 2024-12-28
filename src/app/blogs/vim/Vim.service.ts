@@ -1,10 +1,8 @@
 import React from 'react';
 import { IUseVimSearch, IVimContext, IUseTagHelper } from './Vim';
-import { NotImplemented, apiCaller } from '@utility';
+import { NotImplemented } from '@utility';
 import { ICommand, ICommandTag, InputChange } from '@types';
-import { API } from '@constants';
 import { IUseVimForm } from './Vim';
-import { useRouter } from 'next/navigation';
 
 export const VimContext = React.createContext<IVimContext>({
   mode: 'VIEW',
@@ -20,6 +18,8 @@ export const VimContext = React.createContext<IVimContext>({
   isCommandsLoading: false,
   onFormSave: NotImplemented,
   isSaveLoading: false,
+  onCommandDelete: NotImplemented,
+  isDeleteLoading: false,
 });
 
 export const useVimContext = (): IVimContext => {
@@ -27,14 +27,9 @@ export const useVimContext = (): IVimContext => {
 };
 
 export const useVimForm = (): IUseVimForm => {
-  const { mode, setMode, command, setCommand, onFormSave, isSaveLoading } = useVimContext();
-  const { refresh } = useRouter();
-  const onCommandDelete = async (id?: string): Promise<void> => {
-    if (id) {
-      await apiCaller(API.DeleteVimData(id));
-      refresh();
-    }
-  };
+  const { mode, setMode, command, setCommand, onFormSave, isSaveLoading, onCommandDelete } =
+    useVimContext();
+
   const onFormEdit = (data: ICommand): void => {
     setCommand(data);
     setMode('EDIT');

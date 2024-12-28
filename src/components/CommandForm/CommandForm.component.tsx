@@ -14,7 +14,6 @@ import Button from '@mui/material/Button';
 import SaveIcon from '@mui/icons-material/Save';
 import CloseIcon from '@mui/icons-material/Close';
 
-
 const LanguageOption: LanguageType[] = ['bash', 'shell', 'rust', 'javascript'];
 
 export const CommandForm: React.FC<ICommandForm> = ({

@@ -15,6 +15,8 @@ export interface IVimContext {
   isCommandsError: boolean;
   onFormSave: (data: ICommand) => void;
   isSaveLoading: boolean;
+  onCommandDelete: (id?: string) => void;
+  isDeleteLoading: boolean;
 }
 
 export interface IContext extends IReactChildren {

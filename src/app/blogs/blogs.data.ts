@@ -7,7 +7,7 @@ export const blogs = [
   {
     title: 'Linux',
     content: 'This is linux command',
-    link: '/blogs/rust',
+    link: '/blogs/linux',
   },
   {
     title: 'Rust',

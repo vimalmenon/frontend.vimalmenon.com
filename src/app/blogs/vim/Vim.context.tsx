@@ -12,11 +12,12 @@ export const VimContext: React.FC<IContext> = ({ children, commands }) => {
   const [command, setCommand] = useState<ICommand | undefined>();
   const [search, setSearch] = useState<string>('');
   const [selectedTags, setSelectedTags] = useState<ICommandTag[]>([]);
-  useQuery<ICommand[]>({
-    queryKey: ["Command"],
+  const { data } = useQuery<ICommand[]>({
+    queryKey: ['Command'],
     queryFn: () => Promise.resolve([]),
-    initialData: commands
-  })
+    initialData: commands,
+  });
+  console.log(data);
   useEffect(() => {
     const tags = commands.reduce<string[]>((initialValue, command) => {
       const tags = command.tags.filter((tag) => {

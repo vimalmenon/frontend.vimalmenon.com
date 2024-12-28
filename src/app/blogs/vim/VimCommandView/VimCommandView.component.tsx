@@ -1,13 +1,14 @@
 'use client';
 
-import { useVimForm, useVimSearch, isSearched, useTagHelper } from '../Vim.service';
-import Box from '@mui/material/Box';
 import { Fragment } from 'react';
 import { Highlight } from '@components';
-import { IVimCommandView } from './VimCommandView';
 import { Icons } from '@constants';
 import IconButton from '@mui/material/IconButton';
 import Chip from '@mui/material/Chip';
+import Box from '@mui/material/Box';
+
+import { useVimForm, useVimSearch, isSearched, useTagHelper } from '../Vim.service';
+import { IVimCommandView } from './VimCommandView';
 
 export const VimCommandView: React.FC<IVimCommandView> = ({ commands }) => {
   const { mode, onCommandDelete, onFormEdit } = useVimForm();

@@ -9,7 +9,6 @@ export interface IReactChildren {
 export interface INavigation {
   name: string;
   url: string;
-  navigations: INavigation[];
   breadcrumbs: INavigation[];
 }
 

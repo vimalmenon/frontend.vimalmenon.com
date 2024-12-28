@@ -3,12 +3,10 @@ import { INavigation } from '@types';
 const Home: INavigation = {
   name: 'Home',
   url: '/',
-  navigations: [],
   breadcrumbs: [
     {
       name: 'Home',
       url: '/',
-      navigations: [],
       breadcrumbs: [],
     },
   ],
@@ -17,13 +15,11 @@ const Home: INavigation = {
 const Admin: INavigation = {
   name: 'Admin',
   url: '/admin',
-  navigations: [],
   breadcrumbs: [
     Home,
     {
       name: 'Admin',
       url: '/admin',
-      navigations: [],
       breadcrumbs: [],
     },
   ],
@@ -38,27 +34,6 @@ const Blogs: INavigation = {
       name: 'Blogs',
       url: '/blogs',
       breadcrumbs: [],
-      navigations: [],
-    },
-  ],
-  navigations: [
-    {
-      name: 'Vim',
-      url: '/vim',
-      navigations: [],
-      breadcrumbs: [],
-    },
-    {
-      name: 'Linux',
-      url: '/linux',
-      navigations: [],
-      breadcrumbs: [],
-    },
-    {
-      name: 'Links',
-      url: '/links',
-      navigations: [],
-      breadcrumbs: [],
     },
   ],
 };
@@ -66,14 +41,12 @@ const Blogs: INavigation = {
 const Vim: INavigation = {
   name: 'Vim',
   url: '/blogs/vim',
-  navigations: [],
   breadcrumbs: [
     Home,
     Blogs,
     {
       name: 'Vim',
       url: '/blogs/vim',
-      navigations: [],
       breadcrumbs: [],
     },
   ],
@@ -82,14 +55,12 @@ const Vim: INavigation = {
 const Links: INavigation = {
   name: 'Links',
   url: '/admin/links',
-  navigations: [],
   breadcrumbs: [
     Home,
     Admin,
     {
       name: 'Links',
       url: '/links',
-      navigations: [],
       breadcrumbs: [],
     },
   ],
@@ -98,21 +69,18 @@ const Links: INavigation = {
 const Linux: INavigation = {
   name: 'Linux',
   url: '/blogs/linux',
-  navigations: [],
   breadcrumbs: [
     Home,
     Blogs,
     {
       name: 'Linux',
       url: '/blogs/linux',
-      navigations: [],
       breadcrumbs: [
         Home,
         Blogs,
         {
           name: 'Linux',
           url: '/blogs/linux',
-          navigations: [],
           breadcrumbs: [],
         },
       ],
@@ -122,14 +90,12 @@ const Linux: INavigation = {
 const Rust: INavigation = {
   name: 'Rust',
   url: '/blogs/rust',
-  navigations: [],
   breadcrumbs: [
     Home,
     Blogs,
     {
       name: 'Rust',
       url: '/blogs/rust',
-      navigations: [],
       breadcrumbs: [],
     },
   ],

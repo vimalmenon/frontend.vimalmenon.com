@@ -7,14 +7,14 @@ import DialogTitle from '@mui/material/DialogTitle';
 import Button from '@mui/material/Button';
 
 export const VimDeleteConfirmation: React.FC = () => {
-  const { mode } = useVimDeleteHelper();
+  const { mode, onDeleteCancel, onDeleteConfirm } = useVimDeleteHelper();
   if (mode === 'DELETE') {
     return (
       <Dialog open={true} fullWidth>
         <DialogTitle>Are you sure you want to Delete?</DialogTitle>
         <DialogActions>
-          <Button>Cancel</Button>
-          <Button>Confirm</Button>
+          <Button onClick={onDeleteCancel}>Cancel</Button>
+          <Button onClick={onDeleteConfirm}>Confirm</Button>
         </DialogActions>
       </Dialog>
     );

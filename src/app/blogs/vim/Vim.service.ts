@@ -27,8 +27,7 @@ export const useVimContext = (): IVimContext => {
 };
 
 export const useVimForm = (): IUseVimForm => {
-  const { mode, setMode, command, setCommand, onFormSave, isSaveLoading, onCommandDelete } =
-    useVimContext();
+  const { mode, setMode, command, setCommand, onFormSave, isSaveLoading } = useVimContext();
 
   const onFormEdit = (data: ICommand): void => {
     setCommand(data);
@@ -48,7 +47,6 @@ export const useVimForm = (): IUseVimForm => {
     onFormSave,
     onFormEdit,
     onFormAdd,
-    onCommandDelete,
     onFormCancel,
     isSaveLoading,
   };
@@ -82,11 +80,12 @@ export const useTagHelper = (): IUseTagHelper => {
 };
 
 export const useVimDeleteHelper = (): IUseDeleteHelper => {
-  const { mode, setMode, setCommand } = useVimContext();
+  const { mode, setMode, setCommand, onCommandDelete, command } = useVimContext();
   const onDeleteCancel = (): void => {
     setMode('VIEW');
   };
   const onDeleteConfirm = (): void => {
+    onCommandDelete(command?.id);
     setCommand(undefined);
     setMode('VIEW');
   };

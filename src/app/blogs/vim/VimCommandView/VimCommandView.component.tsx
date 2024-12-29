@@ -7,14 +7,22 @@ import IconButton from '@mui/material/IconButton';
 import Chip from '@mui/material/Chip';
 import Box from '@mui/material/Box';
 
-import { useVimForm, useVimSearch, isSearched, useTagHelper, useVimContext } from '../Vim.service';
+import {
+  useVimForm,
+  useVimSearch,
+  isSearched,
+  useTagHelper,
+  useVimContext,
+  useVimDeleteHelper,
+} from '../Vim.service';
 
 export const VimCommandView: React.FC = () => {
-  const { mode, onCommandDelete, onFormEdit } = useVimForm();
+  const { mode, onFormEdit } = useVimForm();
   const { search } = useVimSearch();
   const { selectedTags } = useTagHelper();
   const { commands, isCommandsLoading } = useVimContext();
-  if (mode === 'VIEW') {
+  const { onDeleteRequest } = useVimDeleteHelper();
+  if (['VIEW', 'DELETE'].includes(mode)) {
     if (isCommandsLoading) {
       return <Box>Loading...</Box>;
     }
@@ -38,7 +46,7 @@ export const VimCommandView: React.FC = () => {
                         <IconButton size="small" onClick={() => onFormEdit(data)}>
                           <Icons.Edit />
                         </IconButton>
-                        <IconButton size="small" onClick={() => onCommandDelete(data.id)}>
+                        <IconButton size="small" onClick={() => onDeleteRequest(data)}>
                           <Icons.Delete />
                         </IconButton>
                       </Box>

@@ -28,7 +28,6 @@ export interface IUseVimForm {
   command: ICommand | undefined;
   setCommand: Dispatch<SetStateAction<ICommand | undefined>>;
   onFormSave: (data: ICommand) => void;
-  onCommandDelete: (id?: string) => void;
   onFormEdit: (data: ICommand) => void;
   onFormAdd: () => void;
   onFormCancel: () => void;

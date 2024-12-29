@@ -5,7 +5,6 @@ Frontend for vimalmenon.com
 #### To Do
 
 - [ ] Have a code to copy to clipboard
-- [ ] Show language used in code
 - [ ] Remove language from Code (Default to Bash)
 - [ ] Grouping of commands
 - [ ] Multiple commands
@@ -14,9 +13,10 @@ Frontend for vimalmenon.com
 - [ ] Create a multiple stage build
 - [ ] Get all the blog's data from Api
 - [ ] Fix the link colors
-- [ ] Show confirmation on delete
-- [ ] Show loading indicator on Delete
+- [ ] Show loading indicator on Delete, Add and Update
 - [ ] Show error msg on errors
+- [ ] Align the Blog page UI to show in card
+- [ ] Show side Navigation on Admin Page
 
 #### Issues
 

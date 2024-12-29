@@ -43,3 +43,10 @@ export interface IUseVimSearch {
   search: string;
   onSearchChange: InputChange;
 }
+
+export interface IUseDeleteHelper {
+  mode: FormMode;
+  onDeleteRequest: (command: ICommand) => void;
+  onDeleteConfirm: () => void;
+  onDeleteCancel: () => void;
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { IUseVimSearch, IVimContext, IUseTagHelper } from './Vim';
+import { IUseVimSearch, IVimContext, IUseTagHelper, IUseDeleteHelper } from './Vim';
 import { NotImplemented } from '@utility';
 import { ICommand, ICommandTag, InputChange } from '@types';
 import { IUseVimForm } from './Vim';
@@ -81,16 +81,24 @@ export const useTagHelper = (): IUseTagHelper => {
   };
 };
 
-export const useVimDeleteHelper = () => {
-  const { mode, setMode } = useVimContext();
+export const useVimDeleteHelper = (): IUseDeleteHelper => {
+  const { mode, setMode, setCommand } = useVimContext();
   const onDeleteCancel = (): void => {
     setMode('VIEW');
   };
-  const onDeleteConfirm = (): void => {};
+  const onDeleteConfirm = (): void => {
+    setCommand(undefined);
+    setMode('VIEW');
+  };
+  const onDeleteRequest = (command: ICommand): void => {
+    setMode('DELETE');
+    setCommand(command);
+  };
   return {
     mode,
     onDeleteCancel,
     onDeleteConfirm,
+    onDeleteRequest,
   };
 };
 

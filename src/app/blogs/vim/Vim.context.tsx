@@ -20,6 +20,7 @@ export const VimContext: React.FC<IContext> = ({ children, commands: initialData
     data: commands,
     isLoading: isCommandsLoading,
     isError: isCommandsError,
+    isFetching: isCommandFetching
   } = useQuery<ICommand[]>({
     queryKey: ['Command'],
     queryFn: () => apiCaller(API.GetVimData()),
@@ -83,7 +84,7 @@ export const VimContext: React.FC<IContext> = ({ children, commands: initialData
         selectedTags,
         setSelectedTags,
         commands,
-        isCommandsLoading,
+        isCommandsLoading: isCommandFetching || isCommandFetching,
         isCommandsError,
         onFormSave,
         isSaveLoading: isSavePending,

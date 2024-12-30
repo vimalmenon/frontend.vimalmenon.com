@@ -15,7 +15,7 @@ Frontend for vimalmenon.com
 - [ ] Fix the link colors
 - [ ] Show loading indicator on Delete, Add and Update
 - [ ] Show error msg on errors
-- [ ] Align the Blog page UI to show in card
+- [ ] Align the blog page UI to show in card
 - [ ] Show side Navigation on Admin Page
 
 #### Issues

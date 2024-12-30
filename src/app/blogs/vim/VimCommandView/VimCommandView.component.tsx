@@ -23,11 +23,9 @@ export const VimCommandView: React.FC = () => {
   const { commands, isCommandsLoading } = useVimContext();
   const { onDeleteRequest } = useVimDeleteHelper();
   if (['VIEW', 'DELETE'].includes(mode)) {
-    if (isCommandsLoading) {
-      return <Box>Loading...</Box>;
-    }
     return (
       <Box>
+        {isCommandsLoading ? <Box>Loading...</Box> : null}
         {commands.map((data, index) => {
           if (isSearched(search, data, selectedTags)) {
             return (

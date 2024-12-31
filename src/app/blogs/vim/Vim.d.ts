@@ -45,6 +45,7 @@ export interface IUseVimSearch {
 
 export interface IUseDeleteHelper {
   mode: FormMode;
+  isDeleteLoading: boolean;
   onDeleteRequest: (command: ICommand) => void;
   onDeleteConfirm: () => void;
   onDeleteCancel: () => void;

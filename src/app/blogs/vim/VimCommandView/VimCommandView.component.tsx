@@ -6,6 +6,7 @@ import { Icons } from '@constants';
 import IconButton from '@mui/material/IconButton';
 import Chip from '@mui/material/Chip';
 import Box from '@mui/material/Box';
+import CircularProgress from '@mui/material/CircularProgress';
 
 import {
   useVimForm,
@@ -21,7 +22,7 @@ export const VimCommandView: React.FC = () => {
   const { search } = useVimSearch();
   const { selectedTags } = useTagHelper();
   const { commands, isCommandsLoading } = useVimContext();
-  const { onDeleteRequest } = useVimDeleteHelper();
+  const { onDeleteRequest, isDeleteLoading } = useVimDeleteHelper();
   if (['VIEW', 'DELETE'].includes(mode)) {
     return (
       <Box>
@@ -44,8 +45,12 @@ export const VimCommandView: React.FC = () => {
                         <IconButton size="small" onClick={() => onFormEdit(data)}>
                           <Icons.Edit />
                         </IconButton>
-                        <IconButton size="small" onClick={() => onDeleteRequest(data)}>
-                          <Icons.Delete />
+                        <IconButton
+                          size="small"
+                          onClick={() => onDeleteRequest(data)}
+                          disabled={isDeleteLoading}
+                        >
+                          {isDeleteLoading ? <CircularProgress size="23px" /> : <Icons.Delete />}
                         </IconButton>
                       </Box>
                     ) : null}

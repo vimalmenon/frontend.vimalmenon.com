@@ -17,6 +17,8 @@ Frontend for vimalmenon.com
 - [ ] Show error msg on errors
 - [ ] Align the blog page UI to show in card
 - [ ] Show side Navigation on Admin Page
+- [ ] Show Loading on deleting item
+- [ ] Show proper loading indicator on fetching (Instead of loading)
 
 #### Issues
 

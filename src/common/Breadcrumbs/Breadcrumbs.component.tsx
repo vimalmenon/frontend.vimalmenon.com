@@ -13,19 +13,21 @@ export const Breadcrumbs: React.FC = () => {
   const navigation = NavigationMap[path];
   return (
     <Box sx={{ padding: [0, 2] }}>
-      <MuiBreadcrumbs>
-        {navigation.breadcrumbs.map((data) => {
-          if (path === data.url) {
-            return <Typography key={data.name}>{data.name}</Typography>;
-          }
-          return (
-            <Link component={NextLink} color="inherit" href={data.url} key={data.name}>
-              {data.name}
-            </Link>
-          );
-        })}
-        {path}
-      </MuiBreadcrumbs>
+      {navigation ? (
+        <MuiBreadcrumbs>
+          {navigation.breadcrumbs.map((data) => {
+            if (path === data.url) {
+              return <Typography key={data.name}>{data.name}</Typography>;
+            }
+            return (
+              <Link component={NextLink} color="inherit" href={data.url} key={data.name}>
+                {data.name}
+              </Link>
+            );
+          })}
+          {path}
+        </MuiBreadcrumbs>
+      ) : null}
     </Box>
   );
 };

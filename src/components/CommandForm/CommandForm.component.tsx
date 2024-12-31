@@ -11,8 +11,7 @@ import MenuItem from '@mui/material/MenuItem';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import SaveIcon from '@mui/icons-material/Save';
-import CloseIcon from '@mui/icons-material/Close';
+import { Icons } from '@constants';
 
 const LanguageOption: LanguageType[] = ['bash', 'shell', 'rust', 'javascript'];
 
@@ -95,7 +94,7 @@ export const CommandForm: React.FC<ICommandForm> = ({
             variant="contained"
             type="submit"
             loadingPosition="start"
-            startIcon={<SaveIcon />}
+            startIcon={<Icons.Save />}
           >
             Save
           </LoadingButton>
@@ -103,7 +102,7 @@ export const CommandForm: React.FC<ICommandForm> = ({
             variant="outlined"
             onClick={onFormCancel}
             disabled={isLoading}
-            startIcon={<CloseIcon />}
+            startIcon={<Icons.Close />}
           >
             Cancel
           </Button>

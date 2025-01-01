@@ -8,7 +8,7 @@ import { Icons } from '@constants';
 
 export const NavigationItem: React.FC<INavigationItem> = ({ data }) => {
   return (
-    <Card key={data.title}>
+    <Card>
       <CardHeader
         title={data.title}
         action={

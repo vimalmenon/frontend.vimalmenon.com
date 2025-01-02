@@ -6,4 +6,9 @@ export const items: ILinkItem[] = [
     content: 'Show all the important links',
     link: '/admin/links',
   },
+  {
+    title: 'Commands',
+    content: 'Show all the commands',
+    link: '/admin/commands',
+  },
 ];

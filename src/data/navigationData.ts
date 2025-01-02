@@ -1,113 +1,41 @@
 import { INavigation } from '@types';
 
-const Home: INavigation = {
-  name: 'Home',
-  url: '/',
-  breadcrumbs: [
-    {
-      name: 'Home',
-      url: '/',
-      breadcrumbs: [],
-    },
-  ],
-};
+class Navigation implements INavigation {
+  constructor(
+    public name: string,
+    public url: string,
+    public breadcrumbs: INavigation[]
+  ) {
+    this.breadcrumbs = [
+      ...breadcrumbs,
+      {
+        name,
+        url,
+        breadcrumbs: [],
+      },
+    ];
+  }
+}
 
-const Admin: INavigation = {
-  name: 'Admin',
-  url: '/admin',
-  breadcrumbs: [
-    Home,
-    {
-      name: 'Admin',
-      url: '/admin',
-      breadcrumbs: [],
-    },
-  ],
-};
+const Home = new Navigation('Home', '/', []);
+const Admin = new Navigation('Admin', '/admin', [Home]);
+const Blogs = new Navigation('Blogs', '/blogs', [Home]);
+const Vim = new Navigation('Vim', '/blogs/vim', [Home, Blogs]);
+const AdminLinks = new Navigation('Links', '/admin/links', [Home, Admin]);
+const AdminCommands = new Navigation('Links', '/admin/commands', [Home, Admin]);
+const Linux = new Navigation('Linux', '/blogs/linux', [Home, Blogs]);
+const Rust = new Navigation('Rust', '/blogs/rust', [Home, Blogs]);
 
-const Blogs: INavigation = {
-  name: 'Blogs',
-  url: '/blogs',
-  breadcrumbs: [
-    Home,
-    {
-      name: 'Blogs',
-      url: '/blogs',
-      breadcrumbs: [],
-    },
-  ],
-};
-
-const Vim: INavigation = {
-  name: 'Vim',
-  url: '/blogs/vim',
-  breadcrumbs: [
-    Home,
-    Blogs,
-    {
-      name: 'Vim',
-      url: '/blogs/vim',
-      breadcrumbs: [],
-    },
-  ],
-};
-
-const Links: INavigation = {
-  name: 'Links',
-  url: '/admin/links',
-  breadcrumbs: [
-    Home,
-    Admin,
-    {
-      name: 'Links',
-      url: '/links',
-      breadcrumbs: [],
-    },
-  ],
-};
-
-const Linux: INavigation = {
-  name: 'Linux',
-  url: '/blogs/linux',
-  breadcrumbs: [
-    Home,
-    Blogs,
-    {
-      name: 'Linux',
-      url: '/blogs/linux',
-      breadcrumbs: [
-        Home,
-        Blogs,
-        {
-          name: 'Linux',
-          url: '/blogs/linux',
-          breadcrumbs: [],
-        },
-      ],
-    },
-  ],
-};
-const Rust: INavigation = {
-  name: 'Rust',
-  url: '/blogs/rust',
-  breadcrumbs: [
-    Home,
-    Blogs,
-    {
-      name: 'Rust',
-      url: '/blogs/rust',
-      breadcrumbs: [],
-    },
-  ],
-};
 export const NavigationData: INavigation[] = [Home, Blogs, Admin];
+export const AdminNavigationData: INavigation[] = [AdminLinks, AdminCommands];
 
 export const NavigationMap = {
   [Home.url]: Home,
   [Admin.url]: Admin,
   [Blogs.url]: Blogs,
   [Linux.url]: Linux,
-  [Links.url]: Links,
+  [AdminLinks.url]: AdminLinks,
   [Vim.url]: Vim,
   [Rust.url]: Rust,
+  [AdminCommands.url]: AdminCommands,
 };

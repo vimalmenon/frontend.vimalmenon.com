@@ -3,11 +3,11 @@ import { links } from '@data';
 import Link from '@mui/material/Link';
 
 export const metadata: Metadata = {
-  title: 'Links | Admin |  Vimal Menon',
+  title: 'Commands | Admin | Vimal Menon',
   description: 'This is my personal website',
 };
 
-const LinksPage: NextPage = () => {
+const Page: NextPage = () => {
   return (
     <div>
       {links.map((link) => {
@@ -28,4 +28,4 @@ const LinksPage: NextPage = () => {
   );
 };
 
-export default LinksPage;
+export default Page;

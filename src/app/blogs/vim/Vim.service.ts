@@ -68,12 +68,14 @@ export const useVimSearch = (): IUseVimSearch => {
 export const useTagHelper = (): IUseTagHelper => {
   const { selectedTags, setSelectedTags, tags } = useVimContext();
   const onTagSelectToggle = (tag: string): void => {
-    const index = selectedTags.indexOf(tag);
-    if (index >= 0) {
-      selectedTags.splice(index, 1);
-      setSelectedTags([...selectedTags]);
-    } else {
-      setSelectedTags([...selectedTags, tag]);
+    if (selectedTags) {
+      const index = selectedTags.indexOf(tag);
+      if (index >= 0) {
+        selectedTags.splice(index, 1);
+        setSelectedTags([...selectedTags]);
+      } else {
+        setSelectedTags([...selectedTags, tag]);
+      }
     }
   };
   return {
@@ -109,9 +111,9 @@ export const useVimDeleteHelper = (): IUseDeleteHelper => {
 export const isSearched = (
   searchedValue: string,
   command: ICommand,
-  selectedTags: string[]
+  selectedTags: string[] | undefined
 ): boolean => {
-  const isTagSelected = selectedTags.some((tag) => {
+  const isTagSelected = selectedTags?.some((tag) => {
     return command.tags.includes(tag);
   });
   if (!isTagSelected) {

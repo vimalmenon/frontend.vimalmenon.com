@@ -8,8 +8,8 @@ export interface IVimContext {
   setCommand: Dispatch<SetStateAction<ICommand | undefined>>;
   search: string;
   setSearch: Dispatch<SetStateAction<string>>;
-  selectedTags: string[];
-  setSelectedTags: Dispatch<SetStateAction<string[]>>;
+  selectedTags: string[] | undefined;
+  setSelectedTags: Dispatch<SetStateAction<string[] | undefined>>;
   commands: ICommand[];
   isCommandsLoading: boolean;
   isCommandsError: boolean;
@@ -37,7 +37,7 @@ export interface IUseVimForm {
 }
 export interface IUseTagHelper {
   tags: string[];
-  selectedTags: string[];
+  selectedTags: string[] | undefined;
   onTagSelectToggle: (tag: string) => void;
 }
 

@@ -36,7 +36,7 @@ export const VimCommandPanel: React.FC = () => {
                 <Chip
                   label={tag}
                   key={tag}
-                  variant={selectedTags.includes(tag) ? 'filled' : 'outlined'}
+                  variant={selectedTags?.includes(tag) ? 'filled' : 'outlined'}
                   onClick={() => onTagSelectToggle(tag)}
                 />
               );

@@ -14,7 +14,7 @@ export const VimContext: React.FC<IContext> = ({ children, commands: initialData
   const [mode, setMode] = useState<FormMode>('VIEW');
   const [command, setCommand] = useState<ICommand | undefined>();
   const [search, setSearch] = useState<string>('');
-  const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const [selectedTags, setSelectedTags] = useState<string[]>();
   const [tags, setTags] = useState<string[]>([]);
   const queryClient = useQueryClient();
   const {
@@ -64,7 +64,9 @@ export const VimContext: React.FC<IContext> = ({ children, commands: initialData
       return [...initialValue, ...tags];
     }, []);
     setTags([...tags]);
-    setSelectedTags([...tags]);
+    if (!selectedTags) {
+      setSelectedTags([...tags]);
+    }
   }, [commands]);
 
   return (

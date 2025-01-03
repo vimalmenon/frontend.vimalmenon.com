@@ -8,7 +8,7 @@ import { Icons } from '@constants';
 
 export const NavigationItem: React.FC<INavigationItem> = ({ data }) => {
   return (
-    <Card>
+    <Card sx={{ display: 'flex', flexDirection: 'column', flex: '1' }}>
       <CardHeader
         title={data.title}
         action={

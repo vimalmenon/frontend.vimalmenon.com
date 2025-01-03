@@ -1,7 +1,7 @@
 import React from 'react';
 import { IUseVimSearch, IVimContext, IUseTagHelper, IUseDeleteHelper } from './Vim';
 import { NotImplemented } from '@utility';
-import { ICommand, ICommandTag, InputChange } from '@types';
+import { ICommand, InputChange } from '@types';
 import { IUseVimForm } from './Vim';
 
 export const VimContext = React.createContext<IVimContext>({
@@ -20,6 +20,8 @@ export const VimContext = React.createContext<IVimContext>({
   isSaveLoading: false,
   onCommandDelete: NotImplemented,
   isDeleteLoading: false,
+  tags: [],
+  setTags: NotImplemented,
 });
 
 export const useVimContext = (): IVimContext => {
@@ -64,18 +66,20 @@ export const useVimSearch = (): IUseVimSearch => {
 };
 
 export const useTagHelper = (): IUseTagHelper => {
-  const { selectedTags, setSelectedTags } = useVimContext();
-  const onTagSelect = (index: number): void => {
-    const tag = selectedTags[index];
-    selectedTags.splice(index, 1, {
-      ...tag,
-      selected: !tag.selected,
-    });
-    setSelectedTags([...selectedTags]);
+  const { selectedTags, setSelectedTags, tags } = useVimContext();
+  const onTagSelectToggle = (tag: string): void => {
+    const index = selectedTags.indexOf(tag);
+    if (index >= 0) {
+      selectedTags.splice(index, 1);
+      setSelectedTags([...selectedTags]);
+    } else {
+      setSelectedTags([...selectedTags, tag]);
+    }
   };
   return {
+    tags,
     selectedTags,
-    onTagSelect,
+    onTagSelectToggle,
   };
 };
 
@@ -105,10 +109,10 @@ export const useVimDeleteHelper = (): IUseDeleteHelper => {
 export const isSearched = (
   searchedValue: string,
   command: ICommand,
-  selectedTags: ICommandTag[]
+  selectedTags: string[]
 ): boolean => {
   const isTagSelected = selectedTags.some((tag) => {
-    return command.tags.includes(tag.name) && tag.selected;
+    return command.tags.includes(tag);
   });
   if (!isTagSelected) {
     return false;

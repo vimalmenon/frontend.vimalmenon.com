@@ -2,7 +2,7 @@
 
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 
-import { FormMode, ICommand, ICommandTag } from '@types';
+import { FormMode, ICommand } from '@types';
 import { useEffect, useState } from 'react';
 import { API } from '@constants';
 
@@ -14,7 +14,8 @@ export const VimContext: React.FC<IContext> = ({ children, commands: initialData
   const [mode, setMode] = useState<FormMode>('VIEW');
   const [command, setCommand] = useState<ICommand | undefined>();
   const [search, setSearch] = useState<string>('');
-  const [selectedTags, setSelectedTags] = useState<ICommandTag[]>([]);
+  const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const [tags, setTags] = useState<string[]>([]);
   const queryClient = useQueryClient();
   const {
     data: commands,
@@ -62,14 +63,8 @@ export const VimContext: React.FC<IContext> = ({ children, commands: initialData
       });
       return [...initialValue, ...tags];
     }, []);
-    setSelectedTags(
-      tags.map<ICommandTag>((tag) => {
-        return {
-          name: tag,
-          selected: true,
-        };
-      })
-    );
+    setTags([...tags]);
+    setSelectedTags([...tags]);
   }, [commands]);
 
   return (
@@ -90,6 +85,8 @@ export const VimContext: React.FC<IContext> = ({ children, commands: initialData
         isSaveLoading: isSavePending,
         onCommandDelete,
         isDeleteLoading: isDeletePending,
+        tags,
+        setTags,
       }}
     >
       {children}

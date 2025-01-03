@@ -19,6 +19,7 @@ Frontend for vimalmenon.com
 - [ ] Show side Navigation on Admin Page
 - [ ] Show proper loading indicator on fetching (Instead of loading)
 - [ ] Retain the tags selected status after change
+- [ ] Admin Page should be protected
 
 #### Issues
 

@@ -27,10 +27,6 @@ export interface IApi {
   method: 'POST' | 'GET' | 'PUT' | 'DELETE';
   body?: string;
 }
-export interface ICommandTag {
-  name: string;
-  selected: boolean;
-}
 
 export interface ILink {
   links: string[];

@@ -1,4 +1,4 @@
-import { FormMode, ICommand, InputChange, IReactChildren, ICommandTag } from '@types';
+import { FormMode, ICommand, InputChange, IReactChildren } from '@types';
 import { Dispatch, SetStateAction } from 'react';
 
 export interface IVimContext {
@@ -8,8 +8,8 @@ export interface IVimContext {
   setCommand: Dispatch<SetStateAction<ICommand | undefined>>;
   search: string;
   setSearch: Dispatch<SetStateAction<string>>;
-  selectedTags: ICommandTag[];
-  setSelectedTags: Dispatch<SetStateAction<ICommandTag[]>>;
+  selectedTags: string[];
+  setSelectedTags: Dispatch<SetStateAction<string[]>>;
   commands: ICommand[];
   isCommandsLoading: boolean;
   isCommandsError: boolean;
@@ -17,6 +17,8 @@ export interface IVimContext {
   isSaveLoading: boolean;
   onCommandDelete: (id?: string) => void;
   isDeleteLoading: boolean;
+  tags: string[];
+  setTags: Dispatch<SetStateAction<string[]>>;
 }
 
 export interface IContext extends IReactChildren {
@@ -34,8 +36,9 @@ export interface IUseVimForm {
   isSaveLoading: boolean;
 }
 export interface IUseTagHelper {
-  selectedTags: ICommandTag[];
-  onTagSelect: (index: number) => void;
+  tags: string[];
+  selectedTags: string[];
+  onTagSelectToggle: (tag: string) => void;
 }
 
 export interface IUseVimSearch {

@@ -10,7 +10,7 @@ import { useTagHelper, useVimForm, useVimSearch } from '../Vim.service';
 
 export const VimCommandPanel: React.FC = () => {
   const { onFormAdd, mode } = useVimForm();
-  const { selectedTags, onTagSelect } = useTagHelper();
+  const { selectedTags, onTagSelectToggle, tags } = useTagHelper();
   const { search, onSearchChange } = useVimSearch();
   return (
     <Box>
@@ -31,13 +31,13 @@ export const VimCommandPanel: React.FC = () => {
             </IconButton>
           </Box>
           <Box sx={{ display: 'flex', gap: 2 }}>
-            {selectedTags.map((tag, index) => {
+            {tags.map((tag) => {
               return (
                 <Chip
-                  label={tag.name}
-                  key={tag.name}
-                  variant={tag.selected ? 'filled' : 'outlined'}
-                  onClick={() => onTagSelect(index)}
+                  label={tag}
+                  key={tag}
+                  variant={selectedTags.includes(tag) ? 'filled' : 'outlined'}
+                  onClick={() => onTagSelectToggle(tag)}
                 />
               );
             })}

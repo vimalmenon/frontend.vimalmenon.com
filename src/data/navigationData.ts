@@ -28,6 +28,7 @@ const Rust = new Navigation('Rust', '/blogs/rust', [Home, Blogs]);
 
 export const NavigationData: INavigation[] = [Home, Blogs, Admin];
 export const AdminNavigationData: INavigation[] = [AdminLinks, AdminCommands];
+export const BlogNavigationData: INavigation[] = [Vim, Linux, Rust];
 
 export const NavigationMap = {
   [Home.url]: Home,

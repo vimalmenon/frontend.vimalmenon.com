@@ -11,15 +11,13 @@ Frontend for vimalmenon.com
 - [ ] Standardize the command
 - [ ] Make the docker image size smaller (Less than 100MB)
 - [ ] Create a multiple stage build
-- [ ] Get all the blog's data from Api
 - [ ] Fix the link colors
 - [ ] Show loading indicator on Delete, Add and Update
 - [ ] Show error msg on errors
-- [ ] Align the blog page UI to show in card
 - [ ] Show side Navigation on Admin Page
 - [ ] Show proper loading indicator on fetching (Instead of loading)
 - [ ] Admin Page should be protected
-- [ ] Add Test for frontend
+- [ ] Add Test
 
 #### Issues
 

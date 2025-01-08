@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'This is my personal website',
 };
 
-const Home: NextPage = () => {
+const Home: NextPage = async () => {
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column' }}>
       <Box>This is Home page</Box>

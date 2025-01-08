@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home This is test case 1`] = `
+<div>
+  <div
+    class="MuiBox-root css-j7qwjs"
+  >
+    <div
+      class="MuiBox-root css-0"
+    >
+      This is Home page
+    </div>
+    <div
+      class="MuiBox-root css-1bcth50"
+    >
+      <div
+        class="MuiBox-root css-0"
+      >
+        API
+      </div>
+      <div
+        class="MuiBox-root css-0"
+      />
+    </div>
+    <div
+      class="MuiBox-root css-1bcth50"
+    >
+      <div
+        class="MuiBox-root css-0"
+      >
+        Env
+      </div>
+      <div
+        class="MuiBox-root css-0"
+      >
+        Dev
+      </div>
+    </div>
+  </div>
+</div>
+`;

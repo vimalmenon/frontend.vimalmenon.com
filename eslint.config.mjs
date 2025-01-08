@@ -31,6 +31,7 @@ export default [
       '/pages/api/**/*.ts',
       'out/*',
       'jest.setup.js',
+      'jest.config.js',
       '.eslintrc.js',
       '.prettierrc.js',
     ],

@@ -17,7 +17,6 @@ Frontend for vimalmenon.com
 - [ ] Show side Navigation on Admin Page
 - [ ] Show proper loading indicator on fetching (Instead of loading)
 - [ ] Admin Page should be protected
-- [ ] Add Test
 - [ ] Create dynamic route
 
 #### Issues

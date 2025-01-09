@@ -4,9 +4,10 @@ import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 
 import { FormMode, ICommand } from '@types';
 import { useEffect, useState } from 'react';
-import { API } from '@constants';
 
+import { API } from '@constants';
 import { apiCaller } from '@utility';
+
 import { IContext } from './Vim';
 import { VimContext as Context } from './Vim.service';
 

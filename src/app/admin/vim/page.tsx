@@ -1,6 +1,7 @@
 import type { Metadata, NextPage } from 'next';
 import { links } from '@data';
 import Link from '@mui/material/Link';
+import { VimContext } from './Vim.context';
 
 export const metadata: Metadata = {
   title: 'Commands | Admin | Vimal Menon',
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 
 const Page: NextPage = () => {
   return (
-    <div>
+    <VimContext>
       {links.map((link) => {
         return (
           <div key={link.name}>
@@ -24,7 +25,7 @@ const Page: NextPage = () => {
           </div>
         );
       })}
-    </div>
+    </VimContext>
   );
 };
 

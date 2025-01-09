@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Home This is test case 1`] = `
+exports[`Home Snapshot testing 1`] = `
 <div>
   <div
     class="MuiBox-root css-j7qwjs"

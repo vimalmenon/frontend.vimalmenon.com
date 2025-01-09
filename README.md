@@ -15,7 +15,6 @@ Frontend for vimalmenon.com
 - [ ] Show loading indicator on Delete, Add and Update
 - [ ] Show error msg on errors
 - [ ] Show side Navigation on Admin Page
-- [ ] Show proper loading indicator on fetching (Instead of loading)
 - [ ] Admin Page should be protected
 - [ ] Create dynamic route
 

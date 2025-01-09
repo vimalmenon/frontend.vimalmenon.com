@@ -13,4 +13,10 @@ export const linuxCommands: ICommand[] = [
     language: 'bash',
     tags: [],
   },
+  {
+    describe: 'Scan for IP Address in subnet',
+    command: 'nmap -sP 192.168.128.0/24',
+    language: 'bash',
+    tags: [],
+  },
 ];

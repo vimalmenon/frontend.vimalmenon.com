@@ -7,6 +7,7 @@ import IconButton from '@mui/material/IconButton';
 import Chip from '@mui/material/Chip';
 import Box from '@mui/material/Box';
 import CircularProgress from '@mui/material/CircularProgress';
+import Skeleton from '@mui/material/Skeleton';
 
 import {
   useVimForm,
@@ -26,7 +27,11 @@ export const VimCommandView: React.FC = () => {
   if (['VIEW', 'DELETE'].includes(mode)) {
     return (
       <Box>
-        {isCommandsLoading ? <Box>Loading...</Box> : null}
+        {isCommandsLoading ? (
+          <Box>
+            <Skeleton variant="text" sx={{ fontSize: '1rem' }} />
+          </Box>
+        ) : null}
         {commands.map((data, index) => {
           if (isSearched(search, data, selectedTags)) {
             return (

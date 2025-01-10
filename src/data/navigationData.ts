@@ -22,12 +22,12 @@ const Admin = new Navigation('Admin', '/admin', [Home]);
 const Blogs = new Navigation('Blogs', '/blogs', [Home]);
 const Vim = new Navigation('Vim', '/blogs/vim', [Home, Blogs]);
 const AdminLinks = new Navigation('Links', '/admin/links', [Home, Admin]);
-const AdminCommands = new Navigation('Links', '/admin/commands', [Home, Admin]);
+const AdminVim = new Navigation('Links', '/admin/vim', [Home, Admin]);
 const Linux = new Navigation('Linux', '/blogs/linux', [Home, Blogs]);
 const Rust = new Navigation('Rust', '/blogs/rust', [Home, Blogs]);
 
 export const NavigationData: INavigation[] = [Home, Blogs, Admin];
-export const AdminNavigationData: INavigation[] = [AdminLinks, AdminCommands];
+export const AdminNavigationData: INavigation[] = [AdminLinks, AdminVim];
 export const BlogNavigationData: INavigation[] = [Vim, Linux, Rust];
 
 export const NavigationMap = {
@@ -38,5 +38,5 @@ export const NavigationMap = {
   [AdminLinks.url]: AdminLinks,
   [Vim.url]: Vim,
   [Rust.url]: Rust,
-  [AdminCommands.url]: AdminCommands,
+  [AdminVim.url]: AdminVim,
 };

@@ -7,8 +7,8 @@ export const items: ILinkItem[] = [
     link: '/admin/links',
   },
   {
-    title: 'Commands',
-    content: 'Show all the commands',
-    link: '/admin/commands',
+    title: 'VIM',
+    content: 'Show all the VIM commands',
+    link: '/admin/vim',
   },
 ];

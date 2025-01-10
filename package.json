@@ -33,7 +33,7 @@
     "yup": "^1.6.1"
   },
   "devDependencies": {
-    "@eslint/js": "^9.17.0",
+    "@eslint/js": "^9.18.0",
     "@tanstack/eslint-plugin-query": "^5.62.16",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
@@ -42,7 +42,7 @@
     "@types/node": "22.10.5",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "eslint": "^9.17.0",
+    "eslint": "^9.18.0",
     "eslint-config-next": "15.1.4",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.31.0",

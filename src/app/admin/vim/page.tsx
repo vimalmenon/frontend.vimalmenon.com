@@ -7,7 +7,7 @@ import { VimView } from './VimView';
 import Box from '@mui/material/Box';
 
 export const metadata: Metadata = {
-  title: 'VIM | Admin | Vimal Menon',
+  title: 'VIM / NVIM | Admin | Vimal Menon',
   description: 'This is my personal website',
 };
 

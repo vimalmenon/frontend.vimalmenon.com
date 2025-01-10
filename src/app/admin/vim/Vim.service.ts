@@ -1,5 +1,5 @@
 import React from 'react';
-import { IVimContext } from './Vim';
+import { IUseAlertHelper, IVimContext } from './Vim';
 import { NotImplemented } from '@utility';
 
 export const Context = React.createContext<IVimContext>({
@@ -9,7 +9,7 @@ export const Context = React.createContext<IVimContext>({
 
 export const useContext = (): IVimContext => React.useContext(Context);
 
-export const useAlertHelper = () => {
+export const useAlertHelper = (): IUseAlertHelper => {
   const { alert, setAlert } = useContext();
   const onAlertClose = (): void => {
     setAlert(undefined);

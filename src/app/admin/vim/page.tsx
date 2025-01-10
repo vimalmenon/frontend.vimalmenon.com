@@ -4,9 +4,10 @@ import Link from '@mui/material/Link';
 import { VimContext } from './Vim.context';
 import { VimPanel } from './VimPanel';
 import { VimView } from './VimView';
+import Box from '@mui/material/Box';
 
 export const metadata: Metadata = {
-  title: 'Commands | Admin | Vimal Menon',
+  title: 'VIM | Admin | Vimal Menon',
   description: 'This is my personal website',
 };
 
@@ -17,7 +18,7 @@ const Page: NextPage = async () => {
       <VimView />
       {links.map((link) => {
         return (
-          <div key={link.name}>
+          <Box key={link.name}>
             {link.name}
             {link.links.map((data, index) => {
               return (
@@ -26,7 +27,7 @@ const Page: NextPage = async () => {
                 </Link>
               );
             })}
-          </div>
+          </Box>
         );
       })}
     </VimContext>

@@ -18,6 +18,7 @@ Frontend for vimalmenon.com
 - [ ] Admin Page should be protected
 - [ ] Create dynamic route
 - [ ] Add framer motion
+- [ ] Fix the test (Unable to run test)
 
 #### Issues
 

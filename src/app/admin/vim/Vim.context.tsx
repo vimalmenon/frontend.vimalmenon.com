@@ -1,3 +1,5 @@
+'use client';
+
 import { IAlert, IReactChildren } from '@types';
 import { Context } from './Vim.service';
 import { useState } from 'react';

@@ -8,3 +8,14 @@ export const Context = React.createContext<IVimContext>({
 });
 
 export const useContext = (): IVimContext => React.useContext(Context);
+
+export const useAlertHelper = () => {
+  const { alert, setAlert } = useContext();
+  const onAlertClose = (): void => {
+    setAlert(undefined);
+  };
+  return {
+    alert,
+    onAlertClose,
+  };
+};

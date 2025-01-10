@@ -2,6 +2,7 @@ import type { Metadata, NextPage } from 'next';
 import { links } from '@data';
 import Link from '@mui/material/Link';
 import { VimContext } from './Vim.context';
+import { VimPanel } from './VimPanel';
 
 export const metadata: Metadata = {
   title: 'Commands | Admin | Vimal Menon',
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
 const Page: NextPage = async () => {
   return (
     <VimContext>
+      <VimPanel />
       {links.map((link) => {
         return (
           <div key={link.name}>

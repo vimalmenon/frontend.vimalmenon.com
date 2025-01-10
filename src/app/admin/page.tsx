@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const Admin: NextPage = async () => {
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+    <Box sx={{ display: 'flex', gap: 2, flex: '1' }}>
       {items.map((data) => {
         return <NavigationItem data={data} key={data.title} />;
       })}

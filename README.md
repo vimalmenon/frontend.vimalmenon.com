@@ -17,6 +17,7 @@ Frontend for vimalmenon.com
 - [ ] Show side Navigation on Admin Page
 - [ ] Admin Page should be protected
 - [ ] Create dynamic route
+- [ ] Add framer motion
 
 #### Issues
 

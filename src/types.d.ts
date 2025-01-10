@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { Dispatch, SetStateAction } from 'react';
+
+export type ReactSetState<T> = Dispatch<SetStateAction<T>>;
 
 export type LanguageType = 'shell' | 'bash' | 'rust' | 'javascript';
+
+export type AlertType = 'error' | 'success' | 'info' | 'info';
 
 export interface IReactChildren {
   children: React.ReactNode;
@@ -37,6 +41,11 @@ export interface ILinkItem {
   title: string;
   content: string;
   link: string;
+}
+
+export interface IAlert {
+  msg: string;
+  alert: AlertType;
 }
 
 export type InputChange = React.ChangeEventHandler<HTMLTextAreaElement>;

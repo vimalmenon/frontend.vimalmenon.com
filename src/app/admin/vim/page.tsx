@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: 'This is my personal website',
 };
 
-const Page: NextPage = () => {
+const Page: NextPage = async () => {
   return (
     <VimContext>
       {links.map((link) => {

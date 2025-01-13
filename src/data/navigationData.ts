@@ -20,9 +20,9 @@ class Navigation implements INavigation {
 const Home = new Navigation('Home', '/', []);
 const Admin = new Navigation('Admin', '/admin', [Home]);
 const Blogs = new Navigation('Blogs', '/blogs', [Home]);
-const Vim = new Navigation('Vim', '/blogs/vim', [Home, Blogs]);
+const Vim = new Navigation('VIM', '/blogs/vim', [Home, Blogs]);
 const AdminLinks = new Navigation('Links', '/admin/links', [Home, Admin]);
-const AdminVim = new Navigation('Links', '/admin/vim', [Home, Admin]);
+const AdminVim = new Navigation('VIM', '/admin/vim', [Home, Admin]);
 const Linux = new Navigation('Linux', '/blogs/linux', [Home, Blogs]);
 const Rust = new Navigation('Rust', '/blogs/rust', [Home, Blogs]);
 

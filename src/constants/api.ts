@@ -22,9 +22,15 @@ const UpdateVimData = (data: ICommand): IApi => ({
   body: JSON.stringify(data),
 });
 
+const GetAdminVimData = (): IApi => ({
+  url: `${env.API}/admin/vim/`,
+  method: 'GET',
+});
+
 export const API = {
   GetVimData,
   AddVimData,
   DeleteVimData,
   UpdateVimData,
+  GetAdminVimData,
 };

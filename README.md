@@ -11,7 +11,6 @@ Frontend for vimalmenon.com
 - [ ] Standardize the command
 - [ ] Make the docker image size smaller (Less than 100MB)
 - [ ] Create a multiple stage build
-- [ ] Fix the link colors
 - [ ] Show loading indicator on Delete, Add and Update
 - [ ] Show error msg on errors
 - [ ] Show side Navigation on Admin Page

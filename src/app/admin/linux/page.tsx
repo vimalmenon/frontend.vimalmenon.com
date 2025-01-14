@@ -1,9 +1,10 @@
+
 import type { Metadata, NextPage } from 'next';
 import { links } from '@data';
 import Link from '@mui/material/Link';
 
 export const metadata: Metadata = {
-  title: 'Links | Admin |  Vimal Menon',
+  title: 'Linux | Admin |  Vimal Menon',
   description: 'This is my personal website',
 };
 

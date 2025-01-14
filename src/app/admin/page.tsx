@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: 'This is my personal website',
 };
 
-const Admin: NextPage = async () => {
+const Page: NextPage = async () => {
   return (
     <Box sx={{ display: 'flex', gap: 2, flex: '1' }}>
       {items.map((data) => {
@@ -18,4 +18,4 @@ const Admin: NextPage = async () => {
   );
 };
 
-export default Admin;
+export default Page;

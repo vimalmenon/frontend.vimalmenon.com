@@ -31,6 +31,13 @@ Start app
 npm run dev
 ```
 
+Quality check
+
+```sh
+npm run eslint:fix
+npm run tsc
+```
+
 Build the app and start the prod
 
 ```sh

@@ -1,4 +1,3 @@
-
 import type { Metadata, NextPage } from 'next';
 import { links } from '@data';
 import Link from '@mui/material/Link';

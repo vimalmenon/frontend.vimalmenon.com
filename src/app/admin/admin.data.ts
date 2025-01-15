@@ -11,4 +11,9 @@ export const items: ILinkItem[] = [
     content: 'Show all the VIM commands',
     link: '/admin/vim',
   },
+  {
+    title: 'Linux',
+    content: 'Show all the Linux commands',
+    link: '/admin/linux',
+  },
 ];

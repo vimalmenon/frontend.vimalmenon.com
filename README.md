@@ -18,6 +18,7 @@ Frontend for vimalmenon.com
 - [ ] Create dynamic route
 - [ ] Add framer motion
 - [ ] Fix the test (Unable to run test)
+- [ ] Everything on frontend and nothing in backend
 
 #### Issues
 

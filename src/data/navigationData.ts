@@ -23,6 +23,7 @@ const Blogs = new Navigation('Blogs', '/blogs', [Home]);
 const Vim = new Navigation('VIM', '/blogs/vim', [Home, Blogs]);
 const AdminLinks = new Navigation('Links', '/admin/links', [Home, Admin]);
 const AdminVim = new Navigation('VIM', '/admin/vim', [Home, Admin]);
+const AdminLinux = new Navigation('Linux', '/admin/linux', [Home, Admin]);
 const Linux = new Navigation('Linux', '/blogs/linux', [Home, Blogs]);
 const Rust = new Navigation('Rust', '/blogs/rust', [Home, Blogs]);
 
@@ -39,4 +40,5 @@ export const NavigationMap = {
   [Vim.url]: Vim,
   [Rust.url]: Rust,
   [AdminVim.url]: AdminVim,
+  [AdminLinux.url]: AdminLinux,
 };

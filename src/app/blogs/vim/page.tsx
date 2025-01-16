@@ -2,6 +2,7 @@ import type { Metadata, NextPage } from 'next';
 import Box from '@mui/material/Box';
 
 import { navigation } from './vim.data';
+import NextLink from 'next/link';
 
 export const metadata: Metadata = {
   title: 'VIM Shortcut | Vimal Menon',
@@ -14,7 +15,11 @@ const Page: NextPage = async () => {
       <Box>VIM Commands:</Box>
       <Box>
         {navigation.map((data) => {
-          return <Box key={data.url}>{data.name}</Box>;
+          return (
+            <Box key={data.url}>
+              <NextLink href={`/blogs/vim/${data.url}`}>{data.name}</NextLink>
+            </Box>
+          );
         })}
       </Box>
     </Box>

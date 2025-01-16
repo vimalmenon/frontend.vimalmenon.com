@@ -1,6 +1,4 @@
 import type { Metadata, NextPage } from 'next';
-import { links } from '@data';
-import Link from '@mui/material/Link';
 
 export const metadata: Metadata = {
   title: 'Linux | Admin |  Vimal Menon',
@@ -8,24 +6,7 @@ export const metadata: Metadata = {
 };
 
 const Page: NextPage = () => {
-  return (
-    <div>
-      {links.map((link) => {
-        return (
-          <div key={link.name}>
-            {link.name}
-            {link.links.map((data, index) => {
-              return (
-                <Link href={data} key={index} target="_blank" rel="noreferrer">
-                  {link.name}
-                </Link>
-              );
-            })}
-          </div>
-        );
-      })}
-    </div>
-  );
+  return <div></div>;
 };
 
 export default Page;

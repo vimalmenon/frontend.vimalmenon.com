@@ -32,11 +32,6 @@ export interface IApi {
   body?: string;
 }
 
-export interface ILink {
-  links: string[];
-  name: string;
-}
-
 export interface ILinkItem {
   title: string;
   content: string;

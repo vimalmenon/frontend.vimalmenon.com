@@ -1,7 +1,7 @@
 import type { Metadata, NextPage } from 'next';
 import Box from '@mui/material/Box';
 
-import { navigation } from './vim.data';
+import { VimNavigationData } from "@data"
 import NextLink from 'next/link';
 
 export const metadata: Metadata = {
@@ -14,10 +14,10 @@ const Page: NextPage = async () => {
     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
       <Box>VIM Commands:</Box>
       <Box>
-        {navigation.map((data) => {
+        {VimNavigationData.map((data) => {
           return (
             <Box key={data.url}>
-              <NextLink href={`/blogs/vim/${data.url}`}>{data.name}</NextLink>
+              <NextLink href={data.url}>{data.name}</NextLink>
             </Box>
           );
         })}

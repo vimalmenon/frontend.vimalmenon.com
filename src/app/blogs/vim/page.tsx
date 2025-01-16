@@ -1,7 +1,7 @@
 import type { Metadata, NextPage } from 'next';
 import Box from '@mui/material/Box';
 
-import { VimNavigationData } from "@data"
+import { VimNavigationData } from '@data';
 import NextLink from 'next/link';
 
 export const metadata: Metadata = {

@@ -4,6 +4,7 @@ class Navigation implements INavigation {
   constructor(
     public name: string,
     public url: string,
+    public title: string,
     public breadcrumbs: INavigation[]
   ) {
     this.breadcrumbs = [
@@ -18,27 +19,33 @@ class Navigation implements INavigation {
 }
 
 //Home Navigation
-const Home = new Navigation('Home', '/', []);
-const Admin = new Navigation('Admin', '/admin', [Home]);
-const Blogs = new Navigation('Blogs', '/blogs', [Home]);
+const Home = new Navigation('Home', '/', 'Home', []);
+const Admin = new Navigation('Admin', '/admin', 'Admin | Home', [Home]);
+const Blogs = new Navigation('Blogs', '/blogs', 'Blogs | Home', [Home]);
 
 //Admin Navigation
-const AdminLinks = new Navigation('Links', '/admin/links', [Home, Admin]);
-const AdminVim = new Navigation('VIM', '/admin/vim', [Home, Admin]);
-const AdminLinux = new Navigation('Linux', '/admin/linux', [Home, Admin]);
+const AdminLinks = new Navigation('Links', '/admin/links', 'Links | Admin | Home', [Home, Admin]);
+const AdminVim = new Navigation('VIM', '/admin/vim', 'Vim | Admin | Home', [Home, Admin]);
+const AdminLinux = new Navigation('Linux', '/admin/linux', 'Linux | Admin | Home', [Home, Admin]);
 
 //Blogs Navigation
-const Linux = new Navigation('Linux', '/blogs/linux', [Home, Blogs]);
-const Rust = new Navigation('Rust', '/blogs/rust', [Home, Blogs]);
-const Vim = new Navigation('VIM', '/blogs/vim', [Home, Blogs]);
+const Linux = new Navigation('Linux', '/blogs/linux', 'Linux | Blogs | Home', [Home, Blogs]);
+const Rust = new Navigation('Rust', '/blogs/rust', 'Rust | Blogs | Home', [Home, Blogs]);
+const Vim = new Navigation('VIM', '/blogs/vim', 'Vim | Blogs | Home', [Home, Blogs]);
 
 // Vim Navigation
-const VimInstall = new Navigation('Install NVIM', '/blogs/vim/install-nvim', [Home, Blogs, Vim]);
-const VimNavigation = new Navigation('Basic Navigation', '/blogs/vim/basic-navigation', [
-  Home,
-  Blogs,
-  Vim,
-]);
+const VimInstall = new Navigation(
+  'Install NVIM',
+  'Install NVIM | Vim | Blogs | Home',
+  `${Vim.url}/install-nvim`,
+  [Home, Blogs, Vim]
+);
+const VimNavigation = new Navigation(
+  'Basic Navigation',
+  'Basic Navigation | Vim | Blogs | Home',
+  `${Vim.url}/basic-navigation`,
+  [Home, Blogs, Vim]
+);
 
 export const NavigationData: INavigation[] = [Home, Blogs, Admin];
 export const AdminNavigationData: INavigation[] = [AdminLinks, AdminVim];

@@ -38,4 +38,25 @@ export const links = [
       },
     ],
   },
+  {
+    name: 'Vimal Menon',
+    links: [
+      {
+        name: 'Frontend VimalMenon',
+        link: 'https://github.com/vimalmenon/frontend.vimalmenon.com',
+      },
+      {
+        name: 'Api VimalMenon',
+        link: 'https://github.com/vimalmenon/api.vimalmenon.com',
+      },
+      {
+        name: 'Helm VimalMenon',
+        link: 'https://github.com/vimalmenon/helm.vimalmenon.com/tree/main',
+      },
+      {
+        name: 'Ansible Homelab',
+        link: 'https://github.com/vimalmenon/ansible.homelab',
+      },
+    ],
+  },
 ];

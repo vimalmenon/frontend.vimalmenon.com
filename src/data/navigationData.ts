@@ -64,21 +64,29 @@ const Linux = new Navigation(
   'Linux',
   '/blogs/linux',
   'Linux | Blogs | Home',
-  'This is Home Page for Vimal Menon',
+  'List very useful linux command',
   [Home, Blogs]
 );
+const Links = new Navigation(
+  'Links',
+  '/blogs/links',
+  'Links | Blogs | Home',
+  'List very useful linux Links',
+  [Home, Blogs]
+);
+
 const Rust = new Navigation(
   'Rust',
   '/blogs/rust',
   'Rust | Blogs | Home',
-  'This is Home Page for Vimal Menon',
+  'Rust tutorial from basic to advanced stuff',
   [Home, Blogs]
 );
 const Vim = new Navigation(
   'VIM',
   '/blogs/vim',
   'Vim | Blogs | Home',
-  'This is Home Page for Vimal Menon',
+  'List all the NVIM and VIM shortcut',
   [Home, Blogs]
 );
 
@@ -100,7 +108,7 @@ const VimNavigation = new Navigation(
 
 export const NavigationData: INavigation[] = [Home, Blogs, Admin];
 export const AdminNavigationData: INavigation[] = [AdminLinks, AdminVim];
-export const BlogNavigationData: INavigation[] = [Vim, Linux, Rust];
+export const BlogNavigationData: INavigation[] = [Vim, Linux, Rust, Links];
 export const VimNavigationData: INavigation[] = [VimInstall, VimNavigation];
 
 export const NavigationMap = {
@@ -115,4 +123,5 @@ export const NavigationMap = {
   [AdminLinux.url]: AdminLinux,
   [VimInstall.url]: VimInstall,
   [VimNavigation.url]: VimNavigation,
+  [Links.url]: Links,
 };

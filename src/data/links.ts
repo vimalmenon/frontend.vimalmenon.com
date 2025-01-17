@@ -19,6 +19,10 @@ export const links = [
         name: 'Website',
         link: 'https://pkg.go.dev/github.com/alexellis/k3sup#readme-do-you-love-k3sup',
       },
+      {
+        name: 'k3S Script Deployment',
+        link: 'https://github.com/JamesTurland/JimsGarage/blob/main/Kubernetes/K3S-Deploy/k3s.sh',
+      },
     ],
   },
   {

@@ -6,7 +6,8 @@ class Navigation implements INavigation {
     public url: string,
     public title: string,
     public description: string,
-    public breadcrumbs: INavigation[]
+    public breadcrumbs: INavigation[],
+    public isReady: boolean
   ) {
     this.breadcrumbs = [
       ...breadcrumbs,
@@ -20,20 +21,22 @@ class Navigation implements INavigation {
 }
 
 //Home Navigation
-const Home = new Navigation('Home', '/', 'Home', 'This is Home Page for Vimal Menon', []);
+const Home = new Navigation('Home', '/', 'Home', 'This is Home Page for Vimal Menon', [], true);
 const Admin = new Navigation(
   'Admin',
   '/admin',
   'Admin | Home',
   'This is Home Page for Vimal Menon',
-  [Home]
+  [Home],
+  true
 );
 const Blogs = new Navigation(
   'Blogs',
   '/blogs',
   'Blogs | Home',
   'This is Home Page for Vimal Menon',
-  [Home]
+  [Home],
+  true
 );
 
 //Admin Navigation
@@ -42,21 +45,24 @@ const AdminLinks = new Navigation(
   '/admin/links',
   'Links | Admin | Home',
   'This is Home Page for Vimal Menon',
-  [Home, Admin]
+  [Home, Admin],
+  true
 );
 const AdminVim = new Navigation(
   'VIM',
   '/admin/vim',
   'Vim | Admin | Home',
   'This is Home Page for Vimal Menon',
-  [Home, Admin]
+  [Home, Admin],
+  true
 );
 const AdminLinux = new Navigation(
   'Linux',
   '/admin/linux',
   'Linux | Admin | Home',
   'This is Home Page for Vimal Menon',
-  [Home, Admin]
+  [Home, Admin],
+  true
 );
 
 //Blogs Navigation
@@ -65,14 +71,16 @@ const Linux = new Navigation(
   '/blogs/linux',
   'Linux | Blogs | Home',
   'List very useful linux command',
-  [Home, Blogs]
+  [Home, Blogs],
+  true
 );
 const Links = new Navigation(
   'Links',
   '/blogs/links',
   'Links | Blogs | Home',
   'List very useful linux Links',
-  [Home, Blogs]
+  [Home, Blogs],
+  true
 );
 
 const Rust = new Navigation(
@@ -80,14 +88,16 @@ const Rust = new Navigation(
   '/blogs/rust',
   'Rust | Blogs | Home',
   'Rust tutorial from basic to advanced stuff',
-  [Home, Blogs]
+  [Home, Blogs],
+  true
 );
 const Vim = new Navigation(
   'VIM',
   '/blogs/vim',
   'Vim | Blogs | Home',
   'List all the NVIM and VIM shortcut',
-  [Home, Blogs]
+  [Home, Blogs],
+  true
 );
 
 // Vim Navigation
@@ -96,14 +106,16 @@ const VimInstall = new Navigation(
   'Install NVIM | Vim | Blogs | Home',
   `${Vim.url}/install-nvim`,
   'This is Home Page for Vimal Menon',
-  [Home, Blogs, Vim]
+  [Home, Blogs, Vim],
+  true
 );
 const VimNavigation = new Navigation(
   'Basic Navigation',
   'Basic Navigation | Vim | Blogs | Home',
   `${Vim.url}/basic-navigation`,
   'This is Home Page for Vimal Menon',
-  [Home, Blogs, Vim]
+  [Home, Blogs, Vim],
+  true
 );
 
 export const NavigationData: INavigation[] = [Home, Blogs, Admin];

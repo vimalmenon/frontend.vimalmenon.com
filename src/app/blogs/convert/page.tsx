@@ -2,7 +2,7 @@ import Box from '@mui/material/Box';
 import type { Metadata, NextPage } from 'next';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import { Context } from './Context.component';
+import { Context } from './Context.context';
 
 export const metadata: Metadata = {
   title: 'Convert | Blogs | Vimal Menon',

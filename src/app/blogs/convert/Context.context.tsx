@@ -7,11 +7,14 @@ import { SelectedButtonType } from './Context';
 
 export const Context: React.FC<IReactChildren> = ({ children }) => {
   const [selectedButton, setSelectedButton] = useState<SelectedButtonType>(0);
+  const [input, setInput] = useState<string>('');
   return (
     <ConvertContext.Provider
       value={{
         selectedButton,
         setSelectedButton,
+        input,
+        setInput,
       }}
     >
       {children}

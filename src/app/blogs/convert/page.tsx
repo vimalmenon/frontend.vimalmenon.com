@@ -1,8 +1,8 @@
 import Box from '@mui/material/Box';
 import type { Metadata, NextPage } from 'next';
-import TextField from '@mui/material/TextField';
 import { Context } from './Context.context';
 import { SelectedButton } from './SelectButton';
+import { ConvertInput } from './ConvertInput';
 
 export const metadata: Metadata = {
   title: 'Convert | Blogs | Vimal Menon',
@@ -14,9 +14,7 @@ const Page: NextPage = () => {
     <Context>
       <Box>
         <SelectedButton />
-        <Box>
-          <TextField required id="outlined-required" label="Required" defaultValue="Hello World" />
-        </Box>
+        <ConvertInput />
         <Box>
           Decimal : 0 <br />
           Binary: 0 <br />

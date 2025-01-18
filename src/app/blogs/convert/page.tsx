@@ -1,8 +1,8 @@
 import Box from '@mui/material/Box';
 import type { Metadata, NextPage } from 'next';
 import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
 import { Context } from './Context.context';
+import { SelectedButton } from './SelectButton';
 
 export const metadata: Metadata = {
   title: 'Convert | Blogs | Vimal Menon',
@@ -13,11 +13,7 @@ const Page: NextPage = () => {
   return (
     <Context>
       <Box>
-        <Box>
-          <Button variant="outlined">Decimal</Button>
-          <Button variant="contained">Binary</Button>
-          <Button variant="outlined">HexaDecimal</Button>
-        </Box>
+        <SelectedButton />
         <Box>
           <TextField required id="outlined-required" label="Required" defaultValue="Hello World" />
         </Box>

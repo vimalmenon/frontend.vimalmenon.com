@@ -145,4 +145,5 @@ export const NavigationMap = {
   [VimInstall.url]: VimInstall,
   [VimNavigation.url]: VimNavigation,
   [Links.url]: Links,
+  [Convert.url]: Convert,
 };

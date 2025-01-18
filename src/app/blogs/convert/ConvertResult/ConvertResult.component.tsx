@@ -4,11 +4,12 @@ import Box from '@mui/material/Box';
 import { useConvertResultHelper } from '../Context.service';
 
 export const ConvertResult: React.FC = () => {
-  const { binaryValue } = useConvertResultHelper();
+  const { binaryValue, input } = useConvertResultHelper();
   return (
     <Box>
-      Decimal : {binaryValue ? binaryValue : '0'} <br />
-      Binary: 0 <br />
+      Decimal : {input ? input : '0'} <br />
+      Binary: {binaryValue ? binaryValue : '0'}
+      <br />
       Hexadecimal: 0 <br />
     </Box>
   );

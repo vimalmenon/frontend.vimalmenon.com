@@ -13,15 +13,10 @@ export const metadata: Metadata = {
 const Page: NextPage = () => {
   return (
     <Context>
-      <Box>
+      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
         <SelectedButton />
         <ConvertInput />
         <ConvertResult />
-        <Box>
-          Decimal : 0 <br />
-          Binary: 0 <br />
-          Hexadecimal: 0 <br />
-        </Box>
       </Box>
     </Context>
   );

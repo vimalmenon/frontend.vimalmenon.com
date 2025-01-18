@@ -24,8 +24,9 @@ export const useInputHelper = () => {
 };
 
 export const useConvertResultHelper = () => {
-  const { binaryValue } = useConvertContext();
+  const { binaryValue, input } = useConvertContext();
   return {
     binaryValue,
+    input,
   };
 };

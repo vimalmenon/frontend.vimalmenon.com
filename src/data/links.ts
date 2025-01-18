@@ -59,4 +59,21 @@ export const links = [
       },
     ],
   },
+  {
+    name: 'Lichee PI',
+    links: [
+      {
+        name: 'Lichee PI Docs',
+        link: 'https://docs.openeuler.org/en/docs/24.03_LTS/docs/Installation/RISC-V-LicheePi4A.html',
+      },
+      {
+        name: 'Wiki Sipeed',
+        link: 'https://wiki.sipeed.com/hardware/en/lichee/th1520/lc4a/lc4a.html',
+      },
+      {
+        name: 'Open BMC GitHub',
+        link: 'https://github.com/openbmc/docs',
+      },
+    ],
+  },
 ];

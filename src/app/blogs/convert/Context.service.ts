@@ -9,6 +9,8 @@ export const ConvertContext = React.createContext<IContext>({
   setSelectedButton: NotImplemented,
   input: '',
   setInput: NotImplemented,
+  binaryValue: '',
+  setBinaryValue: NotImplemented,
 });
 
 export const useConvertContext = (): IContext => React.useContext<IContext>(ConvertContext);
@@ -18,5 +20,12 @@ export const useInputHelper = () => {
   return {
     input,
     setInput,
+  };
+};
+
+export const useConvertResultHelper = () => {
+  const { binaryValue } = useConvertContext();
+  return {
+    binaryValue,
   };
 };

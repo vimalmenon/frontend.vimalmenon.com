@@ -8,6 +8,7 @@ import { SelectedButtonType } from './Context';
 export const Context: React.FC<IReactChildren> = ({ children }) => {
   const [selectedButton, setSelectedButton] = useState<SelectedButtonType>(0);
   const [input, setInput] = useState<string>('');
+  const [binaryValue, setBinaryValue] = useState<string>('');
   return (
     <ConvertContext.Provider
       value={{
@@ -15,6 +16,8 @@ export const Context: React.FC<IReactChildren> = ({ children }) => {
         setSelectedButton,
         input,
         setInput,
+        binaryValue,
+        setBinaryValue,
       }}
     >
       {children}

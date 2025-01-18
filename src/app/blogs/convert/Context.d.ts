@@ -7,4 +7,6 @@ export interface IContext {
   setSelectedButton: ReactSetState<SelectedButtonType>;
   input: string;
   setInput: ReactSetState<string>;
+  binaryValue: string;
+  setBinaryValue: ReactSetState<string>;
 }

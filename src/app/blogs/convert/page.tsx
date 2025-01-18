@@ -3,6 +3,7 @@ import type { Metadata, NextPage } from 'next';
 import { Context } from './Context.context';
 import { SelectedButton } from './SelectButton';
 import { ConvertInput } from './ConvertInput';
+import { ConvertResult } from './ConvertResult';
 
 export const metadata: Metadata = {
   title: 'Convert | Blogs | Vimal Menon',
@@ -15,6 +16,7 @@ const Page: NextPage = () => {
       <Box>
         <SelectedButton />
         <ConvertInput />
+        <ConvertResult />
         <Box>
           Decimal : 0 <br />
           Binary: 0 <br />

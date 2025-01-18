@@ -14,6 +14,7 @@ export interface INavigation {
   name: string;
   url: string;
   breadcrumbs: INavigation[];
+  description: string;
 }
 
 export interface ICommand {

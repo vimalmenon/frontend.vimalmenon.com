@@ -5,7 +5,7 @@ import { Highlight } from '@components';
 import type { Metadata, NextPage } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Links | Blogs | Vimal Menon',
+  title: 'Convert | Blogs | Vimal Menon',
   description: 'This is my personal website',
 };
 

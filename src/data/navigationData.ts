@@ -14,6 +14,7 @@ class Navigation implements INavigation {
       {
         name,
         url,
+        description: '',
         breadcrumbs: [],
       },
     ];
@@ -99,6 +100,14 @@ const Vim = new Navigation(
   [Home, Blogs],
   true
 );
+const Convert = new Navigation(
+  'Convert to binary / hexadecimal',
+  '/blogs/convert',
+  'Convert | Blogs | Home',
+  'Convert the number to binary or hexadecimal',
+  [Home, Blogs],
+  true
+);
 
 // Vim Navigation
 const VimInstall = new Navigation(
@@ -120,7 +129,7 @@ const VimNavigation = new Navigation(
 
 export const NavigationData: INavigation[] = [Home, Blogs, Admin];
 export const AdminNavigationData: INavigation[] = [AdminLinks, AdminVim];
-export const BlogNavigationData: INavigation[] = [Vim, Linux, Rust, Links];
+export const BlogNavigationData: INavigation[] = [Vim, Linux, Rust, Links, Convert];
 export const VimNavigationData: INavigation[] = [VimInstall, VimNavigation];
 
 export const NavigationMap = {

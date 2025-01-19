@@ -36,6 +36,10 @@ export const links = [
         name: 'Website',
         link: 'https://www.reddit.com/r/neovim/comments/1bojtr0/please_share_your_nvimcmp_config/',
       },
+      {
+        name: 'GitHub NeoVim Plugin',
+        link: 'https://github.com/rockerBOO/awesome-neovim?tab=readme-ov-file#plugin-manager',
+      },
     ],
   },
   {

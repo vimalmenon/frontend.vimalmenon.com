@@ -15,8 +15,8 @@ export const Link: React.FC<ILinkComponent> = ({ data, index }) => {
         {data.links.map((link, index) => {
           return (
             <Box key={index} sx={{ marginLeft: 2, display: 'flex', gap: 1 }}>
-              {index + 1})
-              <MuiLink href={link.link} target="_blank">
+              ({index + 1})
+              <MuiLink href={link.link} target="_blank" underline="none">
                 {link.name}
               </MuiLink>
             </Box>

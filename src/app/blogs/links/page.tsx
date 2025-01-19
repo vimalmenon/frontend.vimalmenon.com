@@ -1,6 +1,7 @@
 import Box from '@mui/material/Box';
 import { links } from '@data';
 import type { Metadata, NextPage } from 'next';
+import { Link } from './Link';
 
 export const metadata: Metadata = {
   title: 'Links | Blogs | Vimal Menon',
@@ -13,18 +14,7 @@ const Page: NextPage = () => {
       {links.map((data, index) => {
         return (
           <Box sx={{ margin: 0.5 }} key={index}>
-            <Box>
-              [{index + 1}] {data.name}
-            </Box>
-            <Box>
-              {data.links.map((link, index) => {
-                return (
-                  <Box key={index} sx={{ marginLeft: 2 }}>
-                    {index + 1}) {link.name}
-                  </Box>
-                );
-              })}
-            </Box>
+            <Link data={data} index={index} />
           </Box>
         );
       })}

@@ -1,4 +1,6 @@
-export const links = [
+import { ILink } from '@types';
+
+export const links: ILink[] = [
   {
     name: 'Cron Tab',
     links: [

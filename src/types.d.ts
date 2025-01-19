@@ -44,4 +44,14 @@ export interface IAlert {
   alert: AlertType;
 }
 
+export interface ILinks {
+  name: string;
+  link: string;
+}
+
+export interface ILink {
+  name: string;
+  links: ILinks[];
+}
+
 export type InputChange = React.ChangeEventHandler<HTMLTextAreaElement>;

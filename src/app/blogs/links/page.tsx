@@ -12,11 +12,17 @@ const Page: NextPage = () => {
     <Box>
       {links.map((data, index) => {
         return (
-          <Box component="p" sx={{ margin: 0.5 }} key={index}>
-            <Box>{data.name}</Box>
+          <Box sx={{ margin: 0.5 }} key={index}>
+            <Box>
+              [{index + 1}] {data.name}
+            </Box>
             <Box>
               {data.links.map((link, index) => {
-                return <Box key={index}>{link.name}</Box>;
+                return (
+                  <Box key={index} sx={{ marginLeft: 2 }}>
+                    {index + 1}) {link.name}
+                  </Box>
+                );
               })}
             </Box>
           </Box>

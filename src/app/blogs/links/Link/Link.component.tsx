@@ -1,10 +1,10 @@
 'use client';
 
 import Box from '@mui/material/Box';
-import { ILinkComponent } from './Link';
-
 import MuiLink from '@mui/material/Link';
 import { useState } from 'react';
+
+import { ILinkComponent } from './Link';
 
 export const Link: React.FC<ILinkComponent> = ({ data, index }) => {
   const [show, setShow] = useState<boolean>(false);

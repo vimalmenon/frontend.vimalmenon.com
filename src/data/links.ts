@@ -82,4 +82,13 @@ export const links: ILink[] = [
       },
     ],
   },
+  {
+    name: 'Docs',
+    links: [
+      {
+        name: 'Boto 3',
+        link: 'https://boto3.amazonaws.com/v1/documentation/api/1.35.8/guide/dynamodb.html',
+      },
+    ],
+  },
 ];

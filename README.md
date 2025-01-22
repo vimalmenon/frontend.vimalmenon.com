@@ -19,7 +19,7 @@ Frontend for vimalmenon.com
 - [ ] Add framer motion
 - [ ] Fix the test (Unable to run test)
 - [ ] Everything on frontend and nothing in backend
-- [ ] Conver to binary or hexadecimal
+- [ ] Convert to binary or hexadecimal
 
 #### Issues
 

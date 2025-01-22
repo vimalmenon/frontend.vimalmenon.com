@@ -20,4 +20,3 @@ export const linuxCommands: ICommand[] = [
     tags: [],
   },
 ];
-

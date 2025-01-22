@@ -112,16 +112,16 @@ const Convert = new Navigation(
 // Vim Navigation
 const VimInstall = new Navigation(
   'Install NVIM',
-  'Install NVIM | Vim | Blogs | Home',
   `${Vim.url}/install-nvim`,
+  'Install NVIM | Vim | Blogs | Home',
   'This is Home Page for Vimal Menon',
   [Home, Blogs, Vim],
   true
 );
 const VimNavigation = new Navigation(
   'Basic Navigation',
-  'Basic Navigation | Vim | Blogs | Home',
   `${Vim.url}/basic-navigation`,
+  'Basic Navigation | Vim | Blogs | Home',
   'This is Home Page for Vimal Menon',
   [Home, Blogs, Vim],
   true

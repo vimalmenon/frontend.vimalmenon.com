@@ -91,4 +91,13 @@ export const links: ILink[] = [
       },
     ],
   },
+  {
+    name: 'Personal',
+    links: [
+      {
+        name: 'Resume Mate',
+        link: 'https://www.resumemate.io/resume-builder',
+      },
+    ],
+  },
 ];

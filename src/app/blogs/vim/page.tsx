@@ -4,6 +4,8 @@ import Box from '@mui/material/Box';
 import { VimNavigationData } from '@data';
 import NextLink from 'next/link';
 
+import Link from '@mui/material/Link';
+
 export const metadata: Metadata = {
   title: 'VIM Shortcut | Vimal Menon',
   description: 'This is my personal website',
@@ -17,7 +19,9 @@ const Page: NextPage = async () => {
         {VimNavigationData.map((data) => {
           return (
             <Box key={data.url}>
-              <NextLink href={data.url}>{data.name}</NextLink>
+              <Link component={NextLink} href={data.url} underline="none">
+                {data.name}
+              </Link>
             </Box>
           );
         })}

@@ -1,12 +1,13 @@
 import Box from '@mui/material/Box';
 import type { Metadata, NextPage } from 'next';
 import { env } from '@constants';
+import { NavigationMap } from '@data';
 
-export const dynamic = 'force-dynamic';
+const data = NavigationMap['/blogs'];
 
 export const metadata: Metadata = {
-  title: 'Vimal Menon',
-  description: 'This is my personal website',
+  title: data.title,
+  description: data.description,
 };
 
 const Home: NextPage = async () => {

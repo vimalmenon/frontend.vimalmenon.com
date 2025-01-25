@@ -1,11 +1,13 @@
 import Box from '@mui/material/Box';
-import { links } from '@data';
+import { links, NavigationMap } from '@data';
 import type { Metadata, NextPage } from 'next';
 import { Link } from './Link';
 
+const data = NavigationMap['/blogs/links'];
+
 export const metadata: Metadata = {
-  title: 'Links | Blogs | Vimal Menon',
-  description: 'This is my personal website',
+  title: data.title,
+  description: data.description,
 };
 
 const Page: NextPage = () => {

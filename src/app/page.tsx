@@ -3,7 +3,7 @@ import type { Metadata, NextPage } from 'next';
 import { env } from '@constants';
 import { NavigationMap } from '@data';
 
-const data = NavigationMap['/blogs'];
+const data = NavigationMap['/'];
 
 export const metadata: Metadata = {
   title: data.title,

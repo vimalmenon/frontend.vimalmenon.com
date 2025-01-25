@@ -1,14 +1,16 @@
 import type { Metadata, NextPage } from 'next';
 import Box from '@mui/material/Box';
 
-import { VimNavigationData } from '@data';
+import { NavigationMap, VimNavigationData } from '@data';
 import NextLink from 'next/link';
 
 import Link from '@mui/material/Link';
 
+const data = NavigationMap['/blogs/vim'];
+
 export const metadata: Metadata = {
-  title: 'VIM Shortcut | Vimal Menon',
-  description: 'This is my personal website',
+  title: data.title,
+  description: data.description,
 };
 
 const Page: NextPage = async () => {

@@ -2,10 +2,13 @@ import type { Metadata, NextPage } from 'next';
 import Box from '@mui/material/Box';
 import { items } from './admin.data';
 import { NavigationItem } from '@components';
+import { NavigationMap } from '@data';
+
+const data = NavigationMap['/admin'];
 
 export const metadata: Metadata = {
-  title: 'Admin | Vimal Menon',
-  description: 'This is my personal website',
+  title: data.title,
+  description: data.description,
 };
 
 const Page: NextPage = async () => {

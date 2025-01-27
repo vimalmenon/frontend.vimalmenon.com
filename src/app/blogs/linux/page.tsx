@@ -1,12 +1,14 @@
 import Box from '@mui/material/Box';
-import { linuxCommands } from '@data';
+import { linuxCommands, NavigationMap } from '@data';
 import { Fragment } from 'react';
 import { Highlight } from '@components';
 import type { Metadata, NextPage } from 'next';
 
+const data = NavigationMap['/blogs/linux'];
+
 export const metadata: Metadata = {
-  title: 'Linux Tutorial | Blogs | Vimal Menon',
-  description: 'This is my personal website',
+  title: data.title,
+  description: data.description,
 };
 
 const Linux: NextPage = () => {

@@ -1,10 +1,12 @@
 import type { Metadata, NextPage } from 'next';
 import Box from '@mui/material/Box';
 import { Highlight, AceEditor } from '@components';
+import { NavigationMap } from '@data';
 
+const data = NavigationMap['/blogs/rust'];
 export const metadata: Metadata = {
-  title: 'Rust Tutorial | Vimal Menon',
-  description: 'This is my personal website',
+  title: data.title,
+  description: data.description,
 };
 
 const RustPage: NextPage = () => {

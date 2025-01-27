@@ -4,10 +4,13 @@ import { Context } from './Context.context';
 import { SelectedButton } from './SelectButton';
 import { ConvertInput } from './ConvertInput';
 import { ConvertResult } from './ConvertResult';
+import { NavigationMap } from '@data';
+
+const data = NavigationMap['/convert'];
 
 export const metadata: Metadata = {
-  title: 'Convert | Blogs | Vimal Menon',
-  description: 'This is my personal website',
+  title: data.title,
+  description: data.description,
 };
 
 const Page: NextPage = () => {

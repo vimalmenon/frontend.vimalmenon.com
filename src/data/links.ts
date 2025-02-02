@@ -80,6 +80,22 @@ export const links: ILink[] = [
         name: 'Open BMC GitHub',
         link: 'https://github.com/openbmc/docs',
       },
+      {
+        name: 'Other Installation Process',
+        link: 'https://github.com/ruyisdk/support-matrix/blob/main/LicheePi4A/README.md',
+      },
+      {
+        name: 'chainx github',
+        link: 'https://github.com/chainsx',
+      },
+      {
+        name: 'MaxiHub',
+        link: 'https://maixhub.com/discussion/licheepi-4a',
+      },
+      {
+        name: 'YouTube link to install fedora',
+        link: 'https://www.youtube.com/watch?v=GQQiDCs-yeY',
+      },
     ],
   },
   {

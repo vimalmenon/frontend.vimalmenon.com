@@ -96,6 +96,10 @@ export const links: ILink[] = [
         name: 'YouTube link to install fedora',
         link: 'https://www.youtube.com/watch?v=GQQiDCs-yeY',
       },
+      {
+        name: 'YouTube 2 of burning image',
+        link: 'https://www.youtube.com/watch?v=hQeEyxmtEIY',
+      },
     ],
   },
   {

@@ -134,6 +134,10 @@ export const links: ILink[] = [
         name: 'Resume Mate',
         link: 'https://www.resumemate.io/resume-builder',
       },
+      {
+        name: 'YouTube',
+        link: 'https://www.youtube.com/@real_vimal_menon',
+      },
     ],
   },
   {

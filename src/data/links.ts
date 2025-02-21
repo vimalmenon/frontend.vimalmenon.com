@@ -100,6 +100,22 @@ export const links: ILink[] = [
         name: 'YouTube 2 of burning image',
         link: 'https://www.youtube.com/watch?v=hQeEyxmtEIY',
       },
+      {
+        name: 'command to burn image',
+        link: 'https://cdimage.deepin.com/RISC-V/preview-20240517-riscv64/README.md',
+      },
+      {
+        name: 'LicheePi 4A 安装方法',
+        link: 'https://github.com/chainsx/armbian-riscv-build/blob/main/doc/licheepi-4a-install-guide.md',
+      },
+      {
+        name: 'Another GitHub',
+        link: 'https://github.com/chainsx/fedora-riscv-builder/blob/main/doc/install-guild-licheepi4a.md',
+      },
+      {
+        name: 'Docs',
+        link: 'https://pan.baidu.com/e/1-r6V352TIN8eqiFEIsUQoA?pwd=yskz',
+      },
     ],
   },
   {
@@ -119,5 +135,9 @@ export const links: ILink[] = [
         link: 'https://www.resumemate.io/resume-builder',
       },
     ],
+  },
+  {
+    name: 'AI',
+    links: [],
   },
 ];

@@ -138,6 +138,15 @@ export const links: ILink[] = [
   },
   {
     name: 'AI',
-    links: [],
+    links: [
+      {
+        name: 'LangChain Hub',
+        link: 'https://smith.langchain.com/hub/hwchase17',
+      },
+      {
+        name: 'EdenAI',
+        link: 'https://app.edenai.run/bricks/image/generation',
+      },
+    ],
   },
 ];

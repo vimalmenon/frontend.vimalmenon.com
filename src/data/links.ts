@@ -151,6 +151,18 @@ export const links: ILink[] = [
         name: 'EdenAI',
         link: 'https://app.edenai.run/bricks/image/generation',
       },
+      {
+        name: 'LangChain Conceptual guide',
+        link: 'https://python.langchain.com/docs/concepts/',
+      },
+      {
+        name: 'LangGrap Conceptual guide',
+        link: 'https://langchain-ai.github.io/langgraph/concepts/high_level/',
+      },
+      {
+        name: 'Google Generative AI',
+        link: 'https://aistudio.google.com/prompts/new_chat',
+      },
     ],
   },
 ];
